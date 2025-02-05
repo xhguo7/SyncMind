@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SyncMind: Measuring Agent Out-of-Sync Recovery in Collaborative Software Engineering</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        :root {
+            --primary-color: #4D4D4D;
+            --secondary-color: #3498db;
+            --text-color: #333;
+            --background-color: #f9f9f9;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            text-align: left;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 3rem 0;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        header h1 {
+            margin: 0 auto;
+            font-size: 2.5rem;
+            max-width: 900px;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Author list */
+        .authors {
+            margin: 1.5rem 0;  /* Increased margin for better spacing */
+            font-size: 1.2rem;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;  /* Increased space between authors */
+        }
+
+        .authors {
+            margin: 1.5rem 0;
+            font-size: 1.2rem;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .author a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+            padding: 0.2rem 0;
+        }
+
+        .author a:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        /* Quick links */
+        .quick-links-container {
+            padding: 1rem 0;
+            margin-bottom: 2rem;
+        }
+
+        .quick-links {
+            text-align: center;  /* Keep quick links centered */
+            font-size: 1.2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .quick-links a {
+            text-decoration: none;
+            color: var(--secondary-color);
+            margin: 0 0.5rem;
+            transition: all 0.3s ease;
+            padding: 0.5rem 0.8rem;
+            border-radius: 4px;
+        }
+
+        .quick-links a:hover {
+            opacity: 0.8;
+        }
+
+        .quick-links span {
+            color: var(--text-color);
+            opacity: 0.5;
+            margin: 0 0.5rem;
+        }
+        
+
+        /* Main Contents*/
+        
+        .content-section {
+            background: white;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: left;
+        }
+
+        .abstract {
+            font-style: italic;
+            margin-bottom: 2rem;
+        }
+
+        .abstract-container {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .abstract-text {
+            flex: 1;
+            min-width: 0;
+        }
+        
+        .abstract-image {
+            flex: 1;
+            min-width: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .abstract-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .agent-text {
+            color: #E86F2B;
+            font-weight: 600;
+        }
+        
+        .human-text {
+            color: #2D7FD1;
+            font-weight: 600;
+        }
+        
+        .math {
+            font-family: "Computer Modern", "Times New Roman", serif;
+            font-style: italic;
+        }
+        
+        .math-var {
+            font-style: italic;
+            font-family: "Computer Modern", "Times New Roman", serif;
+        }
+        
+        .math sub {
+            font-size: 0.75em;
+            font-style: italic;
+            line-height: 0;
+            position: relative;
+            vertical-align: baseline;
+            bottom: -0.25em;
+        }
+        
+        .math-operator {
+            font-family: "Computer Modern", "Times New Roman", serif;
+            font-style: normal;
+            padding: 0 0.2em;
+        }
+
+        .key-concept {
+            font-weight: bold;
+        }
+        
+        .math-inequality {
+            font-family: "Computer Modern", "Times New Roman", serif;
+            padding: 0 0.2em;
+        }
+        
+        .math-expression {
+            letter-spacing: 0.02em;
+            line-height: 1.6;
+        }
+        
+        .math-notation {
+            font-style: italic;
+        }
+        
+        .bullet-list {
+            margin-left: 20px;
+            padding-left: 20px;
+            text-indent: -20px;
+            display: block;
+            margin-top: 8px;
+            margin-bottom: 8px;
+        }
+
+        sub {
+            font-size: 0.8em;
+            vertical-align: sub;
+        }
+
+        .evaluation-content {
+            margin-top: 1rem;
+        }
+
+        .metric-section {
+            padding: 2rem;
+            margin: 1rem 0;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid var(--secondary-color);
+        }
+        
+        .metric-section h3 {
+            color: var(--secondary-color);
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+        
+        .metric-details {
+            padding: 2rem;
+            margin: 2rem 0;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .metric-details h2 {
+            color: var(--secondary-color);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .tldr {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-left: 4px solid var(--secondary-color);
+            margin-bottom: 2rem;
+        }
+
+        .component {
+            margin-top: 2rem;
+            padding: 2rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .component h2 {
+            color: var(--secondary-color);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 0.5rem;
+        }
+
+        .resources {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .resource-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .button {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--secondary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #2980b9;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 0;
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .metric-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .metric-link {
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.2s;
+        }
+
+        .metric-link:hover {
+            transform: translateY(-3px);
+        }
+
+        .metric-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: box-shadow 0.2s;
+        }
+
+        .metric-link:hover .metric-card {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .evaluation-section {
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #eee;
+        }
+
+        .evaluation-section h3 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .metric-title {
+            font-size: 1.2rem;
+            color: #000;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-value {
+            font-size: 1.1rem;
+            color: var(--secondary-color);
+            font-weight: 500;
+        }
+
+        .framework-img {
+            width: 100%;
+            max-width: 800px;
+            margin: 2rem auto;
+            display: block;
+        }
+
+        /* Smooth scrolling behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Responsive design for abstract container */
+        @media (max-width: 768px) {
+            .abstract-container {
+                flex-direction: column;
+            }
+            
+            .abstract-image {
+                margin-top: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>SyncMind: Measuring Agent Out-of-Sync Recovery in Collaborative Software Engineering</h1>
+            <div class="authors">
+                <span class="author"><a href="https://xhguo7.github.io/SyncMind" target="_blank">Xuehang Guo</a></span>
+                <span class="author"><a href="https://xwang.dev/" target="_blank">Xingyao Wang</a></span>
+                <span class="author"><a href="https://yangyi-chen.github.io/" target="_blank">Yangyi Chen</a></span>
+                <span class="author"><a href="https://raspberryice.github.io/" target="_blank">Sha Li</a></span>
+                <span class="author"><a href="https://glaciohound.github.io/" target="_blank">Chi Han</a></span>
+                <span class="author"><a href="https://limanling.github.io/" target="_blank">Manling Li</a></span>
+                <span class="author"><a href="https://blender.cs.illinois.edu/hengji.html" target="_blank">Heng Ji</a></span>
+            </div>            
+        </div>
+    </header>
+
+    <!-- Quick links section -->
+    <div class="quick-links-container">
+        <div class="quick-links">
+            <a href="https://xhguo7.github.io/SyncMind">🌐 Homepage</a>
+            <span>•</span>
+            <a href="https://xhguo7.github.io/SyncMind">📃 Paper</a>
+            <span>•</span>
+            <a href="https://huggingface.co/datasets/xuehang/SyncBench">🤗 Data</a>
+            <span>•</span>
+            <a href="https://github.com/xhguo7/SyncMind">🗂️ Code</a>
+        </div>
+    </div>
+
+    <main class="container">
+        <section class="content-section">            
+            <h2>Challenge: Agent Out-of-Sync</h2>
+            <div class="abstract-container">
+                <div class="abstract-text">
+                    <div class="abstract">
+                        Consider a <strong>human-AI collaboration</strong> scenario:
+                        
+                        <br>
+
+                        <div class="bullet-list">• While 
+                        <span class="agent-text">Agent</span> implements changes based on its understanding 
+                        at time <span class="math">T<sub>i</sub></span>, 
+                        <span class="human-text">Human</span> modifies the codebase at <span class="math">T<sub>j</sub></span> 
+                        <span class="math-operator">(</span><span class="math">T<sub>i</sub></span> 
+                        <span class="math-inequality">&lt;</span> 
+                        <span class="math">T<sub>j</sub></span> 
+                        <span class="math-inequality">&lt;</span> 
+                        <span class="math">T<sub>k</sub></span><span class="math-operator">)</span>.
+                        
+                        </div>
+
+                        <div class="bullet-list">• <span class="agent-text">Agent</span>'s subsequent update at <span class="math">T<sub>k</sub></span> 
+                        becomes incompatible with the current state <span class="math">S<sub>k</sub></span> due to its outdated belief 
+                        state <span class="math">B<sub>k</sub></span>.
+                        
+                        </div>
+                        
+                        This raises the key challenge: 
+                        <strong><em>How can collaborators effectively recognize their belief being out-of-sync 
+                        <span class="math-operator">(</span><span class="math">B<sub>k</sub></span> 
+                        <span class="math-inequality">≠</span> 
+                        <span class="math">S<sub>k</sub></span><span class="math-operator">)</span>, diagnose the root causes, and recover their belief 
+                        <span class="math">B<sub>k</sub></span> to match the world state <span class="math">S<sub>k</sub></span>?</em></strong>
+                    </div>
+                </div>
+                <div class="abstract-image">
+                    <img src="https://github.com/xhguo7/SyncMind/main/imgs/out_of_sync.png" alt="Agent Out-of-Sync Visualization">
+                </div>
+            </div>
+
+            <div class="metric-grid">
+                <a href="#syncmind" class="metric-link">
+                    <div class="metric-card">
+                        <div class="metric-title">SyncMind</div>
+                        <div class="metric-value">Framework</div>
+                    </div>
+                </a>
+                <a href="#syncbench" class="metric-link">
+                    <div class="metric-card">
+                        <div class="metric-title">SyncBench</div>
+                        <div class="metric-value">Benchmark</div>
+                    </div>
+                </a>
+                <a href="#evaluation" class="metric-link">
+                    <div class="metric-card">
+                        <div class="metric-title">Agent Out-of-Sync Recovery</div>
+                        <div class="metric-value">Evaluation</div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <div id="syncmind" class="component">
+            <h2>SyncMind: Agent Out-of-Sync Recovery Framework</h2>
+            <p>
+                Tackling the challenge of agent out-of-sync in collaborative software engineering, 
+                we propose <strong>SyncMind</strong>, a framework that systematically evaluates agent out-of-sync recovery in collaborative scenarios.
+            </p>
+            <img src="https://github.com/xhguo7/SyncMind/main/imgs/syncmind.png" alt="SyncMind Framework" class="framework-img">
+        </div>
+
+        <div id="syncbench" class="component">
+            <h2>SyncBench: Agent Out-of-Sync Benchmark</h2>
+            <p>
+                To systematically evaluate the out-of-sync recovery capabilities of LLM-powered agents, 
+                we construct <strong>SyncBench</strong>, a benchmark featuring agent out-of-sync in collaborative software engineering.
+            </p>
+            <img src="https://github.com/xhguo7/SyncMind/main/imgs/syncbench.png" alt="SyncBench Construction" class="framework-img">
+        </div>
+
+        <div id="evaluation" class="component">
+            <h2>Evaluation: Agent Out-of-Sync Recovery</h2>
+            <div class="evaluation-content">
+                <div id="recovery-ability" class="metric-section">
+                    <h3>Recovery Ability: Out-of-Sync Recovery</h3>
+                    <p>
+                        We evaluate LLM agents' out-of-sync recovery abilities through five complementary metrics:
+                        <div class="bullet-list">• <span class="math">SR</sub></span> : success rate </div>
+                        <div class="bullet-list">• <span class="math">LA</sub></span> : localization accuracy </div>
+                        <div class="bullet-list">• <span class="math">CSR</sub></span> : conditional success rate </div>
+                        <div class="bullet-list">• <span class="math">ASR</sub></span> : assistance seeking rate </div>
+                        <div class="bullet-list">• <span class="math">Eff</sub></span> : recovery efficiency </div>
+                    </p>
+                </div>
+
+                <div id="collaboration-ability" class="metric-section">
+                    <h3>Collaboration Ability: Collaborative Out-of-Sync Recovery</h3>
+                    <p>
+                        Experiment results reveal significant limitations in LLM agents' collaboration capabilities:
+                        <div class="bullet-list">• Willingness to collaborate </div>
+                        <div class="bullet-list">• Communication quality </div>
+                        <div class="bullet-list">• Strategic out-of-sync recovery </div>
+                    </p>
+                </div>
+
+                <div id="resource-awareness" class="metric-section">
+                    <h3>Resource Awareness: Resource-Aware Out-of-Sync Recovery</h3>
+                    <p>
+                        Resource-aware out-of-sync recovery unfolds fundamental limitations in LLM agents' resource awareness,
+                        provideing insights for future development of resource-efficient collaborative systems:
+                        <div class="bullet-list">• Time management </div>
+                        <div class="bullet-list">• Cost sensitivity </div>
+                        <div class="bullet-list">• Resource-efficient collaboration </div>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <section class="content-section">
+            <h2>Resources</h2>
+            <div class="resources">
+                <div class="resource-card">
+                    <h3>Paper</h3>
+                    <p>View our paper to learn more about SyncMind and SyncBench.</p>
+                    <a href="https://github.com/xhguo7/SyncMind" class="button" target="_blank">Paper</a>
+                </div>
+                <div class="resource-card">
+                    <h3>Data</h3>
+                    <p>Access our agent out-of-sync benchmark with two datasets: Caller and Callee.</p>
+                    <a href="https://huggingface.co/datasets/xuehang/SyncBench" class="button" target="_blank">Dataset</a>
+                </div>
+                <div class="resource-card">
+                    <h3>Code</h3>
+                    <p>View our implementation of SyncMind and SyncBench for the out-of-sync challenge.</p>
+                    <a href="https://github.com/xhguo7/SyncMind" class="button" target="_blank">GitHub</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 SyncMind</p>
+        </div>
+    </footer>
+</body>
+</html>
