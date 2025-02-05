@@ -13,12 +13,12 @@
 
 ## **SyncMind**
 <p align="center">
-  <img src="imgs/syncmind.png" width="800" alt="Alt text">
+  <img src="assets/syncmind.png" width="800" alt="Alt text">
 </p>
 
 ## **SyncBench**
 <p align="center">
-  <img src="imgs/syncbench.png" width="800" alt="Alt text">
+  <img src="assets/syncbench.png" width="800" alt="Alt text">
 </p>
 
 
