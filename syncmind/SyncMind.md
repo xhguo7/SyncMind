@@ -1,7 +1,7 @@
 # **SyncMind: Measuring Agent Out-of-Sync Recovery in Collaborative Software Engineering**
 
 
-## **SyncMind**
+## **[SyncMind](https://github.com/xhguo7/SyncMind/blob/main/syncmind/SyncMind.md)**
 <p align="center">
   <img src="../assets/syncmind.png" width="800" alt="Alt text">
 </p>

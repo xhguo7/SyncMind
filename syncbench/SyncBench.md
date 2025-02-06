@@ -1,7 +1,7 @@
 # **SyncBench:** Agent Out-of-Sync Benchmark
 
 
-## **SyncBench**
+## **[SyncBench](https://github.com/xhguo7/SyncMind/blob/main/syncbench/SyncBench.md)**
 <p align="center">
   <img src="../assets/syncbench.png" width="800" alt="Alt text">
 </p>
