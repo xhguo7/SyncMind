@@ -244,25 +244,37 @@ Set source repo in *SyncBench* construction command to specify which source repo
     ```
 
 #### **3.1.3 Let's Expand SyncBench!**
-**(1) (Optional) Check gits**
-```
-cd SyncMind
-bash ./scripts/git.sh
-```
+**(1) (Optional) Check Gits**
+  - If would like to check git commits before constructing *SyncBench*
+    ```
+    cd SyncMind
+    bash ./scripts/git.sh
+    ```
 
-**(2) Run construction**
-```
-cd SyncMind
-bash ./scripts/construction.sh
-```
-This will save the constructed datasets in `.json` format
+**(2) SyncBench Construction**
+- Construct *SyncBench*
+    ```
+    cd SyncMind
+    bash ./scripts/construction.sh
+    ```
+    This will save both the structured data in `.json` format and the instantiated data in `.csv` format
+      - `JSON` data: will be saved to `./syncbench_build/dataset` in `.json` format
+      - `CSV` data: will be saved to `./syncbench_build/syncbench` in `.csv` format
 
-**(3) Build SyncBench**
-```
-cd SyncMind
-bash ./scripts/syncbench.sh
-```
-This will save the instantiated datasets in `.csv` format
+    Where `syncbench_build` shares the same parent directory as `SyncMind`.
+
+**(3) (Optional) SyncBench Instantiation**
+  - Instantiate `JSON` data into `CSV` instances (after running syncbench construction `bash ./scripts/construction.sh` to generate `JSON` data):
+    ```
+    cd SyncMind
+    bash ./scripts/syncbench.sh
+    ```
+    This will convert structured `.json` data into instantiated datasets in `.csv` format
+      - `CSV` data: will be saved to `./syncbench_build/syncbench` in `.csv` format
+
+    Where `syncbench_build` shares the same parent directory as `SyncMind`.
+  - Noted that this step in totally optional, just in case if you would like to change instance attributes.
+    - Running `construction.sh` already includes this instantiation step with default attributes for agent out-of-sync recovery evaluation.
 
 
 ### 📉 **3.2 Scale Down**
@@ -270,6 +282,9 @@ For small-scale evaluation, **SyncBench** can be readily downsampled to fewer in
 
 **(1) 300 Instances:**
   - We have sampled a small evaluation dataset through weighted downsampling: [300 Instances](https://huggingface.co/datasets/xuehang/SyncBench)
+    - 300 out-of-sync instances derived from 21 GitHub repositories
+      - 150 Caller instances
+      - 150 Callee instances
 
 **(2) Custom subset**
   - Choose a proper method to downsample a custom *SyncBench* subset
