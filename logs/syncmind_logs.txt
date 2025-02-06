@@ -1,57 +1,541 @@
 
-[2025-02-05 18:09:56] INFO - exetest.py: 291
+[2025-02-05 18:13:37] INFO - handler.py: 66
 
-The path '/shared/nas2/xuehangg/syncbench_build/code/callee7/test_repo/src/_pytest/pytester.py' already exists.
+Folder /workspace/test_repo successfully copied to /shared/nas2/xuehangg/syncbench_build/code/caller9/test_repo/
 
-[2025-02-05 18:09:56] INFO - callee_builder.py: 305
+[2025-02-05 18:13:37] INFO - handler.py: 77
 
-Using docker image with ID: 2ad0b81aebdc
+Container xuehang_9_sympy_3.11__Wed__Feb____5__18_13_27__2025__test_repo__dockerhandler_attempt1 stopped and removed successfully.
 
-[2025-02-05 18:09:56] INFO - exetest.py: 199
+[2025-02-05 18:13:37] INFO - exetest.py: 210
 
-Repository already exists at `/shared/nas2/xuehangg/syncbench_build/code/callee7/test_repo/`.
+Repository cloned from docker image to `/shared/nas2/xuehangg/syncbench_build/code/caller9/test_repo/`
+
+[2025-02-05 18:13:37] INFO - aligner.py: 85
+
+Successfully found and replaced the code of function/method `test_Domain_postprocess` in the context_code.
+
+[2025-02-05 18:13:37] INFO - exetest.py: 291
+
+The path '/shared/nas2/xuehangg/syncbench_build/code/caller9/test_repo/sympy/polys/tests/test_polyoptions.py' already exists.
+
+[2025-02-05 18:13:37] INFO - caller_builder.py: 310
+
+Using docker image with ID: 75594250eeb0
+
+[2025-02-05 18:13:37] INFO - exetest.py: 199
+
+Repository already exists at `/shared/nas2/xuehangg/syncbench_build/code/caller9/test_repo/`.
 
 Skipping repo clone...
 
-[2025-02-05 18:09:56] INFO - aligner.py: 85
+[2025-02-05 18:13:37] INFO - aligner.py: 85
 
-Successfully found and replaced the code of function/method `get_public_names` in the context_code.
+Successfully found and replaced the code of function/method `test_Domain_postprocess` in the context_code.
 
-[2025-02-05 18:09:56] INFO - tester.py: 51
+[2025-02-05 18:13:37] INFO - tester.py: 51
 
-Path already exists: /shared/nas2/xuehangg/syncbench_build/code/callee7/test_repo/src/_pytest/pytester.py
+Path already exists: /shared/nas2/xuehangg/syncbench_build/code/caller9/test_repo/sympy/polys/tests/test_polyoptions.py
 
-[2025-02-05 18:09:56] INFO - tester.py: 61
+[2025-02-05 18:13:37] INFO - tester.py: 61
 
-Successfully saved aligned_code to '/shared/nas2/xuehangg/syncbench_build/code/callee7/test_repo/src/_pytest/pytester.py'
+Successfully saved aligned_code to '/shared/nas2/xuehangg/syncbench_build/code/caller9/test_repo/sympy/polys/tests/test_polyoptions.py'
 
-[2025-02-05 18:09:56] INFO - tester.py: 368
+[2025-02-05 18:13:37] INFO - tester.py: 368
 
-Running unit test using file `/workspace/test_repo/testing/test_python_path.py` in Docker container `xuehang_7_pytest_container_get_public_names_Wed_Feb__5_18_09_56_2025`...
+Running unit test using file `/workspace/test_repo/sympy/polys/tests/test_polyoptions.py` in Docker container `xuehang_9_sympy_container__test_Domain_postprocess__Wed_Feb__5_18_13_37_2025`...
 
-[2025-02-05 18:10:00] INFO - handler.py: 66
+[2025-02-05 18:13:38] INFO - callee_builder.py: 741
+
+
+=========================  Function/method filtering 2/64: [test_model_export_with_loader_module_and_data_path.py] -> [utils.py] -> [_validate_params]  =========================
+
+[2025-02-05 18:13:39] INFO - callee_builder.py: 297
+
+Preparing docker env for execution test...
+
+[2025-02-05 18:13:39] WARNING - callee_builder.py: 130
+
+Failed to remove directory `/shared/nas2/xuehangg/syncbench_build/code/callee16/16_pillow/.git/objects/pack`: [Errno 39] Directory not empty: '/shared/nas2/xuehangg/syncbench_build/code/callee16/16_pillow/.git/objects/pack'
+Attempting directory removal again...
+
+[2025-02-05 18:13:39] WARNING - callee_builder.py: 130
+
+Failed to remove directory `/shared/nas2/xuehangg/syncbench_build/code/callee16/16_pillow/.git/objects`: [Errno 39] Directory not empty: '/shared/nas2/xuehangg/syncbench_build/code/callee16/16_pillow/.git/objects'
+Attempting directory removal again...
+
+[2025-02-05 18:13:39] INFO - tester.py: 92
+
+Execution succeeded!
+Container output: 
+Obtaining file:///workspace/test_repo
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: filelock in /workspace/test_venv/lib/python3.11/site-packages (from transformers==4.45.0.dev0) (3.15.4)
+Requirement already satisfied: huggingface-hub<1.0,>=0.23.2 in /workspace/test_venv/lib/python3.11/site-packages (from transformers==4.45.0.dev0) (0.24.6)
+Requirement already satisfied: numpy>=1.17 in /workspace/test_venv/lib/python3.11/site-packages (from transformers==4.45.0.dev0) (1.26.4)
+Requirement already satisfied: packaging>=20.0 in /workspace/test_venv/lib/python3.11/site-packages (from transformers==4.45.0.dev0) (24.1)
+Requirement already satisfied: pyyaml>=5.1 in /workspace/test_venv/lib/python3.11/site-packages (from transformers==4.45.0.dev0) (6.0.2)
+Requirement already satisfied: regex!=2019.12.17 in /workspace/test_venv/lib/python3.11/site-packages (from transformers==4.45.0.dev0) (2024.7.24)
+Requirement already satisfied: requests in /workspace/test_venv/lib/python3.11/site-packages (from transformers==4.45.0.dev0) (2.32.3)
+Requirement already satisfied: tokenizers<0.20,>=0.19 in /workspace/test_venv/lib/python3.11/site-packages (from transformers==4.45.0.dev0) (0.19.1)
+Requirement already satisfied: safetensors>=0.4.1 in /workspace/test_venv/lib/python3.11/site-packages (from transformers==4.45.0.dev0) (0.4.4)
+Requirement already satisfied: tqdm>=4.27 in /workspace/test_venv/lib/python3.11/site-packages (from transformers==4.45.0.dev0) (4.66.5)
+Requirement already satisfied: fsspec>=2023.5.0 in /workspace/test_venv/lib/python3.11/site-packages (from huggingface-hub<1.0,>=0.23.2->transformers==4.45.0.dev0) (2024.6.1)
+Requirement already satisfied: typing-extensions>=3.7.4.3 in /workspace/test_venv/lib/python3.11/site-packages (from huggingface-hub<1.0,>=0.23.2->transformers==4.45.0.dev0) (4.12.2)
+Requirement already satisfied: charset-normalizer<4,>=2 in /workspace/test_venv/lib/python3.11/site-packages (from requests->transformers==4.45.0.dev0) (3.3.2)
+Requirement already satisfied: idna<4,>=2.5 in /workspace/test_venv/lib/python3.11/site-packages (from requests->transformers==4.45.0.dev0) (3.8)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /workspace/test_venv/lib/python3.11/site-packages (from requests->transformers==4.45.0.dev0) (2.2.2)
+Requirement already satisfied: certifi>=2017.4.17 in /workspace/test_venv/lib/python3.11/site-packages (from requests->transformers==4.45.0.dev0) (2024.8.30)
+Building wheels for collected packages: transformers
+  Building editable for transformers (pyproject.toml): started
+  Building editable for transformers (pyproject.toml): finished with status 'done'
+  Created wheel for transformers: filename=transformers-4.45.0.dev0-0.editable-py3-none-any.whl size=17379 sha256=09d3e5dd176f2d410303cf3bca5c54d654df578dcde11026b7126253d0b8c150
+  Stored in directory: /tmp/pip-ephem-wheel-cache-fk43vfr2/wheels/77/6d/8d/6d288ec591919a528b58517c67f4d12e0e98d23d266200ee38
+Successfully built transformers
+Installing collected packages: transformers
+  Attempting uninstall: transformers
+    Found existing installation: transformers 4.45.0.dev0
+    Uninstalling transformers-4.45.0.dev0:
+      Successfully uninstalled transformers-4.45.0.dev0
+Successfully installed transformers-4.45.0.dev0
+============================= test session starts ==============================
+platform linux -- Python 3.11.9, pytest-8.3.2, pluggy-1.5.0 -- /workspace/test_venv/bin/python
+cachedir: .pytest_cache
+rootdir: /workspace/test_repo
+configfile: pyproject.toml
+plugins: asyncio-0.24.0
+asyncio: mode=Mode.STRICT, default_loop_scope=function
+collecting ... collected 199 items
+
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_assisted_decoding_matches_greedy_search <- ../test_venv/lib/python3.11/site-packages/_pytest/mark/structures.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_assisted_decoding_matches_greedy_search_0_random <- src/transformers/testing_utils.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_assisted_decoding_matches_greedy_search_1_same <- src/transformers/testing_utils.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_assisted_decoding_sample <- tests/generation/test_utils.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_assisted_decoding_with_num_logits_to_keep <- tests/generation/test_utils.py SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_attention_outputs <- tests/test_modeling_common.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_batching_equivalence <- tests/test_modeling_common.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_beam_sample_generate <- tests/generation/test_utils.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_beam_sample_generate_dict_output <- tests/generation/test_utils.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_beam_search_generate <- tests/generation/test_utils.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_beam_search_generate_dict_output <- tests/generation/test_utils.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_beam_search_generate_dict_outputs_use_cache <- tests/generation/test_utils.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_beam_search_low_memory <- tests/generation/test_utils.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_can_use_safetensors <- tests/test_modeling_common.py [2025-02-06 00:12:51,901] [WARNING] [real_accelerator.py:162:get_accelerator] Setting accelerator to CPU. If you have GPU or other accelerator, we were unable to detect it.
+[2025-02-06 00:12:51,902] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cpu (auto detect)
+PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_compile_cuda_graph_time <- tests/test_modeling_common.py SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_config PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_constrained_beam_search_generate <- tests/generation/test_utils.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_constrained_beam_search_generate_dict_output <- tests/generation/test_utils.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_contrastive_generate <- tests/generation/test_utils.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_contrastive_generate_dict_outputs_use_cache <- tests/generation/test_utils.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_contrastive_generate_low_memory <- tests/generation/test_utils.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_correct_missing_keys <- tests/test_modeling_common.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_cpu_offload <- tests/test_modeling_common.py SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_create_position_ids_from_inputs_embeds PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_create_position_ids_respects_padding_index PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_custom_4d_attention_mask <- tests/test_modeling_common.py SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_decoder_model_past_with_large_inputs PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_decoder_model_past_with_large_inputs_relative_pos_emb PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_determinism <- tests/test_modeling_common.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_disk_offload_bin <- tests/test_modeling_common.py SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_disk_offload_safetensors <- tests/test_modeling_common.py SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_dola_decoding_sample <- tests/generation/test_utils.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_eager_matches_sdpa_generate <- tests/test_modeling_common.py SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_eager_matches_sdpa_inference_0_float16 <- ../../usr/local/lib/python3.11/unittest/case.py SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_eager_matches_sdpa_inference_1_bfloat16 <- ../../usr/local/lib/python3.11/unittest/case.py SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_eager_matches_sdpa_inference_2_float32 <- ../../usr/local/lib/python3.11/unittest/case.py SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_equivalence_flax_to_pt <- tests/test_modeling_common.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_equivalence_pt_to_flax <- tests/test_modeling_common.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_feed_forward_chunking <- tests/test_modeling_common.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_flash_attention_2_padding_matches_padding_free_with_position_ids <- tests/test_modeling_common.py SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_flash_attn_2_conversion <- tests/test_modeling_common.py SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_flash_attn_2_fp32_ln <- tests/test_modeling_common.py SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_flash_attn_2_from_config <- tests/test_modeling_common.py SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_flash_attn_2_generate_left_padding <- tests/test_modeling_common.py SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_flash_attn_2_generate_padding_right <- tests/test_modeling_common.py SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_flash_attn_2_generate_reuse_cache <- tests/test_modeling_common.py SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_flash_attn_2_generate_use_cache <- tests/test_modeling_common.py SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_flash_attn_2_inference_equivalence <- tests/test_modeling_common.py SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_flash_attn_2_inference_equivalence_right_padding <- tests/test_modeling_common.py SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_flax_from_pt_safetensors <- tests/test_modeling_common.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_for_causal_lm PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_for_masked_lm PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_for_multiple_choice PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_for_question_answering PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_for_token_classification PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_forward_with_num_logits_to_keep <- tests/test_modeling_common.py SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_from_pretrained_no_checkpoint <- tests/test_modeling_common.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_generate_compile_fullgraph <- tests/generation/test_utils.py SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_generate_continue_from_past_key_values <- tests/generation/test_utils.py SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_generate_from_inputs_embeds_decoder_only <- tests/generation/test_utils.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_generate_methods_with_num_logits_to_keep <- tests/generation/test_utils.py SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_generate_with_head_masking <- tests/generation/test_utils.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_generate_with_quant_cache <- tests/generation/test_utils.py SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_generate_with_static_cache <- tests/generation/test_utils.py SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_generate_without_input_ids <- tests/generation/test_utils.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_gradient_checkpointing_backward_compatibility <- tests/test_modeling_common.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_gradient_checkpointing_enable_disable <- tests/test_modeling_common.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_greedy_generate <- tests/generation/test_utils.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_greedy_generate_dict_outputs <- tests/generation/test_utils.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_greedy_generate_dict_outputs_use_cache <- tests/generation/test_utils.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_group_beam_search_generate <- tests/generation/test_utils.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_group_beam_search_generate_dict_output <- tests/generation/test_utils.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_head_pruning <- tests/test_modeling_common.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_head_pruning_integration <- tests/test_modeling_common.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_head_pruning_save_load_from_config_init <- tests/test_modeling_common.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_head_pruning_save_load_from_pretrained <- tests/test_modeling_common.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_headmasking <- tests/test_modeling_common.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_hidden_states_output <- tests/test_modeling_common.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_initialization <- tests/test_modeling_common.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_inputs_embeds <- tests/test_modeling_common.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_inputs_embeds_matches_input_ids <- tests/test_modeling_common.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_inputs_embeds_matches_input_ids_with_generate <- tests/test_modeling_common.py SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_keep_in_fp32_modules <- tests/test_modeling_common.py SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_left_padding_compatibility <- tests/generation/test_utils.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_load_save_without_tied_weights <- tests/test_modeling_common.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_load_with_mismatched_shapes <- tests/test_modeling_common.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_matched_shapes_have_loaded_weights_when_some_mismatched_shapes_exist <- tests/test_modeling_common.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_mismatched_shapes_have_properly_initialized_weights <- tests/test_modeling_common.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_model PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_model_as_decoder PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_model_as_decoder_with_default_input_mask PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_model_from_pretrained SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_model_get_set_embeddings <- tests/test_modeling_common.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_model_is_small <- tests/test_modeling_common.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_model_main_input_name <- tests/test_modeling_common.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_model_outputs_equivalence <- tests/test_modeling_common.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_model_parallel_beam_search <- tests/generation/test_utils.py SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_model_parallel_equal_results <- tests/test_modeling_common.py SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_model_parallelism <- tests/test_modeling_common.py SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_model_parallelization <- tests/test_modeling_common.py SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_model_various_embeddings PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_model_weights_reload_no_missing_tied_weights <- tests/test_modeling_common.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_multi_gpu_data_parallel_forward <- tests/test_modeling_common.py SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_new_cache_format_0 <- tests/generation/test_utils.py SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_new_cache_format_1 <- tests/generation/test_utils.py SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_new_cache_format_2 <- tests/generation/test_utils.py SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_past_key_values_format <- tests/generation/test_utils.py SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_pipeline_audio_classification <- tests/test_pipeline_mixin.py SKIPPEDr `RobertaModelTest`.)
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_pipeline_audio_classification_fp16 <- tests/test_pipeline_mixin.py SKIPPEDobertaModelTest`.)
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_pipeline_automatic_speech_recognition <- tests/test_pipeline_mixin.py SKIPPEDping` for `RobertaModelTest`.)
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_pipeline_automatic_speech_recognition_fp16 <- tests/test_pipeline_mixin.py SKIPPED for `RobertaModelTest`.)
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_pipeline_depth_estimation <- tests/test_pipeline_mixin.py SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_pipeline_depth_estimation_fp16 <- tests/test_pipeline_mixin.py SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_pipeline_document_question_answering <- tests/test_pipeline_mixin.py SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_pipeline_document_question_answering_fp16 <- tests/test_pipeline_mixin.py SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_pipeline_feature_extraction <- tests/test_pipeline_mixin.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_pipeline_feature_extraction_fp16 <- tests/test_pipeline_mixin.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_pipeline_fill_mask <- tests/test_pipeline_mixin.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_pipeline_fill_mask_fp16 <- tests/test_pipeline_mixin.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_pipeline_image_classification <- tests/test_pipeline_mixin.py SKIPPEDr `RobertaModelTest`.)
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_pipeline_image_classification_fp16 <- tests/test_pipeline_mixin.py SKIPPEDobertaModelTest`.)
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_pipeline_image_feature_extraction <- tests/test_pipeline_mixin.py SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_pipeline_image_feature_extraction_fp16 <- tests/test_pipeline_mixin.py SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_pipeline_image_segmentation <- tests/test_pipeline_mixin.py SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_pipeline_image_segmentation_fp16 <- tests/test_pipeline_mixin.py SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_pipeline_image_to_text <- tests/test_pipeline_mixin.py SKIPPEDrtaModelTest`.)
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_pipeline_image_to_text_fp16 <- tests/test_pipeline_mixin.py SKIPPEDdelTest`.)
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_pipeline_mask_generation <- tests/test_pipeline_mixin.py SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_pipeline_mask_generation_fp16 <- tests/test_pipeline_mixin.py SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_pipeline_object_detection <- tests/test_pipeline_mixin.py SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_pipeline_object_detection_fp16 <- tests/test_pipeline_mixin.py SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_pipeline_question_answering <- tests/test_pipeline_mixin.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_pipeline_question_answering_fp16 <- tests/test_pipeline_mixin.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_pipeline_summarization <- tests/test_pipeline_mixin.py SKIPPEDrtaModelTest`.)
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_pipeline_summarization_fp16 <- tests/test_pipeline_mixin.py SKIPPEDdelTest`.)
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_pipeline_table_question_answering <- tests/test_pipeline_mixin.py SKIPPED` for `RobertaModelTest`.)
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_pipeline_table_question_answering_fp16 <- tests/test_pipeline_mixin.py SKIPPED` for `RobertaModelTest`.)
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_pipeline_text2text_generation <- tests/test_pipeline_mixin.py SKIPPEDr `RobertaModelTest`.)
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_pipeline_text2text_generation_fp16 <- tests/test_pipeline_mixin.py SKIPPEDobertaModelTest`.)
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_pipeline_text_classification <- tests/test_pipeline_mixin.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_pipeline_text_classification_fp16 <- tests/test_pipeline_mixin.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_pipeline_text_generation <- tests/test_pipeline_mixin.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_pipeline_text_generation_fp16 <- tests/test_pipeline_mixin.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_pipeline_text_to_audio <- tests/test_pipeline_mixin.py SKIPPEDrtaModelTest`.)
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_pipeline_text_to_audio_fp16 <- tests/test_pipeline_mixin.py SKIPPEDdelTest`.)
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_pipeline_token_classification <- tests/test_pipeline_mixin.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_pipeline_token_classification_fp16 <- tests/test_pipeline_mixin.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_pipeline_translation <- tests/test_pipeline_mixin.py SKIPPEDaModelTest`.)
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_pipeline_translation_fp16 <- tests/test_pipeline_mixin.py SKIPPEDlTest`.)
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_pipeline_video_classification <- tests/test_pipeline_mixin.py SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_pipeline_video_classification_fp16 <- tests/test_pipeline_mixin.py SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_pipeline_visual_question_answering <- tests/test_pipeline_mixin.py SKIPPEDng` for `RobertaModelTest`.)
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_pipeline_visual_question_answering_fp16 <- tests/test_pipeline_mixin.py SKIPPEDng` for `RobertaModelTest`.)
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_pipeline_zero_shot <- tests/test_pipeline_mixin.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_pipeline_zero_shot_audio_classification <- tests/test_pipeline_mixin.py SKIPPEDapping` for `RobertaModelTest`.)
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_pipeline_zero_shot_audio_classification_fp16 <- tests/test_pipeline_mixin.py SKIPPEDg` for `RobertaModelTest`.)
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_pipeline_zero_shot_fp16 <- tests/test_pipeline_mixin.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_pipeline_zero_shot_image_classification <- tests/test_pipeline_mixin.py SKIPPEDapping` for `RobertaModelTest`.)
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_pipeline_zero_shot_image_classification_fp16 <- tests/test_pipeline_mixin.py SKIPPEDg` for `RobertaModelTest`.)
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_pipeline_zero_shot_object_detection <- tests/test_pipeline_mixin.py SKIPPEDping` for `RobertaModelTest`.)
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_pipeline_zero_shot_object_detection_fp16 <- tests/test_pipeline_mixin.py SKIPPEDor `RobertaModelTest`.)
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_problem_types <- tests/test_modeling_common.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_prompt_lookup_decoding_matches_greedy_search <- tests/generation/test_utils.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_prompt_lookup_decoding_stops_at_eos <- tests/generation/test_utils.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_pt_tf_model_equivalence <- tests/test_modeling_common.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_resize_embeddings_untied <- tests/test_modeling_common.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_resize_position_vector_embeddings <- tests/test_modeling_common.py SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_resize_tokens_embeddings <- tests/test_modeling_common.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_retain_grad_hidden_states_attentions <- tests/test_modeling_common.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_sample_generate <- tests/generation/test_utils.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_sample_generate_dict_output <- tests/generation/test_utils.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_save_load <- tests/test_modeling_common.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_save_load_fast_init_from_base <- tests/test_modeling_common.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_save_load_fast_init_to_base <- tests/test_modeling_common.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_save_load_keys_to_ignore_on_save <- tests/test_modeling_common.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_save_load_low_cpu_mem_usage <- tests/test_modeling_common.py SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_save_load_low_cpu_mem_usage_checkpoints <- tests/test_modeling_common.py SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_save_load_low_cpu_mem_usage_no_safetensors <- tests/test_modeling_common.py SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_sdpa_can_compile_dynamic <- tests/test_modeling_common.py SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_sdpa_can_dispatch_on_flash <- tests/test_modeling_common.py SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_sdpa_matches_eager_sliding_window <- tests/test_modeling_common.py SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_static_cache_matches_dynamic <- tests/test_modeling_common.py SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_tf_from_pt_safetensors <- tests/test_modeling_common.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_tie_model_weights <- tests/test_modeling_common.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_tied_weights_keys <- tests/test_modeling_common.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_torch_compile <- tests/test_modeling_common.py SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_torch_fx <- tests/test_modeling_common.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_torch_fx_output_loss <- tests/test_modeling_common.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_torch_save_load <- tests/test_modeling_common.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_torchscript_output_attentions <- tests/test_modeling_common.py SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_torchscript_output_hidden_state <- tests/test_modeling_common.py SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_torchscript_simple <- tests/test_modeling_common.py SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_training <- tests/test_modeling_common.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_training_gradient_checkpointing <- tests/test_modeling_common.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_training_gradient_checkpointing_use_reentrant <- tests/test_modeling_common.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_training_gradient_checkpointing_use_reentrant_false <- tests/test_modeling_common.py PASSED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelIntegrationTest::test_inference_classification_head SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelIntegrationTest::test_inference_masked_lm SKIPPED
+tests/models/roberta/test_modeling_roberta.py::RobertaModelIntegrationTest::test_inference_no_head SKIPPED
+
+=============================== warnings summary ===============================
+src/transformers/deepspeed.py:24
+  /workspace/test_repo/src/transformers/deepspeed.py:24: FutureWarning: transformers.deepspeed module is deprecated and will be removed in a future version. Please import deepspeed modules directly from transformers.integrations
+    warnings.warn(
+
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_equivalence_flax_to_pt
+  /workspace/test_repo/src/transformers/modeling_flax_pytorch_utils.py:459: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:206.)
+    pt_model_dict[flax_key] = torch.from_numpy(flax_tensor)
+
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_generate_from_inputs_embeds_decoder_only
+  /workspace/test_repo/src/transformers/generation/configuration_utils.py:541: UserWarning: `pad_token_id` should be positive but got -1. This will cause errors when batch generating, if there is padding. Please set `pad_token_id` explicitly as `model.generation_config.pad_token_id=PAD_TOKEN_ID` to avoid errors in generation
+    warnings.warn(
+
+tests/models/roberta/test_modeling_roberta.py: 14 warnings
+  /workspace/test_repo/src/transformers/tokenization_utils_base.py:1602: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be deprecated in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+    warnings.warn(
+
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_pipeline_question_answering
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_pipeline_question_answering_fp16
+  /usr/local/lib/python3.11/multiprocessing/popen_fork.py:66: RuntimeWarning: os.fork() was called. os.fork() is incompatible with multithreaded code, and JAX is multithreaded, so this will likely lead to a deadlock.
+    self.pid = os.fork()
+
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_pipeline_text_generation
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_pipeline_text_generation_fp16
+  /workspace/test_repo/src/transformers/generation/utils.py:1233: UserWarning: Using the model-agnostic default `max_length` (=20) to control the generation length. We recommend setting `max_new_tokens` to control the maximum length of the generation.
+    warnings.warn(
+
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_pipeline_token_classification
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_pipeline_token_classification_fp16
+  /workspace/test_repo/src/transformers/pipelines/token_classification.py:392: UserWarning: Tokenizer does not support real words, using fallback heuristic
+    warnings.warn(
+
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_training_gradient_checkpointing
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_training_gradient_checkpointing_use_reentrant
+  /workspace/test_venv/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+    with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+
+tests/models/roberta/test_modeling_roberta.py::RobertaModelTest::test_training_gradient_checkpointing_use_reentrant_false
+  /workspace/test_venv/lib/python3.11/site-packages/torch/utils/checkpoint.py:1399: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+    with device_autocast_ctx, torch.cpu.amp.autocast(**cpu_autocast_kwargs), recompute_context:  # type: ignore[attr-defined]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+================ 106 passed, 93 skipped, 26 warnings in 49.89s =================
+
+
+[2025-02-05 18:13:39] INFO - tester.py: 184
+
+[2025-02-05 18:13:39] ERROR - tester.py: 121
+
+Discarding invalid `error` count due to ValueError: invalid literal for int() with base 10: 'avoid'
+
+[2025-02-05 18:13:40] INFO - tester.py: 257
+
+{'total': 213, 'passed': 106, 'xpassed': 0, 'failed': 0, 'xfailed': 0, 'deselected': 0, 'skipped': 93, 'warning': 14, 'error': 0}
+
+[2025-02-05 18:13:40] INFO - tester.py: 436
+
+Number of test evals in current unit test: 213
+
+[2025-02-05 18:13:40] INFO - tester.py: 66
+
+Stopping and removing container 'xuehang_2_transformers_container_test_inference_no_head_Wed_Feb__5_18_12_34_2025'...
+
+Successfully removed container 'xuehang_2_transformers_container_test_inference_no_head_Wed_Feb__5_18_12_34_2025'
+
+[2025-02-05 18:13:40] INFO - handler.py: 66
 
 Folder /workspace/test_repo successfully copied to /shared/nas2/xuehangg/syncbench_build/code/caller16/test_repo/
 
-[2025-02-05 18:10:00] ERROR - tester.py: 95
+[2025-02-05 18:13:40] INFO - handler.py: 77
 
-Execution failed with error: Command '['docker', 'run', '--rm', '--name', 'xuehang_9_sympy_container__test_Greedy_preprocess__Wed_Feb__5_18_09_52_2025', '-v', '/shared/nas2/xuehangg/syncbench_build/code/caller9/test_repo/sympy/polys/tests/test_polyoptions.py:/workspace/test_repo/sympy/polys/tests/test_polyoptions.py', '-w', '/workspace/test_repo', 'xuehang/9_sympy:3.11', '/bin/bash', '-c', 'export PYTHONPATH=$PYTHONPATH:/workspace/test_repo && /workspace/test_venv/bin/python -m pip install -e . && /workspace/test_venv/bin/python -m pytest -v /workspace/test_repo/sympy/polys/tests/test_polyoptions.py  ']' returned non-zero exit status 1.
+Container xuehang_16_pillow_3.11__Wed__Feb____5__18_13_34__2025__test_repo__dockerhandler_attempt1 stopped and removed successfully.
 
-[2025-02-05 18:10:00] ERROR - tester.py: 96
+[2025-02-05 18:13:40] INFO - exetest.py: 210
 
-Error output:
+Repository cloned from docker image to `/shared/nas2/xuehangg/syncbench_build/code/caller16/test_repo/`
 
-[notice] A new release of pip is available: 24.2 -> 25.0
-[notice] To update, run: python -m pip install --upgrade pip
-/workspace/test_venv/lib/python3.11/site-packages/pytest_asyncio/plugin.py:208: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
-The event loop scope for asynchronous fixtures will default to the fixture caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to function scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+[2025-02-05 18:13:40] INFO - aligner.py: 85
 
-  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+Successfully found and replaced the code of function/method `_test_buffer_overflow` in the context_code.
+
+[2025-02-05 18:13:40] INFO - exetest.py: 291
+
+The path '/shared/nas2/xuehangg/syncbench_build/code/caller16/test_repo/Tests/test_file_pcx.py' already exists.
+
+[2025-02-05 18:13:40] INFO - caller_builder.py: 310
+
+Using docker image with ID: fc29e8ee0f09
+
+[2025-02-05 18:13:40] INFO - exetest.py: 199
+
+Repository already exists at `/shared/nas2/xuehangg/syncbench_build/code/caller16/test_repo/`.
+
+Skipping repo clone...
+
+[2025-02-05 18:13:40] INFO - aligner.py: 85
+
+Successfully found and replaced the code of function/method `_test_buffer_overflow` in the context_code.
+
+[2025-02-05 18:13:40] INFO - tester.py: 51
+
+Path already exists: /shared/nas2/xuehangg/syncbench_build/code/caller16/test_repo/Tests/test_file_pcx.py
+
+[2025-02-05 18:13:40] INFO - tester.py: 61
+
+Successfully saved aligned_code to '/shared/nas2/xuehangg/syncbench_build/code/caller16/test_repo/Tests/test_file_pcx.py'
+
+[2025-02-05 18:13:40] INFO - tester.py: 368
+
+Running unit test using file `/workspace/test_repo/Tests/test_file_pcx.py` in Docker container `xuehang_16_pillow_container___test_buffer_overflow__Wed_Feb__5_18_13_40_2025`...
+
+[2025-02-05 18:13:40] WARNING - callee_builder.py: 130
+
+Failed to remove directory `/shared/nas2/xuehangg/syncbench_build/code/callee16/16_pillow/.git`: [Errno 39] Directory not empty: '/shared/nas2/xuehangg/syncbench_build/code/callee16/16_pillow/.git'
+Attempting directory removal again...
+
+[2025-02-05 18:13:40] WARNING - callee_builder.py: 130
+
+Failed to remove directory `/shared/nas2/xuehangg/syncbench_build/code/callee16/16_pillow`: [Errno 39] Directory not empty: '/shared/nas2/xuehangg/syncbench_build/code/callee16/16_pillow'
+Attempting directory removal again...
+
+[2025-02-05 18:13:40] INFO - callee_builder.py: 134
+
+Successfully removed directory at '/shared/nas2/xuehangg/syncbench_build/code/callee16/'
+
+[2025-02-05 18:13:40] INFO - builder.py: 176
+
+Checking if Docker image 'xuehang/16_pillow' exists...
+
+Docker image 'xuehang/16_pillow' already exists with ID: fc29e8ee0f09
+
+[2025-02-05 18:13:40] INFO - handler.py: 30
+
+Successfiully created local path: `/shared/nas2/xuehangg/syncbench_build/code/callee16/test_repo/`
+
+[2025-02-05 18:13:41] INFO - handler.py: 42
+
+Container xuehang_16_pillow_3.11__Wed__Feb____5__18_13_40__2025__test_repo__dockerhandler_attempt1 started successfully.
+
+[2025-02-05 18:13:42] INFO - exetest.py: 155
+
+Successfully removed target directory at '/shared/nas2/xuehangg/syncbench_build/code/caller2/test_repo/'
+
+[2025-02-05 18:13:42] INFO - tester.py: 79
+
+Removing temporary directory used for repository at '/shared/nas2/xuehangg/syncbench_build/code/caller2/test_repo/'
+
+[2025-02-05 18:13:42] INFO - caller_builder.py: 490
+
+[Execution Test for 'original_code + new_context'] Passed
 
 
-[2025-02-05 18:10:00] ERROR - tester.py: 97
+[2025-02-05 18:13:42] INFO - caller_builder.py: 699
 
-Standard output:
+
+=========================  Function/method filtering 33/33: [test_modeling_roberta.py] -> [test_modeling_roberta.py] -> [test_inference_classification_head]  =========================
+
+[2025-02-05 18:13:42] WARNING - caller_builder.py: 392
+
+An error occurred when tracing commit history: /shared/nas2/xuehangg/syncbench_build/code/caller2/2_transformers
+Attemptaining again...
+
+[2025-02-05 18:13:42] INFO - builder.py: 176
+
+Checking if Docker image 'xuehang/2_transformers' exists...
+
+Docker image 'xuehang/2_transformers' already exists with ID: b91abec347fc
+
+[2025-02-05 18:13:42] INFO - exetest.py: 199
+
+Repository already exists at `/shared/nas2/xuehangg/syncbench_build/code/caller2/2_transformers/`.
+
+Removing existing repo and re-cloning...
+
+[2025-02-05 18:13:42] WARNING - exetest.py: 144
+
+Failed to remove file /shared/nas2/xuehangg/syncbench_build/code/caller2/2_transformers/.git/objects/pack/.nfs000000000c52a539000121ee: [Errno 16] Device or resource busy: '/shared/nas2/xuehangg/syncbench_build/code/caller2/2_transformers/.git/objects/pack/.nfs000000000c52a539000121ee'
+Attempting to remove file /shared/nas2/xuehangg/syncbench_build/code/caller2/2_transformers/.git/objects/pack/.nfs000000000c52a539000121ee again...
+
+[2025-02-05 18:13:42] WARNING - exetest.py: 144
+
+Failed to remove file /shared/nas2/xuehangg/syncbench_build/code/caller2/2_transformers/.git/objects/pack/.nfs000000000c52a4d9000121ed: [Errno 16] Device or resource busy: '/shared/nas2/xuehangg/syncbench_build/code/caller2/2_transformers/.git/objects/pack/.nfs000000000c52a4d9000121ed'
+Attempting to remove file /shared/nas2/xuehangg/syncbench_build/code/caller2/2_transformers/.git/objects/pack/.nfs000000000c52a4d9000121ed again...
+
+[2025-02-05 18:13:42] WARNING - exetest.py: 151
+
+Failed to remove directory /shared/nas2/xuehangg/syncbench_build/code/caller2/2_transformers/.git/objects/pack: [Errno 39] Directory not empty: '/shared/nas2/xuehangg/syncbench_build/code/caller2/2_transformers/.git/objects/pack'
+Attempting to remove directory /shared/nas2/xuehangg/syncbench_build/code/caller2/2_transformers/.git/objects/pack again...
+
+[2025-02-05 18:13:42] WARNING - exetest.py: 144
+
+Failed to remove file /shared/nas2/xuehangg/syncbench_build/code/caller2/2_transformers/.git/.nfs000000000c52a2dd000121ef: [Errno 16] Device or resource busy: '/shared/nas2/xuehangg/syncbench_build/code/caller2/2_transformers/.git/.nfs000000000c52a2dd000121ef'
+Attempting to remove file /shared/nas2/xuehangg/syncbench_build/code/caller2/2_transformers/.git/.nfs000000000c52a2dd000121ef again...
+
+[2025-02-05 18:13:42] WARNING - exetest.py: 151
+
+Failed to remove directory /shared/nas2/xuehangg/syncbench_build/code/caller2/2_transformers/.git/objects: [Errno 39] Directory not empty: '/shared/nas2/xuehangg/syncbench_build/code/caller2/2_transformers/.git/objects'
+Attempting to remove directory /shared/nas2/xuehangg/syncbench_build/code/caller2/2_transformers/.git/objects again...
+
+[2025-02-05 18:13:42] WARNING - exetest.py: 151
+
+Failed to remove directory /shared/nas2/xuehangg/syncbench_build/code/caller2/2_transformers/.git: [Errno 39] Directory not empty: '/shared/nas2/xuehangg/syncbench_build/code/caller2/2_transformers/.git'
+Attempting to remove directory /shared/nas2/xuehangg/syncbench_build/code/caller2/2_transformers/.git again...
+
+[2025-02-05 18:13:42] INFO - exetest.py: 155
+
+Successfully removed target directory at '/shared/nas2/xuehangg/syncbench_build/code/caller2/2_transformers/'
+
+[2025-02-05 18:13:42] INFO - handler.py: 22
+
+The local path '/shared/nas2/xuehangg/syncbench_build/code/caller2/2_transformers/' already exists.
+
+[2025-02-05 18:13:43] INFO - handler.py: 42
+
+Container xuehang_2_transformers_3.11__Wed__Feb____5__18_13_42__2025__test_repo__dockerhandler_attempt1 started successfully.
+
+[2025-02-05 18:13:45] INFO - tester.py: 92
+
+Execution succeeded!
+Container output: 
 Obtaining file:///workspace/test_repo
   Installing build dependencies: started
   Installing build dependencies: finished with status 'done'
@@ -65,8 +549,8 @@ Requirement already satisfied: mpmath>=1.1.0 in /workspace/test_venv/lib/python3
 Building wheels for collected packages: sympy
   Building editable for sympy (pyproject.toml): started
   Building editable for sympy (pyproject.toml): finished with status 'done'
-  Created wheel for sympy: filename=sympy-1.14.dev0-0.editable-py3-none-any.whl size=33243 sha256=e01a56afeba71034b0289623e2463ff1ce93254dfe27c3d412d5980b375b3f26
-  Stored in directory: /tmp/pip-ephem-wheel-cache-2w15qnng/wheels/77/6d/8d/6d288ec591919a528b58517c67f4d12e0e98d23d266200ee38
+  Created wheel for sympy: filename=sympy-1.14.dev0-0.editable-py3-none-any.whl size=33243 sha256=bbf47cafdd9cd76d25a527bc9271cec81a678b351e8f1190e754791280569043
+  Stored in directory: /tmp/pip-ephem-wheel-cache-iaetagtj/wheels/77/6d/8d/6d288ec591919a528b58517c67f4d12e0e98d23d266200ee38
 Successfully built sympy
 Installing collected packages: sympy
   Attempting uninstall: sympy
@@ -101,7 +585,7 @@ sympy/polys/tests/test_polyoptions.py::test_Order_preprocess PASSED      [ 21%]
 sympy/polys/tests/test_polyoptions.py::test_Order_postprocess PASSED     [ 23%]
 sympy/polys/tests/test_polyoptions.py::test_Field_preprocess PASSED      [ 26%]
 sympy/polys/tests/test_polyoptions.py::test_Field_postprocess PASSED     [ 28%]
-sympy/polys/tests/test_polyoptions.py::test_Greedy_preprocess FAILED     [ 30%]
+sympy/polys/tests/test_polyoptions.py::test_Greedy_preprocess PASSED     [ 30%]
 sympy/polys/tests/test_polyoptions.py::test_Greedy_postprocess PASSED    [ 32%]
 sympy/polys/tests/test_polyoptions.py::test_Domain_preprocess PASSED     [ 34%]
 sympy/polys/tests/test_polyoptions.py::test_Domain_postprocess PASSED    [ 36%]
@@ -135,97 +619,459 @@ sympy/polys/tests/test_polyoptions.py::test_Symbols_postprocess PASSED   [ 95%]
 sympy/polys/tests/test_polyoptions.py::test_Method_preprocess PASSED     [ 97%]
 sympy/polys/tests/test_polyoptions.py::test_Method_postprocess PASSED    [100%]
 
-=================================== FAILURES ===================================
-____________________________ test_Greedy_preprocess ____________________________
-
-    def test_Greedy_preprocess():
-        assert Greedy.preprocess(False) is False
-        assert Greedy.preprocess(True) is True
-    
-        assert Greedy.preprocess(0) is False
-        assert Greedy.preprocess(1) is True
-    
->       raises(OptionError, "Greedy.preprocess(x)")
-E       TypeError: 'Greedy.preprocess(x)' object (type: <class 'str'>) must be callable
-
-sympy/polys/tests/test_polyoptions.py:149: TypeError
-                                DO *NOT* COMMIT!                                
-=========================== short test summary info ============================
-FAILED sympy/polys/tests/test_polyoptions.py::test_Greedy_preprocess - TypeEr...
-========================= 1 failed, 45 passed in 0.45s =========================
+============================== 46 passed in 0.39s ==============================
 
 
-[2025-02-05 18:10:00] INFO - handler.py: 66
+[2025-02-05 18:13:45] INFO - tester.py: 257
 
-[2025-02-05 18:10:00] INFO - tester.py: 257
+{'total': 46, 'passed': 46, 'xpassed': 0, 'failed': 0, 'xfailed': 0, 'deselected': 0, 'skipped': 0, 'warning': 0, 'error': 0}
 
-Folder /workspace/test_repo successfully copied to /shared/nas2/xuehangg/syncbench_build/code/caller21/21_mlflow/
-
-{'total': 46, 'passed': 45, 'xpassed': 0, 'failed': 1, 'xfailed': 0, 'deselected': 0, 'skipped': 0, 'warning': 0, 'error': 0}
-
-[2025-02-05 18:10:00] INFO - tester.py: 436
+[2025-02-05 18:13:45] INFO - tester.py: 436
 
 Number of test evals in current unit test: 46
 
-[2025-02-05 18:10:00] INFO - tester.py: 66
+[2025-02-05 18:13:45] INFO - tester.py: 66
 
-Stopping and removing container 'xuehang_9_sympy_container__test_Greedy_preprocess__Wed_Feb__5_18_09_52_2025'...
+Stopping and removing container 'xuehang_9_sympy_container__test_Domain_postprocess__Wed_Feb__5_18_13_37_2025'...
 
-[2025-02-05 18:10:00] INFO - handler.py: 77
+Successfully removed container 'xuehang_9_sympy_container__test_Domain_postprocess__Wed_Feb__5_18_13_37_2025'
 
-Container xuehang_16_pillow_3.11__Wed__Feb____5__18_09_54__2025__test_repo__dockerhandler_attempt1 stopped and removed successfully.
+[2025-02-05 18:13:45] WARNING - tracer.py: 84
 
-[2025-02-05 18:10:00] INFO - exetest.py: 210
+Skipping commit due to parsing error: expected an indented block after 'else' statement on line 1219 (<unknown>, line 1222)
 
-Repository cloned from docker image to `/shared/nas2/xuehangg/syncbench_build/code/caller16/test_repo/`
+[2025-02-05 18:13:46] INFO - handler.py: 66
 
-[2025-02-05 18:10:00] INFO - aligner.py: 85
+Folder /workspace/test_repo successfully copied to /shared/nas2/xuehangg/syncbench_build/code/callee16/test_repo/
 
-Successfully found and replaced the code of function/method `test_1px_width` in the context_code.
+[2025-02-05 18:13:46] INFO - handler.py: 77
 
-[2025-02-05 18:10:00] INFO - handler.py: 77
+Container xuehang_16_pillow_3.11__Wed__Feb____5__18_13_40__2025__test_repo__dockerhandler_attempt1 stopped and removed successfully.
 
-Container xuehang_21_mlflow_3.11__Wed__Feb____5__18_09_42__2025__test_repo__dockerhandler_attempt1 stopped and removed successfully.
+[2025-02-05 18:13:46] INFO - exetest.py: 210
 
-[2025-02-05 18:10:00] INFO - exetest.py: 210
+Repository cloned from docker image to `/shared/nas2/xuehangg/syncbench_build/code/callee16/test_repo/`
 
-Repository cloned from docker image to `/shared/nas2/xuehangg/syncbench_build/code/caller21/21_mlflow/`
+[2025-02-05 18:13:46] INFO - aligner.py: 85
 
-Successfully removed container 'xuehang_9_sympy_container__test_Greedy_preprocess__Wed_Feb__5_18_09_52_2025'
+Successfully found and replaced the code of function/method `on_ci` in the context_code.
 
-[2025-02-05 18:10:00] INFO - exetest.py: 291
+[2025-02-05 18:13:46] INFO - exetest.py: 291
 
-The path '/shared/nas2/xuehangg/syncbench_build/code/caller16/test_repo/Tests/test_file_pcx.py' already exists.
+The path '/shared/nas2/xuehangg/syncbench_build/code/callee16/test_repo/Tests/helper.py' already exists.
 
-[2025-02-05 18:10:00] INFO - caller_builder.py: 310
+[2025-02-05 18:13:46] INFO - callee_builder.py: 305
 
 Using docker image with ID: fc29e8ee0f09
 
-[2025-02-05 18:10:00] INFO - exetest.py: 199
+[2025-02-05 18:13:46] INFO - exetest.py: 199
 
-Repository already exists at `/shared/nas2/xuehangg/syncbench_build/code/caller16/test_repo/`.
+Repository already exists at `/shared/nas2/xuehangg/syncbench_build/code/callee16/test_repo/`.
 
 Skipping repo clone...
 
-[2025-02-05 18:10:00] INFO - aligner.py: 85
+[2025-02-05 18:13:46] INFO - aligner.py: 85
 
-Successfully found and replaced the code of function/method `test_1px_width` in the context_code.
+Successfully found and replaced the code of function/method `on_ci` in the context_code.
+
+[2025-02-05 18:13:46] INFO - tester.py: 51
+
+Path already exists: /shared/nas2/xuehangg/syncbench_build/code/callee16/test_repo/Tests/helper.py
+
+[2025-02-05 18:13:46] INFO - tester.py: 61
+
+Successfully saved aligned_code to '/shared/nas2/xuehangg/syncbench_build/code/callee16/test_repo/Tests/helper.py'
+
+[2025-02-05 18:13:46] INFO - tester.py: 368
+
+Running unit test using file `/workspace/test_repo/Tests/test_imagefontpil.py` in Docker container `xuehang_16_pillow_container__on_ci__Wed_Feb__5_18_13_46_2025`...
+
+[2025-02-05 18:13:46] INFO - exetest.py: 155
+
+Successfully removed target directory at '/shared/nas2/xuehangg/syncbench_build/code/caller9/test_repo/'
+
+[2025-02-05 18:13:46] INFO - tester.py: 79
+
+Removing temporary directory used for repository at '/shared/nas2/xuehangg/syncbench_build/code/caller9/test_repo/'
+
+[2025-02-05 18:13:46] INFO - caller_builder.py: 476
+
+[Execution Test for 'gold_code + new_context'] Passed
+
+
+[2025-02-05 18:13:46] INFO - caller_builder.py: 302
+
+Preparing docker env for execution test...
+
+[2025-02-05 18:13:46] WARNING - caller_builder.py: 125
+
+Failed to remove file `/shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/.git/objects/pack/.nfs000000000c530cee00012209`: [Errno 16] Device or resource busy: '/shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/.git/objects/pack/.nfs000000000c530cee00012209'
+Attempting file removal again...
+
+[2025-02-05 18:13:46] WARNING - caller_builder.py: 125
+
+Failed to remove file `/shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/.git/objects/pack/.nfs000000000c530a190001220a`: [Errno 16] Device or resource busy: '/shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/.git/objects/pack/.nfs000000000c530a190001220a'
+Attempting file removal again...
+
+[2025-02-05 18:13:46] WARNING - caller_builder.py: 132
+
+Failed to remove directory `/shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/.git/objects/pack`: [Errno 39] Directory not empty: '/shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/.git/objects/pack'
+Attempting directory removal again...
+
+[2025-02-05 18:13:46] WARNING - caller_builder.py: 132
+
+Failed to remove directory `/shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/.git/objects`: [Errno 39] Directory not empty: '/shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/.git/objects'
+Attempting directory removal again...
+
+[2025-02-05 18:13:46] WARNING - caller_builder.py: 132
+
+Failed to remove directory `/shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/.git`: [Errno 39] Directory not empty: '/shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/.git'
+Attempting directory removal again...
+
+[2025-02-05 18:13:46] WARNING - caller_builder.py: 132
+
+Failed to remove directory `/shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy`: [Errno 39] Directory not empty: '/shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy'
+Attempting directory removal again...
+
+[2025-02-05 18:13:46] INFO - caller_builder.py: 136
+
+Successfully removed directory at '/shared/nas2/xuehangg/syncbench_build/code/caller9/'
+
+[2025-02-05 18:13:46] INFO - builder.py: 176
+
+Checking if Docker image 'xuehang/9_sympy' exists...
+
+Docker image 'xuehang/9_sympy' already exists with ID: 75594250eeb0
+
+[2025-02-05 18:13:46] INFO - handler.py: 30
+
+Successfiully created local path: `/shared/nas2/xuehangg/syncbench_build/code/caller9/test_repo/`
+
+[2025-02-05 18:13:47] INFO - handler.py: 42
+
+Container xuehang_9_sympy_3.11__Wed__Feb____5__18_13_46__2025__test_repo__dockerhandler_attempt1 started successfully.
+
+[2025-02-05 18:13:53] WARNING - tracer.py: 84
+
+Skipping commit due to parsing error: inconsistent use of tabs and spaces in indentation (<unknown>, line 176)
+
+[2025-02-05 18:13:53] WARNING - tracer.py: 84
+
+Skipping commit due to parsing error: inconsistent use of tabs and spaces in indentation (<unknown>, line 176)
+
+[2025-02-05 18:13:54] WARNING - tracer.py: 84
+
+Skipping commit due to parsing error: inconsistent use of tabs and spaces in indentation (<unknown>, line 176)
+
+[2025-02-05 18:13:54] WARNING - tracer.py: 84
+
+Skipping commit due to parsing error: inconsistent use of tabs and spaces in indentation (<unknown>, line 171)
+
+[2025-02-05 18:13:55] INFO - handler.py: 66
+
+Folder /workspace/test_repo successfully copied to /shared/nas2/xuehangg/syncbench_build/code/caller9/test_repo/
+
+[2025-02-05 18:13:55] WARNING - tracer.py: 84
+
+Skipping commit due to parsing error: inconsistent use of tabs and spaces in indentation (<unknown>, line 171)
+
+[2025-02-05 18:13:55] INFO - handler.py: 77
+
+Container xuehang_9_sympy_3.11__Wed__Feb____5__18_13_46__2025__test_repo__dockerhandler_attempt1 stopped and removed successfully.
+
+[2025-02-05 18:13:55] INFO - exetest.py: 210
+
+Repository cloned from docker image to `/shared/nas2/xuehangg/syncbench_build/code/caller9/test_repo/`
+
+[2025-02-05 18:13:55] INFO - aligner.py: 85
+
+Successfully found and replaced the code of function/method `test_Domain_postprocess` in the context_code.
+
+[2025-02-05 18:13:55] INFO - exetest.py: 291
+
+The path '/shared/nas2/xuehangg/syncbench_build/code/caller9/test_repo/sympy/polys/tests/test_polyoptions.py' already exists.
+
+[2025-02-05 18:13:55] INFO - caller_builder.py: 310
+
+Using docker image with ID: 75594250eeb0
+
+[2025-02-05 18:13:55] INFO - exetest.py: 199
+
+Repository already exists at `/shared/nas2/xuehangg/syncbench_build/code/caller9/test_repo/`.
+
+Skipping repo clone...
+
+[2025-02-05 18:13:55] INFO - aligner.py: 85
+
+Successfully found and replaced the code of function/method `test_Domain_postprocess` in the context_code.
+
+[2025-02-05 18:13:55] INFO - tester.py: 51
+
+Path already exists: /shared/nas2/xuehangg/syncbench_build/code/caller9/test_repo/sympy/polys/tests/test_polyoptions.py
+
+[2025-02-05 18:13:55] INFO - tester.py: 61
+
+Successfully saved aligned_code to '/shared/nas2/xuehangg/syncbench_build/code/caller9/test_repo/sympy/polys/tests/test_polyoptions.py'
+
+[2025-02-05 18:13:55] INFO - tester.py: 368
+
+Running unit test using file `/workspace/test_repo/sympy/polys/tests/test_polyoptions.py` in Docker container `xuehang_9_sympy_container__test_Domain_postprocess__Wed_Feb__5_18_13_55_2025`...
+
+[2025-02-05 18:13:55] WARNING - tracer.py: 84
+
+Skipping commit due to parsing error: inconsistent use of tabs and spaces in indentation (<unknown>, line 171)
+
+[2025-02-05 18:13:56] WARNING - tracer.py: 84
+
+Skipping commit due to parsing error: inconsistent use of tabs and spaces in indentation (<unknown>, line 171)
+
+[2025-02-05 18:13:56] INFO - handler.py: 66
+
+Folder /workspace/test_repo successfully copied to /shared/nas2/xuehangg/syncbench_build/code/caller2/2_transformers/
+
+[2025-02-05 18:13:56] INFO - handler.py: 77
+
+Container xuehang_2_transformers_3.11__Wed__Feb____5__18_13_42__2025__test_repo__dockerhandler_attempt1 stopped and removed successfully.
+
+[2025-02-05 18:13:56] INFO - exetest.py: 210
+
+Repository cloned from docker image to `/shared/nas2/xuehangg/syncbench_build/code/caller2/2_transformers/`
 
 Update: Commit tracing success!
 
-[2025-02-05 18:10:00] INFO - tester.py: 51
+[2025-02-05 18:13:56] WARNING - tracer.py: 84
 
-Path already exists: /shared/nas2/xuehangg/syncbench_build/code/caller16/test_repo/Tests/test_file_pcx.py
+Skipping commit due to parsing error: inconsistent use of tabs and spaces in indentation (<unknown>, line 171)
 
-[2025-02-05 18:10:00] INFO - tester.py: 61
+[2025-02-05 18:13:57] WARNING - tracer.py: 84
 
-Successfully saved aligned_code to '/shared/nas2/xuehangg/syncbench_build/code/caller16/test_repo/Tests/test_file_pcx.py'
+Skipping commit due to parsing error: inconsistent use of tabs and spaces in indentation (<unknown>, line 171)
 
-[2025-02-05 18:10:00] INFO - tester.py: 368
+[2025-02-05 18:13:58] WARNING - tracer.py: 84
 
-Running unit test using file `/workspace/test_repo/Tests/test_file_pcx.py` in Docker container `xuehang_16_pillow_container__test_1px_width__Wed_Feb__5_18_10_00_2025`...
+Skipping commit due to parsing error: inconsistent use of tabs and spaces in indentation (<unknown>, line 171)
 
-[2025-02-05 18:10:01] INFO - tester.py: 92
+[2025-02-05 18:14:00] WARNING - tracer.py: 84
+
+Skipping commit due to parsing error: unindent does not match any outer indentation level (<unknown>, line 552)
+
+[2025-02-05 18:14:02] ERROR - tester.py: 95
+
+Execution failed with error: Command '['docker', 'run', '--rm', '--name', 'xuehang_9_sympy_container__test_Domain_postprocess__Wed_Feb__5_18_13_55_2025', '-v', '/shared/nas2/xuehangg/syncbench_build/code/caller9/test_repo/sympy/polys/tests/test_polyoptions.py:/workspace/test_repo/sympy/polys/tests/test_polyoptions.py', '-w', '/workspace/test_repo', 'xuehang/9_sympy:3.11', '/bin/bash', '-c', 'export PYTHONPATH=$PYTHONPATH:/workspace/test_repo && /workspace/test_venv/bin/python -m pip install -e . && /workspace/test_venv/bin/python -m pytest -v /workspace/test_repo/sympy/polys/tests/test_polyoptions.py  ']' returned non-zero exit status 1.
+
+[2025-02-05 18:14:02] ERROR - tester.py: 96
+
+Error output:
+
+[notice] A new release of pip is available: 24.2 -> 25.0
+[notice] To update, run: python -m pip install --upgrade pip
+/workspace/test_venv/lib/python3.11/site-packages/pytest_asyncio/plugin.py:208: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+The event loop scope for asynchronous fixtures will default to the fixture caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to function scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+
+  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+
+
+[2025-02-05 18:14:02] ERROR - tester.py: 97
+
+Standard output:
+Obtaining file:///workspace/test_repo
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: mpmath>=1.1.0 in /workspace/test_venv/lib/python3.11/site-packages (from sympy==1.14.dev0) (1.3.0)
+Building wheels for collected packages: sympy
+  Building editable for sympy (pyproject.toml): started
+  Building editable for sympy (pyproject.toml): finished with status 'done'
+  Created wheel for sympy: filename=sympy-1.14.dev0-0.editable-py3-none-any.whl size=33243 sha256=574353133164beb69b2c30612e0cfcffd0a5977c47d3eb8f5324f6b255f93890
+  Stored in directory: /tmp/pip-ephem-wheel-cache-aajiifya/wheels/77/6d/8d/6d288ec591919a528b58517c67f4d12e0e98d23d266200ee38
+Successfully built sympy
+Installing collected packages: sympy
+  Attempting uninstall: sympy
+    Found existing installation: sympy 1.14.dev0
+    Not uninstalling sympy at /workspace/test_repo, outside environment /workspace/test_venv
+    Can't uninstall 'sympy'. No files were found to uninstall.
+Successfully installed sympy-1.14.dev0
+============================= test session starts ==============================
+platform linux -- Python 3.11.9, pytest-8.3.2, pluggy-1.5.0 -- /workspace/test_venv/bin/python
+cachedir: .pytest_cache
+hypothesis profile 'sympy_hypothesis_profile' -> deadline=None, database=DirectoryBasedExampleDatabase(PosixPath('/workspace/test_repo/.hypothesis/examples'))
+architecture: 64-bit
+cache:        yes
+ground types: python 
+
+rootdir: /workspace/test_repo
+configfile: pyproject.toml
+plugins: hypothesis-6.112.0, doctestplus-1.2.1, split-0.9.0, timeout-2.3.1, xdist-3.6.1, asyncio-0.24.0
+asyncio: mode=Mode.STRICT, default_loop_scope=None
+collecting ... collected 46 items
+
+sympy/polys/tests/test_polyoptions.py::test_Options_clone PASSED         [  2%]
+sympy/polys/tests/test_polyoptions.py::test_Expand_preprocess PASSED     [  4%]
+sympy/polys/tests/test_polyoptions.py::test_Expand_postprocess PASSED    [  6%]
+sympy/polys/tests/test_polyoptions.py::test_Gens_preprocess PASSED       [  8%]
+sympy/polys/tests/test_polyoptions.py::test_Gens_postprocess PASSED      [ 10%]
+sympy/polys/tests/test_polyoptions.py::test_Wrt_preprocess PASSED        [ 13%]
+sympy/polys/tests/test_polyoptions.py::test_Wrt_postprocess PASSED       [ 15%]
+sympy/polys/tests/test_polyoptions.py::test_Sort_preprocess PASSED       [ 17%]
+sympy/polys/tests/test_polyoptions.py::test_Sort_postprocess PASSED      [ 19%]
+sympy/polys/tests/test_polyoptions.py::test_Order_preprocess PASSED      [ 21%]
+sympy/polys/tests/test_polyoptions.py::test_Order_postprocess PASSED     [ 23%]
+sympy/polys/tests/test_polyoptions.py::test_Field_preprocess PASSED      [ 26%]
+sympy/polys/tests/test_polyoptions.py::test_Field_postprocess PASSED     [ 28%]
+sympy/polys/tests/test_polyoptions.py::test_Greedy_preprocess PASSED     [ 30%]
+sympy/polys/tests/test_polyoptions.py::test_Greedy_postprocess PASSED    [ 32%]
+sympy/polys/tests/test_polyoptions.py::test_Domain_preprocess PASSED     [ 34%]
+sympy/polys/tests/test_polyoptions.py::test_Domain_postprocess FAILED    [ 36%]
+sympy/polys/tests/test_polyoptions.py::test_Split_preprocess PASSED      [ 39%]
+sympy/polys/tests/test_polyoptions.py::test_Split_postprocess PASSED     [ 41%]
+sympy/polys/tests/test_polyoptions.py::test_Gaussian_preprocess PASSED   [ 43%]
+sympy/polys/tests/test_polyoptions.py::test_Gaussian_postprocess PASSED  [ 45%]
+sympy/polys/tests/test_polyoptions.py::test_Extension_preprocess PASSED  [ 47%]
+sympy/polys/tests/test_polyoptions.py::test_Extension_postprocess PASSED [ 50%]
+sympy/polys/tests/test_polyoptions.py::test_Modulus_preprocess PASSED    [ 52%]
+sympy/polys/tests/test_polyoptions.py::test_Modulus_postprocess PASSED   [ 54%]
+sympy/polys/tests/test_polyoptions.py::test_Symmetric_preprocess PASSED  [ 56%]
+sympy/polys/tests/test_polyoptions.py::test_Symmetric_postprocess PASSED [ 58%]
+sympy/polys/tests/test_polyoptions.py::test_Strict_preprocess PASSED     [ 60%]
+sympy/polys/tests/test_polyoptions.py::test_Strict_postprocess PASSED    [ 63%]
+sympy/polys/tests/test_polyoptions.py::test_Auto_preprocess PASSED       [ 65%]
+sympy/polys/tests/test_polyoptions.py::test_Auto_postprocess PASSED      [ 67%]
+sympy/polys/tests/test_polyoptions.py::test_Frac_preprocess PASSED       [ 69%]
+sympy/polys/tests/test_polyoptions.py::test_Frac_postprocess PASSED      [ 71%]
+sympy/polys/tests/test_polyoptions.py::test_Formal_preprocess PASSED     [ 73%]
+sympy/polys/tests/test_polyoptions.py::test_Formal_postprocess PASSED    [ 76%]
+sympy/polys/tests/test_polyoptions.py::test_Polys_preprocess PASSED      [ 78%]
+sympy/polys/tests/test_polyoptions.py::test_Polys_postprocess PASSED     [ 80%]
+sympy/polys/tests/test_polyoptions.py::test_Include_preprocess PASSED    [ 82%]
+sympy/polys/tests/test_polyoptions.py::test_Include_postprocess PASSED   [ 84%]
+sympy/polys/tests/test_polyoptions.py::test_All_preprocess PASSED        [ 86%]
+sympy/polys/tests/test_polyoptions.py::test_All_postprocess PASSED       [ 89%]
+sympy/polys/tests/test_polyoptions.py::test_Gen_postprocess PASSED       [ 91%]
+sympy/polys/tests/test_polyoptions.py::test_Symbols_preprocess PASSED    [ 93%]
+sympy/polys/tests/test_polyoptions.py::test_Symbols_postprocess PASSED   [ 95%]
+sympy/polys/tests/test_polyoptions.py::test_Method_preprocess PASSED     [ 97%]
+sympy/polys/tests/test_polyoptions.py::test_Method_postprocess PASSED    [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_Domain_postprocess ____________________________
+
+    def test_Domain_postprocess():
+>       raises(GeneratorsError,
+               "Domain.postprocess({'gens': (x, y), 'domain': ZZ[y, z]})")
+E       TypeError: "Domain.postprocess({'gens': (x, y), 'domain': ZZ[y, z]})" object (type: <class 'str'>) must be callable
+
+sympy/polys/tests/test_polyoptions.py:224: TypeError
+                                DO *NOT* COMMIT!                                
+=========================== short test summary info ============================
+FAILED sympy/polys/tests/test_polyoptions.py::test_Domain_postprocess - TypeE...
+========================= 1 failed, 45 passed in 0.46s =========================
+
+
+[2025-02-05 18:14:02] INFO - tester.py: 257
+
+{'total': 46, 'passed': 45, 'xpassed': 0, 'failed': 1, 'xfailed': 0, 'deselected': 0, 'skipped': 0, 'warning': 0, 'error': 0}
+
+[2025-02-05 18:14:02] INFO - tester.py: 436
+
+Number of test evals in current unit test: 46
+
+[2025-02-05 18:14:02] INFO - tester.py: 66
+
+Stopping and removing container 'xuehang_9_sympy_container__test_Domain_postprocess__Wed_Feb__5_18_13_55_2025'...
+
+Successfully removed container 'xuehang_9_sympy_container__test_Domain_postprocess__Wed_Feb__5_18_13_55_2025'
+
+[2025-02-05 18:14:03] INFO - exetest.py: 155
+
+Successfully removed target directory at '/shared/nas2/xuehangg/syncbench_build/code/caller9/test_repo/'
+
+[2025-02-05 18:14:03] INFO - tester.py: 79
+
+Removing temporary directory used for repository at '/shared/nas2/xuehangg/syncbench_build/code/caller9/test_repo/'
+
+[2025-02-05 18:14:03] INFO - caller_builder.py: 490
+
+[Execution Test for 'original_code + new_context'] Failed
+
+
+[2025-02-05 18:14:03] INFO - caller_builder.py: 699
+
+[2025-02-05 18:14:03] INFO - caller_builder.py: 548
+
+[Valid test 438/438] Current commit(38ec67fc517e33af110de4cb7b9c3b0b18ea0f88) has been successfully recorded.
+
+[2025-02-05 18:14:04] INFO - caller_builder.py: 276
+
+Successfully saved data to '/shared/nas2/xuehangg/syncbench_build/dataset/caller_9_sympy.json
+
+Current progress successfully saved to '/shared/nas2/xuehangg/syncbench_build/dataset/caller_9_sympy.json'
+
+
+[2025-02-05 18:14:04] INFO - caller_builder.py: 699
+
+
+=========================  Function/method filtering 18/46: [test_polyoptions.py] -> [test_polyoptions.py] -> [test_Split_preprocess]  =========================
+
+[2025-02-05 18:14:04] WARNING - caller_builder.py: 392
+
+An error occurred when tracing commit history: /shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy
+Attemptaining again...
+
+[2025-02-05 18:14:04] INFO - builder.py: 176
+
+Checking if Docker image 'xuehang/9_sympy' exists...
+
+Docker image 'xuehang/9_sympy' already exists with ID: 75594250eeb0
+
+[2025-02-05 18:14:04] INFO - exetest.py: 199
+
+Repository already exists at `/shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/`.
+
+Removing existing repo and re-cloning...
+
+[2025-02-05 18:14:04] WARNING - exetest.py: 144
+
+Failed to remove file /shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/.git/objects/pack/.nfs000000000c530cee00012209: [Errno 16] Device or resource busy: '/shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/.git/objects/pack/.nfs000000000c530cee00012209'
+Attempting to remove file /shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/.git/objects/pack/.nfs000000000c530cee00012209 again...
+
+[2025-02-05 18:14:04] WARNING - exetest.py: 144
+
+Failed to remove file /shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/.git/objects/pack/.nfs000000000c530a190001220a: [Errno 16] Device or resource busy: '/shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/.git/objects/pack/.nfs000000000c530a190001220a'
+Attempting to remove file /shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/.git/objects/pack/.nfs000000000c530a190001220a again...
+
+[2025-02-05 18:14:04] WARNING - exetest.py: 151
+
+Failed to remove directory /shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/.git/objects/pack: [Errno 39] Directory not empty: '/shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/.git/objects/pack'
+Attempting to remove directory /shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/.git/objects/pack again...
+
+[2025-02-05 18:14:04] WARNING - exetest.py: 151
+
+Failed to remove directory /shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/.git/objects: [Errno 39] Directory not empty: '/shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/.git/objects'
+Attempting to remove directory /shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/.git/objects again...
+
+[2025-02-05 18:14:04] WARNING - exetest.py: 151
+
+Failed to remove directory /shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/.git: [Errno 39] Directory not empty: '/shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/.git'
+Attempting to remove directory /shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/.git again...
+
+[2025-02-05 18:14:04] INFO - exetest.py: 155
+
+Successfully removed target directory at '/shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/'
+
+[2025-02-05 18:14:04] INFO - handler.py: 22
+
+The local path '/shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/' already exists.
+
+[2025-02-05 18:14:04] INFO - handler.py: 42
+
+Container xuehang_9_sympy_3.11__Wed__Feb____5__18_14_04__2025__test_repo__dockerhandler_attempt1 started successfully.
+
+[2025-02-05 18:14:07] INFO - tester.py: 92
 
 Execution succeeded!
 Container output: 
@@ -238,292 +1084,219 @@ Obtaining file:///workspace/test_repo
   Getting requirements to build editable: finished with status 'done'
   Preparing editable metadata (pyproject.toml): started
   Preparing editable metadata (pyproject.toml): finished with status 'done'
-Requirement already satisfied: iniconfig in /workspace/test_venv/lib/python3.11/site-packages (from pytest==8.4.0.dev64+g72c682ff9.d20250206) (2.0.0)
-Requirement already satisfied: packaging in /workspace/test_venv/lib/python3.11/site-packages (from pytest==8.4.0.dev64+g72c682ff9.d20250206) (24.1)
-Requirement already satisfied: pluggy<2,>=1.5 in /workspace/test_venv/lib/python3.11/site-packages (from pytest==8.4.0.dev64+g72c682ff9.d20250206) (1.5.0)
-Building wheels for collected packages: pytest
-  Building editable for pytest (pyproject.toml): started
-  Building editable for pytest (pyproject.toml): finished with status 'done'
-  Created wheel for pytest: filename=pytest-8.4.0.dev64+g72c682ff9.d20250206-0.editable-py3-none-any.whl size=9450 sha256=e5a7a97d4edb5ca62169f3d45201369069a21811391debafb78fdd5d42f97638
-  Stored in directory: /tmp/pip-ephem-wheel-cache-au2poecz/wheels/77/6d/8d/6d288ec591919a528b58517c67f4d12e0e98d23d266200ee38
-Successfully built pytest
-Installing collected packages: pytest
-  Attempting uninstall: pytest
-    Found existing installation: pytest 8.4.0.dev64+g72c682ff9
-    Uninstalling pytest-8.4.0.dev64+g72c682ff9:
-      Successfully uninstalled pytest-8.4.0.dev64+g72c682ff9
-Successfully installed pytest-8.4.0.dev64+g72c682ff9.d20250206
-============================= test session starts ==============================
-platform linux -- Python 3.11.9, pytest-8.4.0.dev64+g72c682ff9.d20250206, pluggy-1.5.0 -- /workspace/test_venv/bin/python
+Building wheels for collected packages: pillow
+  Building editable for pillow (pyproject.toml): started
+  Building editable for pillow (pyproject.toml): finished with status 'done'
+  Created wheel for pillow: filename=pillow-11.0.0.dev0-0.editable-cp311-cp311-linux_x86_64.whl size=4639 sha256=3725c74e573bb372efcdad6d304f1da5464aa540b0034d527c9b667d12278ae6
+  Stored in directory: /tmp/pip-ephem-wheel-cache-gxb1twdf/wheels/77/6d/8d/6d288ec591919a528b58517c67f4d12e0e98d23d266200ee38
+Successfully built pillow
+Installing collected packages: pillow
+  Attempting uninstall: pillow
+    Found existing installation: pillow 11.0.0.dev0
+    Uninstalling pillow-11.0.0.dev0:
+      Successfully uninstalled pillow-11.0.0.dev0
+Successfully installed pillow-11.0.0.dev0
+[1m============================= test session starts ==============================[0m
+platform linux -- Python 3.11.9, pytest-8.3.2, pluggy-1.5.0 -- /workspace/test_venv/bin/python
 cachedir: .pytest_cache
+--------------------------------------------------------------------
+Pillow 11.0.0.dev0
+Python 3.11.9 (main, Sep  5 2024, 00:16:19) [GCC 12.2.0]
+--------------------------------------------------------------------
+Python executable is /workspace/test_venv/bin/python
+Environment Python files loaded from /workspace/test_venv
+System Python files loaded from /usr/local
+--------------------------------------------------------------------
+Python Pillow modules loaded from /workspace/test_repo/src/PIL
+Binary Pillow modules loaded from /workspace/test_repo/src/PIL
+--------------------------------------------------------------------
+--- PIL CORE support ok, compiled for 11.0.0.dev0
+--- TKINTER support ok, loaded 8.6
+--- FREETYPE2 support ok, loaded 2.12.1
+--- LITTLECMS2 support ok, loaded 2.14
+--- WEBP support ok, loaded 1.2.4
+--- JPEG support ok, compiled for libjpeg-turbo 2.1.5
+--- OPENJPEG (JPEG2000) support ok, loaded 2.5.0
+--- ZLIB (PNG/ZIP) support ok, loaded 1.2.13
+--- LIBTIFF support ok, loaded 4.5.0
+*** RAQM (Bidirectional Text) support not installed
+*** LIBIMAGEQUANT (Quantization method) support not installed
+--- XCB (X protocol) support ok
+--------------------------------------------------------------------
+
 rootdir: /workspace/test_repo
 configfile: pyproject.toml
 plugins: asyncio-0.24.0
 asyncio: mode=Mode.STRICT, default_loop_scope=None
-collecting ... collected 6 items
+[1mcollecting ... [0mcollected 16 items
 
-testing/test_python_path.py::test_one_dir PASSED                         [ 16%]
-testing/test_python_path.py::test_two_dirs PASSED                        [ 33%]
-testing/test_python_path.py::test_local_plugin PASSED                    [ 50%]
-testing/test_python_path.py::test_module_not_found PASSED                [ 66%]
-testing/test_python_path.py::test_no_ini PASSED                          [ 83%]
-testing/test_python_path.py::test_clean_up PASSED                        [100%]
+Tests/test_file_pcx.py::test_sanity [32mPASSED[0m[32m                               [  6%][0m
+Tests/test_file_pcx.py::test_invalid_file [32mPASSED[0m[32m                         [ 12%][0m
+Tests/test_file_pcx.py::test_odd[1] [32mPASSED[0m[32m                               [ 18%][0m
+Tests/test_file_pcx.py::test_odd[L] [32mPASSED[0m[32m                               [ 25%][0m
+Tests/test_file_pcx.py::test_odd[P] [32mPASSED[0m[32m                               [ 31%][0m
+Tests/test_file_pcx.py::test_odd[RGB] [32mPASSED[0m[32m                             [ 37%][0m
+Tests/test_file_pcx.py::test_odd_read [32mPASSED[0m[32m                             [ 43%][0m
+Tests/test_file_pcx.py::test_pil184 [32mPASSED[0m[32m                               [ 50%][0m
+Tests/test_file_pcx.py::test_1px_width [32mPASSED[0m[32m                            [ 56%][0m
+Tests/test_file_pcx.py::test_large_count [32mPASSED[0m[32m                          [ 62%][0m
+Tests/test_file_pcx.py::test_break_in_count_overflow [32mPASSED[0m[32m              [ 68%][0m
+Tests/test_file_pcx.py::test_break_one_in_loop [32mPASSED[0m[32m                    [ 75%][0m
+Tests/test_file_pcx.py::test_break_many_in_loop [32mPASSED[0m[32m                   [ 81%][0m
+Tests/test_file_pcx.py::test_break_one_at_end [32mPASSED[0m[32m                     [ 87%][0m
+Tests/test_file_pcx.py::test_break_many_at_end [32mPASSED[0m[32m                    [ 93%][0m
+Tests/test_file_pcx.py::test_break_padding [32mPASSED[0m[32m                        [100%][0m
 
-============================== 6 passed in 0.34s ===============================
-
-
-[2025-02-05 18:10:01] INFO - tester.py: 257
-
-{'total': 6, 'passed': 6, 'xpassed': 0, 'failed': 0, 'xfailed': 0, 'deselected': 0, 'skipped': 0, 'warning': 0, 'error': 0}
-
-[2025-02-05 18:10:01] INFO - tester.py: 436
-
-Number of test evals in current unit test: 6
-
-[2025-02-05 18:10:01] INFO - tester.py: 66
-
-Stopping and removing container 'xuehang_7_pytest_container_get_public_names_Wed_Feb__5_18_09_56_2025'...
-
-Successfully removed container 'xuehang_7_pytest_container_get_public_names_Wed_Feb__5_18_09_56_2025'
-
-[2025-02-05 18:10:01] INFO - exetest.py: 155
-
-Successfully removed target directory at '/shared/nas2/xuehangg/syncbench_build/code/caller9/test_repo/'
-
-[2025-02-05 18:10:01] INFO - tester.py: 79
-
-Removing temporary directory used for repository at '/shared/nas2/xuehangg/syncbench_build/code/caller9/test_repo/'
-
-[2025-02-05 18:10:01] INFO - caller_builder.py: 490
-
-[Execution Test for 'original_code + new_context'] Failed
+[32m============================== [32m[1m16 passed[0m[32m in 0.29s[0m[32m ==============================[0m
 
 
-[2025-02-05 18:10:01] INFO - caller_builder.py: 699
+[2025-02-05 18:14:07] INFO - tester.py: 168
 
-[2025-02-05 18:10:01] INFO - caller_builder.py: 548
+[2025-02-05 18:14:07] INFO - tester.py: 257
 
-[Valid test 436/436] Current commit(38ec67fc517e33af110de4cb7b9c3b0b18ea0f88) has been successfully recorded.
+{'total': 16, 'passed': 16, 'xpassed': 0, 'failed': 0, 'xfailed': 0, 'deselected': 0, 'skipped': 0, 'warning': 0, 'error': 0}
 
-[2025-02-05 18:10:02] INFO - exetest.py: 155
+[2025-02-05 18:14:07] INFO - tester.py: 436
 
-Successfully removed target directory at '/shared/nas2/xuehangg/syncbench_build/code/callee7/test_repo/'
+Number of test evals in current unit test: 16
 
-[2025-02-05 18:10:02] INFO - tester.py: 79
+[2025-02-05 18:14:07] INFO - tester.py: 66
 
-Removing temporary directory used for repository at '/shared/nas2/xuehangg/syncbench_build/code/callee7/test_repo/'
+Stopping and removing container 'xuehang_16_pillow_container___test_buffer_overflow__Wed_Feb__5_18_13_40_2025'...
 
-[2025-02-05 18:10:02] INFO - callee_builder.py: 480
+Successfully removed container 'xuehang_16_pillow_container___test_buffer_overflow__Wed_Feb__5_18_13_40_2025'
+
+[2025-02-05 18:14:07] WARNING - tracer.py: 84
+
+Skipping commit due to parsing error: inconsistent use of tabs and spaces in indentation (<unknown>, line 613)
+
+[2025-02-05 18:14:07] INFO - exetest.py: 155
+
+Successfully removed target directory at `/shared/nas2/xuehangg/syncbench_build/code/caller16/test_repo/`
+
+[2025-02-05 18:14:07] INFO - tester.py: 79
+
+Removing temporary directory used for repository at '/shared/nas2/xuehangg/syncbench_build/code/caller16/test_repo/'
+
+[2025-02-05 18:14:07] INFO - caller_builder.py: 472
 
 [Execution Test for 'gold_code + new_context'] Passed
 
 
-[2025-02-05 18:10:02] INFO - callee_builder.py: 297
+[2025-02-05 18:14:07] INFO - caller_builder.py: 302
 
 Preparing docker env for execution test...
 
-[2025-02-05 18:10:02] WARNING - callee_builder.py: 123
+[2025-02-05 18:14:07] WARNING - caller_builder.py: 125
 
-Failed to remove file `/shared/nas2/xuehangg/syncbench_build/code/callee7/7_pytest/.git/objects/pack/.nfs000000000c5282bf000121e7`: [Errno 16] Device or resource busy: '/shared/nas2/xuehangg/syncbench_build/code/callee7/7_pytest/.git/objects/pack/.nfs000000000c5282bf000121e7'
+Failed to remove file `/shared/nas2/xuehangg/syncbench_build/code/caller16/16_pillow/.git/objects/pack/.nfs000000000c4bf5f30001220b`: [Errno 16] Device or resource busy: '/shared/nas2/xuehangg/syncbench_build/code/caller16/16_pillow/.git/objects/pack/.nfs000000000c4bf5f30001220b'
 Attempting file removal again...
 
-[2025-02-05 18:10:02] WARNING - callee_builder.py: 123
+[2025-02-05 18:14:07] WARNING - caller_builder.py: 125
 
-Failed to remove file `/shared/nas2/xuehangg/syncbench_build/code/callee7/7_pytest/.git/objects/pack/.nfs000000000c52912b000121e8`: [Errno 16] Device or resource busy: '/shared/nas2/xuehangg/syncbench_build/code/callee7/7_pytest/.git/objects/pack/.nfs000000000c52912b000121e8'
+Failed to remove file `/shared/nas2/xuehangg/syncbench_build/code/caller16/16_pillow/.git/objects/pack/.nfs000000000c4e17390001220c`: [Errno 16] Device or resource busy: '/shared/nas2/xuehangg/syncbench_build/code/caller16/16_pillow/.git/objects/pack/.nfs000000000c4e17390001220c'
 Attempting file removal again...
 
-[2025-02-05 18:10:02] WARNING - callee_builder.py: 130
+[2025-02-05 18:14:07] WARNING - caller_builder.py: 132
+
+Failed to remove directory `/shared/nas2/xuehangg/syncbench_build/code/caller16/16_pillow/.git/objects/pack`: [Errno 39] Directory not empty: '/shared/nas2/xuehangg/syncbench_build/code/caller16/16_pillow/.git/objects/pack'
+Attempting directory removal again...
+
+[2025-02-05 18:14:07] WARNING - caller_builder.py: 132
+
+Failed to remove directory `/shared/nas2/xuehangg/syncbench_build/code/caller16/16_pillow/.git/objects`: [Errno 39] Directory not empty: '/shared/nas2/xuehangg/syncbench_build/code/caller16/16_pillow/.git/objects'
+Attempting directory removal again...
+
+[2025-02-05 18:14:07] WARNING - caller_builder.py: 132
+
+Failed to remove directory `/shared/nas2/xuehangg/syncbench_build/code/caller16/16_pillow/.git`: [Errno 39] Directory not empty: '/shared/nas2/xuehangg/syncbench_build/code/caller16/16_pillow/.git'
+Attempting directory removal again...
+
+[2025-02-05 18:14:07] WARNING - caller_builder.py: 132
+
+Failed to remove directory `/shared/nas2/xuehangg/syncbench_build/code/caller16/16_pillow`: [Errno 39] Directory not empty: '/shared/nas2/xuehangg/syncbench_build/code/caller16/16_pillow'
+Attempting directory removal again...
+
+[2025-02-05 18:14:07] INFO - caller_builder.py: 136
+
+Successfully removed directory at '/shared/nas2/xuehangg/syncbench_build/code/caller16/'
+
+[2025-02-05 18:14:07] INFO - builder.py: 176
+
+Checking if Docker image 'xuehang/16_pillow' exists...
+
+Docker image 'xuehang/16_pillow' already exists with ID: fc29e8ee0f09
+
+[2025-02-05 18:14:07] INFO - handler.py: 30
+
+Successfiully created local path: `/shared/nas2/xuehangg/syncbench_build/code/caller16/test_repo/`
+
+[2025-02-05 18:14:08] WARNING - tracer.py: 84
+
+Skipping commit due to parsing error: inconsistent use of tabs and spaces in indentation (<unknown>, line 612)
+
+[2025-02-05 18:14:08] INFO - handler.py: 42
+
+Container xuehang_16_pillow_3.11__Wed__Feb____5__18_14_07__2025__test_repo__dockerhandler_attempt1 started successfully.
+
+[2025-02-05 18:14:08] WARNING - tracer.py: 84
+
+Skipping commit due to parsing error: inconsistent use of tabs and spaces in indentation (<unknown>, line 612)
+
+[2025-02-05 18:14:09] WARNING - tracer.py: 84
+
+Skipping commit due to parsing error: inconsistent use of tabs and spaces in indentation (<unknown>, line 612)
+
+[2025-02-05 18:14:09] WARNING - tracer.py: 84
+
+Skipping commit due to parsing error: inconsistent use of tabs and spaces in indentation (<unknown>, line 612)
+
+[2025-02-05 18:14:09] INFO - callee_builder.py: 297
+
+Preparing docker env for execution test...
+
+[2025-02-05 18:14:09] WARNING - callee_builder.py: 130
 
 Failed to remove directory `/shared/nas2/xuehangg/syncbench_build/code/callee7/7_pytest/.git/objects/pack`: [Errno 39] Directory not empty: '/shared/nas2/xuehangg/syncbench_build/code/callee7/7_pytest/.git/objects/pack'
 Attempting directory removal again...
 
-[2025-02-05 18:10:02] WARNING - callee_builder.py: 130
+[2025-02-05 18:14:09] WARNING - callee_builder.py: 130
 
 Failed to remove directory `/shared/nas2/xuehangg/syncbench_build/code/callee7/7_pytest/.git/objects`: [Errno 39] Directory not empty: '/shared/nas2/xuehangg/syncbench_build/code/callee7/7_pytest/.git/objects'
 Attempting directory removal again...
 
-[2025-02-05 18:10:02] WARNING - callee_builder.py: 130
+[2025-02-05 18:14:10] WARNING - tracer.py: 84
+
+Skipping commit due to parsing error: inconsistent use of tabs and spaces in indentation (<unknown>, line 612)
+
+[2025-02-05 18:14:10] WARNING - callee_builder.py: 130
 
 Failed to remove directory `/shared/nas2/xuehangg/syncbench_build/code/callee7/7_pytest/.git`: [Errno 39] Directory not empty: '/shared/nas2/xuehangg/syncbench_build/code/callee7/7_pytest/.git'
 Attempting directory removal again...
 
-[2025-02-05 18:10:02] WARNING - callee_builder.py: 130
+[2025-02-05 18:14:10] WARNING - callee_builder.py: 130
 
 Failed to remove directory `/shared/nas2/xuehangg/syncbench_build/code/callee7/7_pytest`: [Errno 39] Directory not empty: '/shared/nas2/xuehangg/syncbench_build/code/callee7/7_pytest'
 Attempting directory removal again...
 
-[2025-02-05 18:10:02] INFO - callee_builder.py: 134
+[2025-02-05 18:14:10] INFO - callee_builder.py: 134
 
 Successfully removed directory at '/shared/nas2/xuehangg/syncbench_build/code/callee7/'
 
-[2025-02-05 18:10:02] INFO - builder.py: 176
+[2025-02-05 18:14:10] INFO - builder.py: 176
 
 Checking if Docker image 'xuehang/7_pytest' exists...
 
 Docker image 'xuehang/7_pytest' already exists with ID: 2ad0b81aebdc
 
-[2025-02-05 18:10:02] INFO - handler.py: 30
+[2025-02-05 18:14:10] INFO - handler.py: 30
 
 Successfiully created local path: `/shared/nas2/xuehangg/syncbench_build/code/callee7/test_repo/`
 
-[2025-02-05 18:10:02] INFO - caller_builder.py: 276
+[2025-02-05 18:14:11] INFO - handler.py: 42
 
-Successfully saved data to '/shared/nas2/xuehangg/syncbench_build/dataset/caller_9_sympy.json
+Container xuehang_7_pytest_3.11__Wed__Feb____5__18_14_10__2025__test_repo__dockerhandler_attempt1 started successfully.
 
-Current progress successfully saved to '/shared/nas2/xuehangg/syncbench_build/dataset/caller_9_sympy.json'
+[2025-02-05 18:14:11] WARNING - tracer.py: 84
 
-
-[2025-02-05 18:10:02] INFO - caller_builder.py: 699
-
-
-=========================  Function/method filtering 15/46: [test_polyoptions.py] -> [test_polyoptions.py] -> [test_Greedy_postprocess]  =========================
-
-[2025-02-05 18:10:02] WARNING - caller_builder.py: 392
-
-An error occurred when tracing commit history: /shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy
-Attemptaining again...
-
-[2025-02-05 18:10:02] INFO - builder.py: 176
-
-Checking if Docker image 'xuehang/9_sympy' exists...
-
-Docker image 'xuehang/9_sympy' already exists with ID: 75594250eeb0
-
-[2025-02-05 18:10:02] INFO - exetest.py: 199
-
-Repository already exists at `/shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/`.
-
-Removing existing repo and re-cloning...
-
-[2025-02-05 18:10:02] WARNING - exetest.py: 144
-
-Failed to remove file /shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/.git/objects/pack/.nfs000000000c5201e4000121e3: [Errno 16] Device or resource busy: '/shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/.git/objects/pack/.nfs000000000c5201e4000121e3'
-Attempting to remove file /shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/.git/objects/pack/.nfs000000000c5201e4000121e3 again...
-
-[2025-02-05 18:10:02] WARNING - exetest.py: 144
-
-Failed to remove file /shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/.git/objects/pack/.nfs000000000c52202d000121e2: [Errno 16] Device or resource busy: '/shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/.git/objects/pack/.nfs000000000c52202d000121e2'
-Attempting to remove file /shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/.git/objects/pack/.nfs000000000c52202d000121e2 again...
-
-[2025-02-05 18:10:02] WARNING - exetest.py: 151
-
-Failed to remove directory /shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/.git/objects/pack: [Errno 39] Directory not empty: '/shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/.git/objects/pack'
-Attempting to remove directory /shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/.git/objects/pack again...
-
-[2025-02-05 18:10:02] WARNING - exetest.py: 151
-
-Failed to remove directory /shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/.git/objects: [Errno 39] Directory not empty: '/shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/.git/objects'
-Attempting to remove directory /shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/.git/objects again...
-
-[2025-02-05 18:10:02] WARNING - exetest.py: 151
-
-Failed to remove directory /shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/.git: [Errno 39] Directory not empty: '/shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/.git'
-Attempting to remove directory /shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/.git again...
-
-[2025-02-05 18:10:02] INFO - exetest.py: 155
-
-Successfully removed target directory at '/shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/'
-
-[2025-02-05 18:10:02] INFO - handler.py: 22
-
-The local path '/shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/' already exists.
-
-[2025-02-05 18:10:02] INFO - handler.py: 42
-
-Container xuehang_7_pytest_3.11__Wed__Feb____5__18_10_02__2025__test_repo__dockerhandler_attempt1 started successfully.
-
-[2025-02-05 18:10:02] INFO - handler.py: 42
-
-Container xuehang_9_sympy_3.11__Wed__Feb____5__18_10_02__2025__test_repo__dockerhandler_attempt1 started successfully.
-
-[2025-02-05 18:10:05] INFO - handler.py: 66
-
-Folder /workspace/test_repo successfully copied to /shared/nas2/xuehangg/syncbench_build/code/callee7/test_repo/
-
-[2025-02-05 18:10:05] INFO - handler.py: 77
-
-Container xuehang_7_pytest_3.11__Wed__Feb____5__18_10_02__2025__test_repo__dockerhandler_attempt1 stopped and removed successfully.
-
-[2025-02-05 18:10:05] INFO - exetest.py: 210
-
-Repository cloned from docker image to `/shared/nas2/xuehangg/syncbench_build/code/callee7/test_repo/`
-
-[2025-02-05 18:10:05] INFO - aligner.py: 85
-
-Successfully found and replaced the code of function/method `get_public_names` in the context_code.
-
-[2025-02-05 18:10:05] INFO - exetest.py: 291
-
-The path '/shared/nas2/xuehangg/syncbench_build/code/callee7/test_repo/src/_pytest/pytester.py' already exists.
-
-[2025-02-05 18:10:05] INFO - callee_builder.py: 305
-
-Using docker image with ID: 2ad0b81aebdc
-
-[2025-02-05 18:10:05] INFO - exetest.py: 199
-
-Repository already exists at `/shared/nas2/xuehangg/syncbench_build/code/callee7/test_repo/`.
-
-Skipping repo clone...
-
-[2025-02-05 18:10:05] INFO - aligner.py: 85
-
-Successfully found and replaced the code of function/method `get_public_names` in the context_code.
-
-[2025-02-05 18:10:05] INFO - tester.py: 51
-
-Path already exists: /shared/nas2/xuehangg/syncbench_build/code/callee7/test_repo/src/_pytest/pytester.py
-
-[2025-02-05 18:10:05] INFO - tester.py: 61
-
-Successfully saved aligned_code to '/shared/nas2/xuehangg/syncbench_build/code/callee7/test_repo/src/_pytest/pytester.py'
-
-[2025-02-05 18:10:05] INFO - tester.py: 368
-
-Running unit test using file `/workspace/test_repo/testing/test_python_path.py` in Docker container `xuehang_7_pytest_container_get_public_names_Wed_Feb__5_18_10_05_2025`...
-
-[2025-02-05 18:10:07] INFO - handler.py: 66
-
-Folder /workspace/test_repo successfully copied to /shared/nas2/xuehangg/syncbench_build/code/callee21/test_repo/
-
-[2025-02-05 18:10:07] INFO - handler.py: 77
-
-Container xuehang_21_mlflow_3.11__Wed__Feb____5__18_09_50__2025__test_repo__dockerhandler_attempt1 stopped and removed successfully.
-
-[2025-02-05 18:10:07] INFO - exetest.py: 210
-
-Repository cloned from docker image to `/shared/nas2/xuehangg/syncbench_build/code/callee21/test_repo/`
-
-[2025-02-05 18:10:07] INFO - aligner.py: 85
-
-Successfully found and replaced the code of function/method `invalid_parameter_value` in the context_code.
-
-[2025-02-05 18:10:07] INFO - exetest.py: 291
-
-The path '/shared/nas2/xuehangg/syncbench_build/code/callee21/test_repo/mlflow/exceptions.py' already exists.
-
-[2025-02-05 18:10:07] INFO - callee_builder.py: 305
-
-Using docker image with ID: 73f308f5c08c
-
-[2025-02-05 18:10:07] INFO - exetest.py: 199
-
-Repository already exists at `/shared/nas2/xuehangg/syncbench_build/code/callee21/test_repo/`.
-
-Skipping repo clone...
-
-[2025-02-05 18:10:07] INFO - aligner.py: 85
-
-Successfully found and replaced the code of function/method `invalid_parameter_value` in the context_code.
-
-[2025-02-05 18:10:07] INFO - tester.py: 51
-
-Path already exists: /shared/nas2/xuehangg/syncbench_build/code/callee21/test_repo/mlflow/exceptions.py
-
-[2025-02-05 18:10:07] INFO - tester.py: 61
-
-Successfully saved aligned_code to '/shared/nas2/xuehangg/syncbench_build/code/callee21/test_repo/mlflow/exceptions.py'
-
-[2025-02-05 18:10:07] INFO - tester.py: 368
-
-Running unit test using file `/workspace/test_repo/tests/pyfunc/test_model_export_with_loader_module_and_data_path.py` in Docker container `xuehang_21_mlflow_container__invalid_parameter_value__Wed_Feb__5_18_10_07_2025`...
+Skipping commit due to parsing error: inconsistent use of tabs and spaces in indentation (<unknown>, line 612)

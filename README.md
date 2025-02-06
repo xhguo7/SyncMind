@@ -1,4 +1,4 @@
-<h1 align="center"><b> SyncMind: Measureing Agent Out-of-Sync Recovery in Collaborative Software Engineering </b></h1>
+<h1 align="center"><b> SyncMind: Measuring Agent Out-of-Sync Recovery in Collaborative Software Engineering </b></h1>
 
 <p align="center">
 <a href="https://https://xhguo7.github.io/SyncMind">🌐 Homepage</a>
@@ -183,7 +183,7 @@ Edit source repo at: `./source/my_repo_dict.json`
 Set source repo in *SyncBench* construction command to specify which source repositories to use.
 
 #### **3.1.2 Configuration**
-**Set params:** modify `construction.sh`
+**Set params:** directly modify `construction.sh`
   ```
   cd SyncMind/scripts/construction.sh
   ```
