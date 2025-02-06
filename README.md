@@ -11,12 +11,12 @@
 </p>
 
 
-## **SyncMind**
+## **[SyncMind](https://github.com/xhguo7/SyncMind/blob/main/syncmind/SyncMind.md)**
 <p align="center">
   <img src="assets/syncmind.png" width="800" alt="Alt text">
 </p>
 
-## **SyncBench**
+## **[SyncBench](https://github.com/xhguo7/SyncMind/blob/main/syncbench/SyncBench.md)**
 <p align="center">
   <img src="assets/syncbench.png" width="800" alt="Alt text">
 </p>
