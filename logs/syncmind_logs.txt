@@ -1,264 +1,231 @@
 
-[2025-02-05 18:06:24] INFO - handler.py: 66
+[2025-02-05 18:09:56] INFO - exetest.py: 291
+
+The path '/shared/nas2/xuehangg/syncbench_build/code/callee7/test_repo/src/_pytest/pytester.py' already exists.
+
+[2025-02-05 18:09:56] INFO - callee_builder.py: 305
+
+Using docker image with ID: 2ad0b81aebdc
+
+[2025-02-05 18:09:56] INFO - exetest.py: 199
+
+Repository already exists at `/shared/nas2/xuehangg/syncbench_build/code/callee7/test_repo/`.
+
+Skipping repo clone...
+
+[2025-02-05 18:09:56] INFO - aligner.py: 85
+
+Successfully found and replaced the code of function/method `get_public_names` in the context_code.
+
+[2025-02-05 18:09:56] INFO - tester.py: 51
+
+Path already exists: /shared/nas2/xuehangg/syncbench_build/code/callee7/test_repo/src/_pytest/pytester.py
+
+[2025-02-05 18:09:56] INFO - tester.py: 61
+
+Successfully saved aligned_code to '/shared/nas2/xuehangg/syncbench_build/code/callee7/test_repo/src/_pytest/pytester.py'
+
+[2025-02-05 18:09:56] INFO - tester.py: 368
+
+Running unit test using file `/workspace/test_repo/testing/test_python_path.py` in Docker container `xuehang_7_pytest_container_get_public_names_Wed_Feb__5_18_09_56_2025`...
+
+[2025-02-05 18:10:00] INFO - handler.py: 66
 
 Folder /workspace/test_repo successfully copied to /shared/nas2/xuehangg/syncbench_build/code/caller16/test_repo/
 
-[2025-02-05 18:06:24] INFO - handler.py: 77
+[2025-02-05 18:10:00] ERROR - tester.py: 95
 
-Container xuehang_16_pillow_3.11__Wed__Feb____5__18_06_18__2025__test_repo__dockerhandler_attempt1 stopped and removed successfully.
+Execution failed with error: Command '['docker', 'run', '--rm', '--name', 'xuehang_9_sympy_container__test_Greedy_preprocess__Wed_Feb__5_18_09_52_2025', '-v', '/shared/nas2/xuehangg/syncbench_build/code/caller9/test_repo/sympy/polys/tests/test_polyoptions.py:/workspace/test_repo/sympy/polys/tests/test_polyoptions.py', '-w', '/workspace/test_repo', 'xuehang/9_sympy:3.11', '/bin/bash', '-c', 'export PYTHONPATH=$PYTHONPATH:/workspace/test_repo && /workspace/test_venv/bin/python -m pip install -e . && /workspace/test_venv/bin/python -m pytest -v /workspace/test_repo/sympy/polys/tests/test_polyoptions.py  ']' returned non-zero exit status 1.
 
-[2025-02-05 18:06:24] INFO - exetest.py: 210
+[2025-02-05 18:10:00] ERROR - tester.py: 96
+
+Error output:
+
+[notice] A new release of pip is available: 24.2 -> 25.0
+[notice] To update, run: python -m pip install --upgrade pip
+/workspace/test_venv/lib/python3.11/site-packages/pytest_asyncio/plugin.py:208: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+The event loop scope for asynchronous fixtures will default to the fixture caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to function scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+
+  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+
+
+[2025-02-05 18:10:00] ERROR - tester.py: 97
+
+Standard output:
+Obtaining file:///workspace/test_repo
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: mpmath>=1.1.0 in /workspace/test_venv/lib/python3.11/site-packages (from sympy==1.14.dev0) (1.3.0)
+Building wheels for collected packages: sympy
+  Building editable for sympy (pyproject.toml): started
+  Building editable for sympy (pyproject.toml): finished with status 'done'
+  Created wheel for sympy: filename=sympy-1.14.dev0-0.editable-py3-none-any.whl size=33243 sha256=e01a56afeba71034b0289623e2463ff1ce93254dfe27c3d412d5980b375b3f26
+  Stored in directory: /tmp/pip-ephem-wheel-cache-2w15qnng/wheels/77/6d/8d/6d288ec591919a528b58517c67f4d12e0e98d23d266200ee38
+Successfully built sympy
+Installing collected packages: sympy
+  Attempting uninstall: sympy
+    Found existing installation: sympy 1.14.dev0
+    Not uninstalling sympy at /workspace/test_repo, outside environment /workspace/test_venv
+    Can't uninstall 'sympy'. No files were found to uninstall.
+Successfully installed sympy-1.14.dev0
+============================= test session starts ==============================
+platform linux -- Python 3.11.9, pytest-8.3.2, pluggy-1.5.0 -- /workspace/test_venv/bin/python
+cachedir: .pytest_cache
+hypothesis profile 'sympy_hypothesis_profile' -> deadline=None, database=DirectoryBasedExampleDatabase(PosixPath('/workspace/test_repo/.hypothesis/examples'))
+architecture: 64-bit
+cache:        yes
+ground types: python 
+
+rootdir: /workspace/test_repo
+configfile: pyproject.toml
+plugins: hypothesis-6.112.0, doctestplus-1.2.1, split-0.9.0, timeout-2.3.1, xdist-3.6.1, asyncio-0.24.0
+asyncio: mode=Mode.STRICT, default_loop_scope=None
+collecting ... collected 46 items
+
+sympy/polys/tests/test_polyoptions.py::test_Options_clone PASSED         [  2%]
+sympy/polys/tests/test_polyoptions.py::test_Expand_preprocess PASSED     [  4%]
+sympy/polys/tests/test_polyoptions.py::test_Expand_postprocess PASSED    [  6%]
+sympy/polys/tests/test_polyoptions.py::test_Gens_preprocess PASSED       [  8%]
+sympy/polys/tests/test_polyoptions.py::test_Gens_postprocess PASSED      [ 10%]
+sympy/polys/tests/test_polyoptions.py::test_Wrt_preprocess PASSED        [ 13%]
+sympy/polys/tests/test_polyoptions.py::test_Wrt_postprocess PASSED       [ 15%]
+sympy/polys/tests/test_polyoptions.py::test_Sort_preprocess PASSED       [ 17%]
+sympy/polys/tests/test_polyoptions.py::test_Sort_postprocess PASSED      [ 19%]
+sympy/polys/tests/test_polyoptions.py::test_Order_preprocess PASSED      [ 21%]
+sympy/polys/tests/test_polyoptions.py::test_Order_postprocess PASSED     [ 23%]
+sympy/polys/tests/test_polyoptions.py::test_Field_preprocess PASSED      [ 26%]
+sympy/polys/tests/test_polyoptions.py::test_Field_postprocess PASSED     [ 28%]
+sympy/polys/tests/test_polyoptions.py::test_Greedy_preprocess FAILED     [ 30%]
+sympy/polys/tests/test_polyoptions.py::test_Greedy_postprocess PASSED    [ 32%]
+sympy/polys/tests/test_polyoptions.py::test_Domain_preprocess PASSED     [ 34%]
+sympy/polys/tests/test_polyoptions.py::test_Domain_postprocess PASSED    [ 36%]
+sympy/polys/tests/test_polyoptions.py::test_Split_preprocess PASSED      [ 39%]
+sympy/polys/tests/test_polyoptions.py::test_Split_postprocess PASSED     [ 41%]
+sympy/polys/tests/test_polyoptions.py::test_Gaussian_preprocess PASSED   [ 43%]
+sympy/polys/tests/test_polyoptions.py::test_Gaussian_postprocess PASSED  [ 45%]
+sympy/polys/tests/test_polyoptions.py::test_Extension_preprocess PASSED  [ 47%]
+sympy/polys/tests/test_polyoptions.py::test_Extension_postprocess PASSED [ 50%]
+sympy/polys/tests/test_polyoptions.py::test_Modulus_preprocess PASSED    [ 52%]
+sympy/polys/tests/test_polyoptions.py::test_Modulus_postprocess PASSED   [ 54%]
+sympy/polys/tests/test_polyoptions.py::test_Symmetric_preprocess PASSED  [ 56%]
+sympy/polys/tests/test_polyoptions.py::test_Symmetric_postprocess PASSED [ 58%]
+sympy/polys/tests/test_polyoptions.py::test_Strict_preprocess PASSED     [ 60%]
+sympy/polys/tests/test_polyoptions.py::test_Strict_postprocess PASSED    [ 63%]
+sympy/polys/tests/test_polyoptions.py::test_Auto_preprocess PASSED       [ 65%]
+sympy/polys/tests/test_polyoptions.py::test_Auto_postprocess PASSED      [ 67%]
+sympy/polys/tests/test_polyoptions.py::test_Frac_preprocess PASSED       [ 69%]
+sympy/polys/tests/test_polyoptions.py::test_Frac_postprocess PASSED      [ 71%]
+sympy/polys/tests/test_polyoptions.py::test_Formal_preprocess PASSED     [ 73%]
+sympy/polys/tests/test_polyoptions.py::test_Formal_postprocess PASSED    [ 76%]
+sympy/polys/tests/test_polyoptions.py::test_Polys_preprocess PASSED      [ 78%]
+sympy/polys/tests/test_polyoptions.py::test_Polys_postprocess PASSED     [ 80%]
+sympy/polys/tests/test_polyoptions.py::test_Include_preprocess PASSED    [ 82%]
+sympy/polys/tests/test_polyoptions.py::test_Include_postprocess PASSED   [ 84%]
+sympy/polys/tests/test_polyoptions.py::test_All_preprocess PASSED        [ 86%]
+sympy/polys/tests/test_polyoptions.py::test_All_postprocess PASSED       [ 89%]
+sympy/polys/tests/test_polyoptions.py::test_Gen_postprocess PASSED       [ 91%]
+sympy/polys/tests/test_polyoptions.py::test_Symbols_preprocess PASSED    [ 93%]
+sympy/polys/tests/test_polyoptions.py::test_Symbols_postprocess PASSED   [ 95%]
+sympy/polys/tests/test_polyoptions.py::test_Method_preprocess PASSED     [ 97%]
+sympy/polys/tests/test_polyoptions.py::test_Method_postprocess PASSED    [100%]
+
+=================================== FAILURES ===================================
+____________________________ test_Greedy_preprocess ____________________________
+
+    def test_Greedy_preprocess():
+        assert Greedy.preprocess(False) is False
+        assert Greedy.preprocess(True) is True
+    
+        assert Greedy.preprocess(0) is False
+        assert Greedy.preprocess(1) is True
+    
+>       raises(OptionError, "Greedy.preprocess(x)")
+E       TypeError: 'Greedy.preprocess(x)' object (type: <class 'str'>) must be callable
+
+sympy/polys/tests/test_polyoptions.py:149: TypeError
+                                DO *NOT* COMMIT!                                
+=========================== short test summary info ============================
+FAILED sympy/polys/tests/test_polyoptions.py::test_Greedy_preprocess - TypeEr...
+========================= 1 failed, 45 passed in 0.45s =========================
+
+
+[2025-02-05 18:10:00] INFO - handler.py: 66
+
+[2025-02-05 18:10:00] INFO - tester.py: 257
+
+Folder /workspace/test_repo successfully copied to /shared/nas2/xuehangg/syncbench_build/code/caller21/21_mlflow/
+
+{'total': 46, 'passed': 45, 'xpassed': 0, 'failed': 1, 'xfailed': 0, 'deselected': 0, 'skipped': 0, 'warning': 0, 'error': 0}
+
+[2025-02-05 18:10:00] INFO - tester.py: 436
+
+Number of test evals in current unit test: 46
+
+[2025-02-05 18:10:00] INFO - tester.py: 66
+
+Stopping and removing container 'xuehang_9_sympy_container__test_Greedy_preprocess__Wed_Feb__5_18_09_52_2025'...
+
+[2025-02-05 18:10:00] INFO - handler.py: 77
+
+Container xuehang_16_pillow_3.11__Wed__Feb____5__18_09_54__2025__test_repo__dockerhandler_attempt1 stopped and removed successfully.
+
+[2025-02-05 18:10:00] INFO - exetest.py: 210
 
 Repository cloned from docker image to `/shared/nas2/xuehangg/syncbench_build/code/caller16/test_repo/`
 
-[2025-02-05 18:06:24] INFO - aligner.py: 85
+[2025-02-05 18:10:00] INFO - aligner.py: 85
 
-Successfully found and replaced the code of function/method `test_odd_read` in the context_code.
+Successfully found and replaced the code of function/method `test_1px_width` in the context_code.
 
-[2025-02-05 18:06:24] INFO - exetest.py: 291
+[2025-02-05 18:10:00] INFO - handler.py: 77
+
+Container xuehang_21_mlflow_3.11__Wed__Feb____5__18_09_42__2025__test_repo__dockerhandler_attempt1 stopped and removed successfully.
+
+[2025-02-05 18:10:00] INFO - exetest.py: 210
+
+Repository cloned from docker image to `/shared/nas2/xuehangg/syncbench_build/code/caller21/21_mlflow/`
+
+Successfully removed container 'xuehang_9_sympy_container__test_Greedy_preprocess__Wed_Feb__5_18_09_52_2025'
+
+[2025-02-05 18:10:00] INFO - exetest.py: 291
 
 The path '/shared/nas2/xuehangg/syncbench_build/code/caller16/test_repo/Tests/test_file_pcx.py' already exists.
 
-[2025-02-05 18:06:24] INFO - caller_builder.py: 310
+[2025-02-05 18:10:00] INFO - caller_builder.py: 310
 
 Using docker image with ID: fc29e8ee0f09
 
-[2025-02-05 18:06:24] INFO - exetest.py: 199
+[2025-02-05 18:10:00] INFO - exetest.py: 199
 
 Repository already exists at `/shared/nas2/xuehangg/syncbench_build/code/caller16/test_repo/`.
 
 Skipping repo clone...
 
-[2025-02-05 18:06:24] INFO - aligner.py: 85
+[2025-02-05 18:10:00] INFO - aligner.py: 85
 
-Successfully found and replaced the code of function/method `test_odd_read` in the context_code.
+Successfully found and replaced the code of function/method `test_1px_width` in the context_code.
 
-[2025-02-05 18:06:24] INFO - tester.py: 51
+Update: Commit tracing success!
+
+[2025-02-05 18:10:00] INFO - tester.py: 51
 
 Path already exists: /shared/nas2/xuehangg/syncbench_build/code/caller16/test_repo/Tests/test_file_pcx.py
 
-[2025-02-05 18:06:24] INFO - tester.py: 61
+[2025-02-05 18:10:00] INFO - tester.py: 61
 
 Successfully saved aligned_code to '/shared/nas2/xuehangg/syncbench_build/code/caller16/test_repo/Tests/test_file_pcx.py'
 
-[2025-02-05 18:06:24] INFO - tester.py: 368
+[2025-02-05 18:10:00] INFO - tester.py: 368
 
-Running unit test using file `/workspace/test_repo/Tests/test_file_pcx.py` in Docker container `xuehang_16_pillow_container__test_odd_read__Wed_Feb__5_18_06_24_2025`...
+Running unit test using file `/workspace/test_repo/Tests/test_file_pcx.py` in Docker container `xuehang_16_pillow_container__test_1px_width__Wed_Feb__5_18_10_00_2025`...
 
-[2025-02-05 18:06:41] INFO - tester.py: 92
-
-Execution succeeded!
-Container output: 
-Obtaining file:///workspace/test_repo
-  Installing build dependencies: started
-  Installing build dependencies: finished with status 'done'
-  Checking if build backend supports build_editable: started
-  Checking if build backend supports build_editable: finished with status 'done'
-  Getting requirements to build editable: started
-  Getting requirements to build editable: finished with status 'done'
-  Preparing editable metadata (pyproject.toml): started
-  Preparing editable metadata (pyproject.toml): finished with status 'done'
-Requirement already satisfied: Flask<4 in /workspace/test_venv/lib/python3.11/site-packages (from mlflow==2.16.1.dev0) (3.0.3)
-Requirement already satisfied: Jinja2<4,>=2.11 in /workspace/test_venv/lib/python3.11/site-packages (from mlflow==2.16.1.dev0) (3.1.4)
-Requirement already satisfied: alembic!=1.10.0,<2 in /workspace/test_venv/lib/python3.11/site-packages (from mlflow==2.16.1.dev0) (1.13.2)
-Requirement already satisfied: cachetools<6,>=5.0.0 in /workspace/test_venv/lib/python3.11/site-packages (from mlflow==2.16.1.dev0) (5.5.0)
-Requirement already satisfied: click<9,>=7.0 in /workspace/test_venv/lib/python3.11/site-packages (from mlflow==2.16.1.dev0) (8.1.7)
-Requirement already satisfied: cloudpickle<4 in /workspace/test_venv/lib/python3.11/site-packages (from mlflow==2.16.1.dev0) (3.0.0)
-Requirement already satisfied: databricks-sdk<1,>=0.20.0 in /workspace/test_venv/lib/python3.11/site-packages (from mlflow==2.16.1.dev0) (0.32.0)
-Requirement already satisfied: docker<8,>=4.0.0 in /workspace/test_venv/lib/python3.11/site-packages (from mlflow==2.16.1.dev0) (7.1.0)
-Requirement already satisfied: gitpython<4,>=3.1.9 in /workspace/test_venv/lib/python3.11/site-packages (from mlflow==2.16.1.dev0) (3.1.43)
-Requirement already satisfied: graphene<4 in /workspace/test_venv/lib/python3.11/site-packages (from mlflow==2.16.1.dev0) (3.3)
-Requirement already satisfied: gunicorn<24 in /workspace/test_venv/lib/python3.11/site-packages (from mlflow==2.16.1.dev0) (23.0.0)
-Requirement already satisfied: importlib_metadata!=4.7.0,<9,>=3.7.0 in /workspace/test_venv/lib/python3.11/site-packages (from mlflow==2.16.1.dev0) (8.4.0)
-Requirement already satisfied: markdown<4,>=3.3 in /workspace/test_venv/lib/python3.11/site-packages (from mlflow==2.16.1.dev0) (3.7)
-Requirement already satisfied: matplotlib<4 in /workspace/test_venv/lib/python3.11/site-packages (from mlflow==2.16.1.dev0) (3.9.2)
-Requirement already satisfied: numpy<3 in /workspace/test_venv/lib/python3.11/site-packages (from mlflow==2.16.1.dev0) (2.1.1)
-Requirement already satisfied: opentelemetry-api<3,>=1.9.0 in /workspace/test_venv/lib/python3.11/site-packages (from mlflow==2.16.1.dev0) (1.27.0)
-Requirement already satisfied: opentelemetry-sdk<3,>=1.9.0 in /workspace/test_venv/lib/python3.11/site-packages (from mlflow==2.16.1.dev0) (1.27.0)
-Requirement already satisfied: packaging<25 in /workspace/test_venv/lib/python3.11/site-packages (from mlflow==2.16.1.dev0) (24.1)
-Requirement already satisfied: pandas<3 in /workspace/test_venv/lib/python3.11/site-packages (from mlflow==2.16.1.dev0) (2.2.2)
-Requirement already satisfied: protobuf<6,>=3.12.0 in /workspace/test_venv/lib/python3.11/site-packages (from mlflow==2.16.1.dev0) (5.28.0)
-Requirement already satisfied: pyarrow<18,>=4.0.0 in /workspace/test_venv/lib/python3.11/site-packages (from mlflow==2.16.1.dev0) (17.0.0)
-Requirement already satisfied: pyyaml<7,>=5.1 in /workspace/test_venv/lib/python3.11/site-packages (from mlflow==2.16.1.dev0) (6.0.2)
-Requirement already satisfied: requests<3,>=2.17.3 in /workspace/test_venv/lib/python3.11/site-packages (from mlflow==2.16.1.dev0) (2.32.3)
-Requirement already satisfied: scikit-learn<2 in /workspace/test_venv/lib/python3.11/site-packages (from mlflow==2.16.1.dev0) (1.5.1)
-Requirement already satisfied: scipy<2 in /workspace/test_venv/lib/python3.11/site-packages (from mlflow==2.16.1.dev0) (1.14.1)
-Requirement already satisfied: sqlalchemy<3,>=1.4.0 in /workspace/test_venv/lib/python3.11/site-packages (from mlflow==2.16.1.dev0) (2.0.34)
-Requirement already satisfied: sqlparse<1,>=0.4.0 in /workspace/test_venv/lib/python3.11/site-packages (from mlflow==2.16.1.dev0) (0.5.1)
-Requirement already satisfied: Mako in /workspace/test_venv/lib/python3.11/site-packages (from alembic!=1.10.0,<2->mlflow==2.16.1.dev0) (1.3.5)
-Requirement already satisfied: typing-extensions>=4 in /workspace/test_venv/lib/python3.11/site-packages (from alembic!=1.10.0,<2->mlflow==2.16.1.dev0) (4.12.2)
-Requirement already satisfied: google-auth~=2.0 in /workspace/test_venv/lib/python3.11/site-packages (from databricks-sdk<1,>=0.20.0->mlflow==2.16.1.dev0) (2.34.0)
-Requirement already satisfied: urllib3>=1.26.0 in /workspace/test_venv/lib/python3.11/site-packages (from docker<8,>=4.0.0->mlflow==2.16.1.dev0) (2.2.2)
-Requirement already satisfied: Werkzeug>=3.0.0 in /workspace/test_venv/lib/python3.11/site-packages (from Flask<4->mlflow==2.16.1.dev0) (3.0.4)
-Requirement already satisfied: itsdangerous>=2.1.2 in /workspace/test_venv/lib/python3.11/site-packages (from Flask<4->mlflow==2.16.1.dev0) (2.2.0)
-Requirement already satisfied: blinker>=1.6.2 in /workspace/test_venv/lib/python3.11/site-packages (from Flask<4->mlflow==2.16.1.dev0) (1.8.2)
-Requirement already satisfied: gitdb<5,>=4.0.1 in /workspace/test_venv/lib/python3.11/site-packages (from gitpython<4,>=3.1.9->mlflow==2.16.1.dev0) (4.0.11)
-Requirement already satisfied: graphql-core<3.3,>=3.1 in /workspace/test_venv/lib/python3.11/site-packages (from graphene<4->mlflow==2.16.1.dev0) (3.2.4)
-Requirement already satisfied: graphql-relay<3.3,>=3.1 in /workspace/test_venv/lib/python3.11/site-packages (from graphene<4->mlflow==2.16.1.dev0) (3.2.0)
-Requirement already satisfied: aniso8601<10,>=8 in /workspace/test_venv/lib/python3.11/site-packages (from graphene<4->mlflow==2.16.1.dev0) (9.0.1)
-Requirement already satisfied: zipp>=0.5 in /workspace/test_venv/lib/python3.11/site-packages (from importlib_metadata!=4.7.0,<9,>=3.7.0->mlflow==2.16.1.dev0) (3.20.1)
-Requirement already satisfied: MarkupSafe>=2.0 in /workspace/test_venv/lib/python3.11/site-packages (from Jinja2<4,>=2.11->mlflow==2.16.1.dev0) (2.1.5)
-Requirement already satisfied: contourpy>=1.0.1 in /workspace/test_venv/lib/python3.11/site-packages (from matplotlib<4->mlflow==2.16.1.dev0) (1.3.0)
-Requirement already satisfied: cycler>=0.10 in /workspace/test_venv/lib/python3.11/site-packages (from matplotlib<4->mlflow==2.16.1.dev0) (0.12.1)
-Requirement already satisfied: fonttools>=4.22.0 in /workspace/test_venv/lib/python3.11/site-packages (from matplotlib<4->mlflow==2.16.1.dev0) (4.53.1)
-Requirement already satisfied: kiwisolver>=1.3.1 in /workspace/test_venv/lib/python3.11/site-packages (from matplotlib<4->mlflow==2.16.1.dev0) (1.4.7)
-Requirement already satisfied: pillow>=8 in /workspace/test_venv/lib/python3.11/site-packages (from matplotlib<4->mlflow==2.16.1.dev0) (10.4.0)
-Requirement already satisfied: pyparsing>=2.3.1 in /workspace/test_venv/lib/python3.11/site-packages (from matplotlib<4->mlflow==2.16.1.dev0) (3.1.4)
-Requirement already satisfied: python-dateutil>=2.7 in /workspace/test_venv/lib/python3.11/site-packages (from matplotlib<4->mlflow==2.16.1.dev0) (2.9.0.post0)
-Requirement already satisfied: deprecated>=1.2.6 in /workspace/test_venv/lib/python3.11/site-packages (from opentelemetry-api<3,>=1.9.0->mlflow==2.16.1.dev0) (1.2.14)
-Requirement already satisfied: opentelemetry-semantic-conventions==0.48b0 in /workspace/test_venv/lib/python3.11/site-packages (from opentelemetry-sdk<3,>=1.9.0->mlflow==2.16.1.dev0) (0.48b0)
-Requirement already satisfied: pytz>=2020.1 in /workspace/test_venv/lib/python3.11/site-packages (from pandas<3->mlflow==2.16.1.dev0) (2024.1)
-Requirement already satisfied: tzdata>=2022.7 in /workspace/test_venv/lib/python3.11/site-packages (from pandas<3->mlflow==2.16.1.dev0) (2024.1)
-Requirement already satisfied: charset-normalizer<4,>=2 in /workspace/test_venv/lib/python3.11/site-packages (from requests<3,>=2.17.3->mlflow==2.16.1.dev0) (3.3.2)
-Requirement already satisfied: idna<4,>=2.5 in /workspace/test_venv/lib/python3.11/site-packages (from requests<3,>=2.17.3->mlflow==2.16.1.dev0) (3.8)
-Requirement already satisfied: certifi>=2017.4.17 in /workspace/test_venv/lib/python3.11/site-packages (from requests<3,>=2.17.3->mlflow==2.16.1.dev0) (2024.8.30)
-Requirement already satisfied: joblib>=1.2.0 in /workspace/test_venv/lib/python3.11/site-packages (from scikit-learn<2->mlflow==2.16.1.dev0) (1.4.2)
-Requirement already satisfied: threadpoolctl>=3.1.0 in /workspace/test_venv/lib/python3.11/site-packages (from scikit-learn<2->mlflow==2.16.1.dev0) (3.5.0)
-Requirement already satisfied: greenlet!=0.4.17 in /workspace/test_venv/lib/python3.11/site-packages (from sqlalchemy<3,>=1.4.0->mlflow==2.16.1.dev0) (3.0.3)
-Requirement already satisfied: wrapt<2,>=1.10 in /workspace/test_venv/lib/python3.11/site-packages (from deprecated>=1.2.6->opentelemetry-api<3,>=1.9.0->mlflow==2.16.1.dev0) (1.16.0)
-Requirement already satisfied: smmap<6,>=3.0.1 in /workspace/test_venv/lib/python3.11/site-packages (from gitdb<5,>=4.0.1->gitpython<4,>=3.1.9->mlflow==2.16.1.dev0) (5.0.1)
-Requirement already satisfied: pyasn1-modules>=0.2.1 in /workspace/test_venv/lib/python3.11/site-packages (from google-auth~=2.0->databricks-sdk<1,>=0.20.0->mlflow==2.16.1.dev0) (0.4.0)
-Requirement already satisfied: rsa<5,>=3.1.4 in /workspace/test_venv/lib/python3.11/site-packages (from google-auth~=2.0->databricks-sdk<1,>=0.20.0->mlflow==2.16.1.dev0) (4.9)
-Requirement already satisfied: six>=1.5 in /workspace/test_venv/lib/python3.11/site-packages (from python-dateutil>=2.7->matplotlib<4->mlflow==2.16.1.dev0) (1.16.0)
-Requirement already satisfied: pyasn1<0.7.0,>=0.4.6 in /workspace/test_venv/lib/python3.11/site-packages (from pyasn1-modules>=0.2.1->google-auth~=2.0->databricks-sdk<1,>=0.20.0->mlflow==2.16.1.dev0) (0.6.0)
-Building wheels for collected packages: mlflow
-  Building editable for mlflow (pyproject.toml): started
-  Building editable for mlflow (pyproject.toml): finished with status 'done'
-  Created wheel for mlflow: filename=mlflow-2.16.1.dev0-0.editable-py3-none-any.whl size=19576 sha256=aa816eb50c2bfe6db33e29bf6b34b3f1b4e5090a1fdf39db76b209eb3e1f9d30
-  Stored in directory: /tmp/pip-ephem-wheel-cache-u257qx1t/wheels/77/6d/8d/6d288ec591919a528b58517c67f4d12e0e98d23d266200ee38
-Successfully built mlflow
-Installing collected packages: mlflow
-  Attempting uninstall: mlflow
-    Found existing installation: mlflow 2.16.1.dev0
-    Not uninstalling mlflow at /workspace/test_repo, outside environment /workspace/test_venv
-    Can't uninstall 'mlflow'. No files were found to uninstall.
-Successfully installed mlflow-2.16.1.dev0
-[1m============================= test session starts ==============================[0m
-platform linux -- Python 3.11.9, pytest-8.3.2, pluggy-1.5.0 -- /workspace/test_venv/bin/python
-cachedir: .pytest_cache
-rootdir: /workspace/test_repo
-configfile: pytest.ini
-plugins: asyncio-0.24.0
-asyncio: mode=Mode.STRICT, default_loop_scope=None
-[1mcollecting ... [0mcollected 11 items
-
-tests/pyfunc/test_model_export_with_loader_module_and_data_path.py::test_model_save_load [32mPASSED[0m[33m [  9%][0m
-tests/pyfunc/test_model_export_with_loader_module_and_data_path.py::test_signature_and_examples_are_saved_correctly [32mPASSED[0m[33m [ 18%][0m
-tests/pyfunc/test_model_export_with_loader_module_and_data_path.py::test_model_log_load [32mPASSED[0m[33m [ 27%][0m
-tests/pyfunc/test_model_export_with_loader_module_and_data_path.py::test_model_log_load_no_active_run [32mPASSED[0m[33m [ 36%][0m
-tests/pyfunc/test_model_export_with_loader_module_and_data_path.py::test_save_model_with_unsupported_argument_combinations_throws_exception [32mPASSED[0m[33m [ 45%][0m
-tests/pyfunc/test_model_export_with_loader_module_and_data_path.py::test_log_model_with_unsupported_argument_combinations_throws_exception [32mPASSED[0m[33m [ 54%][0m
-tests/pyfunc/test_model_export_with_loader_module_and_data_path.py::test_log_model_persists_specified_conda_env_file_in_mlflow_model_directory [32mPASSED[0m[33m [ 63%][0m
-tests/pyfunc/test_model_export_with_loader_module_and_data_path.py::test_log_model_persists_specified_conda_env_dict_in_mlflow_model_directory [32mPASSED[0m[33m [ 72%][0m
-tests/pyfunc/test_model_export_with_loader_module_and_data_path.py::test_log_model_persists_requirements_in_mlflow_model_directory [32mPASSED[0m[33m [ 81%][0m
-tests/pyfunc/test_model_export_with_loader_module_and_data_path.py::test_log_model_without_specified_conda_env_uses_default_env_with_expected_dependencies [32mPASSED[0m[33m [ 90%][0m
-tests/pyfunc/test_model_export_with_loader_module_and_data_path.py::test_streamable_model_save_load [32mPASSED[0m[33m [100%][0m
-
-[33m=============================== warnings summary ===============================[0m
-../test_venv/lib/python3.11/site-packages/_pytest/config/__init__.py:1437
-  /workspace/test_venv/lib/python3.11/site-packages/_pytest/config/__init__.py:1437: PytestConfigWarning: Unknown config option: timeout
-  
-    self._warn_or_fail_if_strict(f"Unknown config option: {key}\n")
-
--- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
-============================= slowest 10 durations =============================
-5.74s call     tests/pyfunc/test_model_export_with_loader_module_and_data_path.py::test_signature_and_examples_are_saved_correctly
-2.45s call     tests/pyfunc/test_model_export_with_loader_module_and_data_path.py::test_model_save_load
-1.75s call     tests/pyfunc/test_model_export_with_loader_module_and_data_path.py::test_model_log_load
-1.66s call     tests/pyfunc/test_model_export_with_loader_module_and_data_path.py::test_streamable_model_save_load
-1.57s call     tests/pyfunc/test_model_export_with_loader_module_and_data_path.py::test_log_model_without_specified_conda_env_uses_default_env_with_expected_dependencies
-1.53s call     tests/pyfunc/test_model_export_with_loader_module_and_data_path.py::test_model_log_load_no_active_run
-0.37s call     tests/pyfunc/test_model_export_with_loader_module_and_data_path.py::test_log_model_persists_specified_conda_env_file_in_mlflow_model_directory
-0.25s call     tests/pyfunc/test_model_export_with_loader_module_and_data_path.py::test_log_model_persists_specified_conda_env_dict_in_mlflow_model_directory
-0.23s call     tests/pyfunc/test_model_export_with_loader_module_and_data_path.py::test_log_model_persists_requirements_in_mlflow_model_directory
-0.22s call     tests/pyfunc/test_model_export_with_loader_module_and_data_path.py::test_save_model_with_unsupported_argument_combinations_throws_exception
-[33m======================== [32m11 passed[0m, [33m[1m1 warning[0m[33m in 16.45s[0m[33m ========================[0m
-
-
-[2025-02-05 18:06:41] INFO - tester.py: 168
-
-[2025-02-05 18:06:41] INFO - tester.py: 180
-
-[2025-02-05 18:06:41] INFO - tester.py: 257
-
-{'total': 12, 'passed': 11, 'xpassed': 0, 'failed': 0, 'xfailed': 0, 'deselected': 0, 'skipped': 0, 'warning': 1, 'error': 0}
-
-[2025-02-05 18:06:41] INFO - tester.py: 436
-
-Number of test evals in current unit test: 12
-
-[2025-02-05 18:06:41] INFO - tester.py: 66
-
-Stopping and removing container 'xuehang_21_mlflow_container__serialize_as_json__Wed_Feb__5_18_06_17_2025'...
-
-Successfully removed container 'xuehang_21_mlflow_container__serialize_as_json__Wed_Feb__5_18_06_17_2025'
-
-[2025-02-05 18:06:43] INFO - exetest.py: 155
-
-Successfully removed target directory at `/shared/nas2/xuehangg/syncbench_build/code/callee21/test_repo/`
-
-[2025-02-05 18:06:43] INFO - tester.py: 79
-
-Removing temporary directory used for repository at '/shared/nas2/xuehangg/syncbench_build/code/callee21/test_repo/'
-
-[2025-02-05 18:06:43] INFO - callee_builder.py: 476
-
-[Execution Test for 'gold_code + new_context'] Passed
-
-
-[2025-02-05 18:06:43] INFO - callee_builder.py: 297
-
-Preparing docker env for execution test...
-
-[2025-02-05 18:06:43] WARNING - callee_builder.py: 123
-
-Failed to remove file `/shared/nas2/xuehangg/syncbench_build/code/callee21/21_mlflow/.git/objects/pack/.nfs000000000c55d3c2000121c0`: [Errno 16] Device or resource busy: '/shared/nas2/xuehangg/syncbench_build/code/callee21/21_mlflow/.git/objects/pack/.nfs000000000c55d3c2000121c0'
-Attempting file removal again...
-
-[2025-02-05 18:06:43] WARNING - callee_builder.py: 123
-
-Failed to remove file `/shared/nas2/xuehangg/syncbench_build/code/callee21/21_mlflow/.git/objects/pack/.nfs000000000c55db91000121bf`: [Errno 16] Device or resource busy: '/shared/nas2/xuehangg/syncbench_build/code/callee21/21_mlflow/.git/objects/pack/.nfs000000000c55db91000121bf'
-Attempting file removal again...
-
-[2025-02-05 18:06:43] WARNING - callee_builder.py: 130
-
-Failed to remove directory `/shared/nas2/xuehangg/syncbench_build/code/callee21/21_mlflow/.git/objects/pack`: [Errno 39] Directory not empty: '/shared/nas2/xuehangg/syncbench_build/code/callee21/21_mlflow/.git/objects/pack'
-Attempting directory removal again...
-
-[2025-02-05 18:06:43] WARNING - callee_builder.py: 130
-
-Failed to remove directory `/shared/nas2/xuehangg/syncbench_build/code/callee21/21_mlflow/.git/objects`: [Errno 39] Directory not empty: '/shared/nas2/xuehangg/syncbench_build/code/callee21/21_mlflow/.git/objects'
-Attempting directory removal again...
-
-[2025-02-05 18:06:43] WARNING - callee_builder.py: 130
-
-Failed to remove directory `/shared/nas2/xuehangg/syncbench_build/code/callee21/21_mlflow/.git`: [Errno 39] Directory not empty: '/shared/nas2/xuehangg/syncbench_build/code/callee21/21_mlflow/.git'
-Attempting directory removal again...
-
-[2025-02-05 18:06:43] WARNING - callee_builder.py: 130
-
-Failed to remove directory `/shared/nas2/xuehangg/syncbench_build/code/callee21/21_mlflow`: [Errno 39] Directory not empty: '/shared/nas2/xuehangg/syncbench_build/code/callee21/21_mlflow'
-Attempting directory removal again...
-
-[2025-02-05 18:06:43] INFO - callee_builder.py: 134
-
-Successfully removed directory at '/shared/nas2/xuehangg/syncbench_build/code/callee21/'
-
-[2025-02-05 18:06:43] INFO - builder.py: 176
-
-Checking if Docker image 'xuehang/21_mlflow' exists...
-
-Docker image 'xuehang/21_mlflow' already exists with ID: 73f308f5c08c
-
-[2025-02-05 18:06:43] INFO - handler.py: 30
-
-Successfiully created local path: `/shared/nas2/xuehangg/syncbench_build/code/callee21/test_repo/`
-
-[2025-02-05 18:06:43] INFO - handler.py: 42
-
-Container xuehang_21_mlflow_3.11__Wed__Feb____5__18_06_43__2025__test_repo__dockerhandler_attempt1 started successfully.
-
-[2025-02-05 18:06:49] INFO - tester.py: 92
+[2025-02-05 18:10:01] INFO - tester.py: 92
 
 Execution succeeded!
 Container output: 
@@ -271,233 +238,292 @@ Obtaining file:///workspace/test_repo
   Getting requirements to build editable: finished with status 'done'
   Preparing editable metadata (pyproject.toml): started
   Preparing editable metadata (pyproject.toml): finished with status 'done'
-Building wheels for collected packages: pillow
-  Building editable for pillow (pyproject.toml): started
-  Building editable for pillow (pyproject.toml): finished with status 'done'
-  Created wheel for pillow: filename=pillow-11.0.0.dev0-0.editable-cp311-cp311-linux_x86_64.whl size=4639 sha256=5691414e29b3569bcc3cb2e5b7d4eb4652d3f6dea271811f35cc304f0e329659
-  Stored in directory: /tmp/pip-ephem-wheel-cache-45y3l_56/wheels/77/6d/8d/6d288ec591919a528b58517c67f4d12e0e98d23d266200ee38
-Successfully built pillow
-Installing collected packages: pillow
-  Attempting uninstall: pillow
-    Found existing installation: pillow 11.0.0.dev0
-    Uninstalling pillow-11.0.0.dev0:
-      Successfully uninstalled pillow-11.0.0.dev0
-Successfully installed pillow-11.0.0.dev0
-[1m============================= test session starts ==============================[0m
-platform linux -- Python 3.11.9, pytest-8.3.2, pluggy-1.5.0 -- /workspace/test_venv/bin/python
+Requirement already satisfied: iniconfig in /workspace/test_venv/lib/python3.11/site-packages (from pytest==8.4.0.dev64+g72c682ff9.d20250206) (2.0.0)
+Requirement already satisfied: packaging in /workspace/test_venv/lib/python3.11/site-packages (from pytest==8.4.0.dev64+g72c682ff9.d20250206) (24.1)
+Requirement already satisfied: pluggy<2,>=1.5 in /workspace/test_venv/lib/python3.11/site-packages (from pytest==8.4.0.dev64+g72c682ff9.d20250206) (1.5.0)
+Building wheels for collected packages: pytest
+  Building editable for pytest (pyproject.toml): started
+  Building editable for pytest (pyproject.toml): finished with status 'done'
+  Created wheel for pytest: filename=pytest-8.4.0.dev64+g72c682ff9.d20250206-0.editable-py3-none-any.whl size=9450 sha256=e5a7a97d4edb5ca62169f3d45201369069a21811391debafb78fdd5d42f97638
+  Stored in directory: /tmp/pip-ephem-wheel-cache-au2poecz/wheels/77/6d/8d/6d288ec591919a528b58517c67f4d12e0e98d23d266200ee38
+Successfully built pytest
+Installing collected packages: pytest
+  Attempting uninstall: pytest
+    Found existing installation: pytest 8.4.0.dev64+g72c682ff9
+    Uninstalling pytest-8.4.0.dev64+g72c682ff9:
+      Successfully uninstalled pytest-8.4.0.dev64+g72c682ff9
+Successfully installed pytest-8.4.0.dev64+g72c682ff9.d20250206
+============================= test session starts ==============================
+platform linux -- Python 3.11.9, pytest-8.4.0.dev64+g72c682ff9.d20250206, pluggy-1.5.0 -- /workspace/test_venv/bin/python
 cachedir: .pytest_cache
---------------------------------------------------------------------
-Pillow 11.0.0.dev0
-Python 3.11.9 (main, Sep  5 2024, 00:16:19) [GCC 12.2.0]
---------------------------------------------------------------------
-Python executable is /workspace/test_venv/bin/python
-Environment Python files loaded from /workspace/test_venv
-System Python files loaded from /usr/local
---------------------------------------------------------------------
-Python Pillow modules loaded from /workspace/test_repo/src/PIL
-Binary Pillow modules loaded from /workspace/test_repo/src/PIL
---------------------------------------------------------------------
---- PIL CORE support ok, compiled for 11.0.0.dev0
---- TKINTER support ok, loaded 8.6
---- FREETYPE2 support ok, loaded 2.12.1
---- LITTLECMS2 support ok, loaded 2.14
---- WEBP support ok, loaded 1.2.4
---- JPEG support ok, compiled for libjpeg-turbo 2.1.5
---- OPENJPEG (JPEG2000) support ok, loaded 2.5.0
---- ZLIB (PNG/ZIP) support ok, loaded 1.2.13
---- LIBTIFF support ok, loaded 4.5.0
-*** RAQM (Bidirectional Text) support not installed
-*** LIBIMAGEQUANT (Quantization method) support not installed
---- XCB (X protocol) support ok
---------------------------------------------------------------------
-
 rootdir: /workspace/test_repo
 configfile: pyproject.toml
 plugins: asyncio-0.24.0
 asyncio: mode=Mode.STRICT, default_loop_scope=None
-[1mcollecting ... [0mcollected 16 items
+collecting ... collected 6 items
 
-Tests/test_file_pcx.py::test_sanity [32mPASSED[0m[32m                               [  6%][0m
-Tests/test_file_pcx.py::test_invalid_file [32mPASSED[0m[32m                         [ 12%][0m
-Tests/test_file_pcx.py::test_odd[1] [32mPASSED[0m[32m                               [ 18%][0m
-Tests/test_file_pcx.py::test_odd[L] [32mPASSED[0m[32m                               [ 25%][0m
-Tests/test_file_pcx.py::test_odd[P] [32mPASSED[0m[32m                               [ 31%][0m
-Tests/test_file_pcx.py::test_odd[RGB] [32mPASSED[0m[32m                             [ 37%][0m
-Tests/test_file_pcx.py::test_odd_read [32mPASSED[0m[32m                             [ 43%][0m
-Tests/test_file_pcx.py::test_pil184 [32mPASSED[0m[32m                               [ 50%][0m
-Tests/test_file_pcx.py::test_1px_width [32mPASSED[0m[32m                            [ 56%][0m
-Tests/test_file_pcx.py::test_large_count [32mPASSED[0m[32m                          [ 62%][0m
-Tests/test_file_pcx.py::test_break_in_count_overflow [32mPASSED[0m[32m              [ 68%][0m
-Tests/test_file_pcx.py::test_break_one_in_loop [32mPASSED[0m[32m                    [ 75%][0m
-Tests/test_file_pcx.py::test_break_many_in_loop [32mPASSED[0m[32m                   [ 81%][0m
-Tests/test_file_pcx.py::test_break_one_at_end [32mPASSED[0m[32m                     [ 87%][0m
-Tests/test_file_pcx.py::test_break_many_at_end [32mPASSED[0m[32m                    [ 93%][0m
-Tests/test_file_pcx.py::test_break_padding [32mPASSED[0m[32m                        [100%][0m
+testing/test_python_path.py::test_one_dir PASSED                         [ 16%]
+testing/test_python_path.py::test_two_dirs PASSED                        [ 33%]
+testing/test_python_path.py::test_local_plugin PASSED                    [ 50%]
+testing/test_python_path.py::test_module_not_found PASSED                [ 66%]
+testing/test_python_path.py::test_no_ini PASSED                          [ 83%]
+testing/test_python_path.py::test_clean_up PASSED                        [100%]
 
-[32m============================== [32m[1m16 passed[0m[32m in 0.22s[0m[32m ==============================[0m
+============================== 6 passed in 0.34s ===============================
 
 
-[2025-02-05 18:06:49] INFO - tester.py: 168
+[2025-02-05 18:10:01] INFO - tester.py: 257
 
-[2025-02-05 18:06:49] INFO - tester.py: 257
+{'total': 6, 'passed': 6, 'xpassed': 0, 'failed': 0, 'xfailed': 0, 'deselected': 0, 'skipped': 0, 'warning': 0, 'error': 0}
 
-{'total': 16, 'passed': 16, 'xpassed': 0, 'failed': 0, 'xfailed': 0, 'deselected': 0, 'skipped': 0, 'warning': 0, 'error': 0}
+[2025-02-05 18:10:01] INFO - tester.py: 436
 
-[2025-02-05 18:06:49] INFO - tester.py: 436
+Number of test evals in current unit test: 6
 
-Number of test evals in current unit test: 16
+[2025-02-05 18:10:01] INFO - tester.py: 66
 
-[2025-02-05 18:06:49] INFO - tester.py: 66
+Stopping and removing container 'xuehang_7_pytest_container_get_public_names_Wed_Feb__5_18_09_56_2025'...
 
-Stopping and removing container 'xuehang_16_pillow_container__test_odd_read__Wed_Feb__5_18_06_24_2025'...
+Successfully removed container 'xuehang_7_pytest_container_get_public_names_Wed_Feb__5_18_09_56_2025'
 
-Successfully removed container 'xuehang_16_pillow_container__test_odd_read__Wed_Feb__5_18_06_24_2025'
+[2025-02-05 18:10:01] INFO - exetest.py: 155
 
-[2025-02-05 18:06:50] INFO - exetest.py: 155
+Successfully removed target directory at '/shared/nas2/xuehangg/syncbench_build/code/caller9/test_repo/'
 
-Successfully removed target directory at `/shared/nas2/xuehangg/syncbench_build/code/caller16/test_repo/`
+[2025-02-05 18:10:01] INFO - tester.py: 79
 
-[2025-02-05 18:06:50] INFO - tester.py: 79
+Removing temporary directory used for repository at '/shared/nas2/xuehangg/syncbench_build/code/caller9/test_repo/'
 
-Removing temporary directory used for repository at '/shared/nas2/xuehangg/syncbench_build/code/caller16/test_repo/'
+[2025-02-05 18:10:01] INFO - caller_builder.py: 490
 
-[2025-02-05 18:06:50] INFO - caller_builder.py: 472
+[Execution Test for 'original_code + new_context'] Failed
+
+
+[2025-02-05 18:10:01] INFO - caller_builder.py: 699
+
+[2025-02-05 18:10:01] INFO - caller_builder.py: 548
+
+[Valid test 436/436] Current commit(38ec67fc517e33af110de4cb7b9c3b0b18ea0f88) has been successfully recorded.
+
+[2025-02-05 18:10:02] INFO - exetest.py: 155
+
+Successfully removed target directory at '/shared/nas2/xuehangg/syncbench_build/code/callee7/test_repo/'
+
+[2025-02-05 18:10:02] INFO - tester.py: 79
+
+Removing temporary directory used for repository at '/shared/nas2/xuehangg/syncbench_build/code/callee7/test_repo/'
+
+[2025-02-05 18:10:02] INFO - callee_builder.py: 480
 
 [Execution Test for 'gold_code + new_context'] Passed
 
 
-[2025-02-05 18:06:50] INFO - caller_builder.py: 302
+[2025-02-05 18:10:02] INFO - callee_builder.py: 297
 
 Preparing docker env for execution test...
 
-[2025-02-05 18:06:50] WARNING - caller_builder.py: 125
+[2025-02-05 18:10:02] WARNING - callee_builder.py: 123
 
-Failed to remove file `/shared/nas2/xuehangg/syncbench_build/code/caller16/16_pillow/.git/objects/pack/.nfs000000000c539ea0000121c1`: [Errno 16] Device or resource busy: '/shared/nas2/xuehangg/syncbench_build/code/caller16/16_pillow/.git/objects/pack/.nfs000000000c539ea0000121c1'
+Failed to remove file `/shared/nas2/xuehangg/syncbench_build/code/callee7/7_pytest/.git/objects/pack/.nfs000000000c5282bf000121e7`: [Errno 16] Device or resource busy: '/shared/nas2/xuehangg/syncbench_build/code/callee7/7_pytest/.git/objects/pack/.nfs000000000c5282bf000121e7'
 Attempting file removal again...
 
-[2025-02-05 18:06:50] WARNING - caller_builder.py: 125
+[2025-02-05 18:10:02] WARNING - callee_builder.py: 123
 
-Failed to remove file `/shared/nas2/xuehangg/syncbench_build/code/caller16/16_pillow/.git/objects/pack/.nfs000000000c539aea000121c2`: [Errno 16] Device or resource busy: '/shared/nas2/xuehangg/syncbench_build/code/caller16/16_pillow/.git/objects/pack/.nfs000000000c539aea000121c2'
+Failed to remove file `/shared/nas2/xuehangg/syncbench_build/code/callee7/7_pytest/.git/objects/pack/.nfs000000000c52912b000121e8`: [Errno 16] Device or resource busy: '/shared/nas2/xuehangg/syncbench_build/code/callee7/7_pytest/.git/objects/pack/.nfs000000000c52912b000121e8'
 Attempting file removal again...
 
-[2025-02-05 18:06:50] WARNING - caller_builder.py: 132
-
-Failed to remove directory `/shared/nas2/xuehangg/syncbench_build/code/caller16/16_pillow/.git/objects/pack`: [Errno 39] Directory not empty: '/shared/nas2/xuehangg/syncbench_build/code/caller16/16_pillow/.git/objects/pack'
-Attempting directory removal again...
-
-[2025-02-05 18:06:50] WARNING - caller_builder.py: 132
-
-Failed to remove directory `/shared/nas2/xuehangg/syncbench_build/code/caller16/16_pillow/.git/objects`: [Errno 39] Directory not empty: '/shared/nas2/xuehangg/syncbench_build/code/caller16/16_pillow/.git/objects'
-Attempting directory removal again...
-
-[2025-02-05 18:06:50] WARNING - caller_builder.py: 132
-
-Failed to remove directory `/shared/nas2/xuehangg/syncbench_build/code/caller16/16_pillow/.git`: [Errno 39] Directory not empty: '/shared/nas2/xuehangg/syncbench_build/code/caller16/16_pillow/.git'
-Attempting directory removal again...
-
-[2025-02-05 18:06:50] WARNING - caller_builder.py: 132
-
-Failed to remove directory `/shared/nas2/xuehangg/syncbench_build/code/caller16/16_pillow`: [Errno 39] Directory not empty: '/shared/nas2/xuehangg/syncbench_build/code/caller16/16_pillow'
-Attempting directory removal again...
-
-[2025-02-05 18:06:50] INFO - caller_builder.py: 136
-
-Successfully removed directory at '/shared/nas2/xuehangg/syncbench_build/code/caller16/'
-
-[2025-02-05 18:06:50] INFO - builder.py: 176
-
-Checking if Docker image 'xuehang/16_pillow' exists...
-
-Docker image 'xuehang/16_pillow' already exists with ID: fc29e8ee0f09
-
-[2025-02-05 18:06:50] INFO - handler.py: 30
-
-Successfiully created local path: `/shared/nas2/xuehangg/syncbench_build/code/caller16/test_repo/`
-
-[2025-02-05 18:06:50] INFO - handler.py: 42
-
-Container xuehang_16_pillow_3.11__Wed__Feb____5__18_06_50__2025__test_repo__dockerhandler_attempt1 started successfully.
-
-[2025-02-05 18:06:50] INFO - callee_builder.py: 297
-
-Preparing docker env for execution test...
-
-[2025-02-05 18:06:50] WARNING - callee_builder.py: 130
-
-Failed to remove directory `/shared/nas2/xuehangg/syncbench_build/code/callee16/16_pillow/.git/objects/pack`: [Errno 39] Directory not empty: '/shared/nas2/xuehangg/syncbench_build/code/callee16/16_pillow/.git/objects/pack'
-Attempting directory removal again...
-
-[2025-02-05 18:06:50] WARNING - callee_builder.py: 130
-
-Failed to remove directory `/shared/nas2/xuehangg/syncbench_build/code/callee16/16_pillow/.git/objects`: [Errno 39] Directory not empty: '/shared/nas2/xuehangg/syncbench_build/code/callee16/16_pillow/.git/objects'
-Attempting directory removal again...
-
-[2025-02-05 18:06:51] WARNING - callee_builder.py: 130
-
-Failed to remove directory `/shared/nas2/xuehangg/syncbench_build/code/callee16/16_pillow/.git`: [Errno 39] Directory not empty: '/shared/nas2/xuehangg/syncbench_build/code/callee16/16_pillow/.git'
-Attempting directory removal again...
-
-[2025-02-05 18:06:51] WARNING - callee_builder.py: 130
-
-Failed to remove directory `/shared/nas2/xuehangg/syncbench_build/code/callee16/16_pillow`: [Errno 39] Directory not empty: '/shared/nas2/xuehangg/syncbench_build/code/callee16/16_pillow'
-Attempting directory removal again...
-
-[2025-02-05 18:06:51] INFO - callee_builder.py: 134
-
-Successfully removed directory at '/shared/nas2/xuehangg/syncbench_build/code/callee16/'
-
-[2025-02-05 18:06:51] INFO - builder.py: 176
-
-Checking if Docker image 'xuehang/16_pillow' exists...
-
-Docker image 'xuehang/16_pillow' already exists with ID: fc29e8ee0f09
-
-[2025-02-05 18:06:51] INFO - handler.py: 30
-
-Successfiully created local path: `/shared/nas2/xuehangg/syncbench_build/code/callee16/test_repo/`
-
-[2025-02-05 18:06:52] INFO - handler.py: 42
-
-Container xuehang_16_pillow_3.11__Wed__Feb____5__18_06_51__2025__test_repo__dockerhandler_attempt1 started successfully.
-
-[2025-02-05 18:06:53] INFO - callee_builder.py: 297
-
-Preparing docker env for execution test...
-
-[2025-02-05 18:06:53] WARNING - callee_builder.py: 130
+[2025-02-05 18:10:02] WARNING - callee_builder.py: 130
 
 Failed to remove directory `/shared/nas2/xuehangg/syncbench_build/code/callee7/7_pytest/.git/objects/pack`: [Errno 39] Directory not empty: '/shared/nas2/xuehangg/syncbench_build/code/callee7/7_pytest/.git/objects/pack'
 Attempting directory removal again...
 
-[2025-02-05 18:06:53] WARNING - callee_builder.py: 130
+[2025-02-05 18:10:02] WARNING - callee_builder.py: 130
 
 Failed to remove directory `/shared/nas2/xuehangg/syncbench_build/code/callee7/7_pytest/.git/objects`: [Errno 39] Directory not empty: '/shared/nas2/xuehangg/syncbench_build/code/callee7/7_pytest/.git/objects'
 Attempting directory removal again...
 
-[2025-02-05 18:06:54] WARNING - callee_builder.py: 130
+[2025-02-05 18:10:02] WARNING - callee_builder.py: 130
 
 Failed to remove directory `/shared/nas2/xuehangg/syncbench_build/code/callee7/7_pytest/.git`: [Errno 39] Directory not empty: '/shared/nas2/xuehangg/syncbench_build/code/callee7/7_pytest/.git'
 Attempting directory removal again...
 
-[2025-02-05 18:06:54] WARNING - callee_builder.py: 130
+[2025-02-05 18:10:02] WARNING - callee_builder.py: 130
 
 Failed to remove directory `/shared/nas2/xuehangg/syncbench_build/code/callee7/7_pytest`: [Errno 39] Directory not empty: '/shared/nas2/xuehangg/syncbench_build/code/callee7/7_pytest'
 Attempting directory removal again...
 
-[2025-02-05 18:06:54] INFO - callee_builder.py: 134
+[2025-02-05 18:10:02] INFO - callee_builder.py: 134
 
 Successfully removed directory at '/shared/nas2/xuehangg/syncbench_build/code/callee7/'
 
-[2025-02-05 18:06:54] INFO - builder.py: 176
+[2025-02-05 18:10:02] INFO - builder.py: 176
 
 Checking if Docker image 'xuehang/7_pytest' exists...
 
 Docker image 'xuehang/7_pytest' already exists with ID: 2ad0b81aebdc
 
-[2025-02-05 18:06:54] INFO - handler.py: 30
+[2025-02-05 18:10:02] INFO - handler.py: 30
 
 Successfiully created local path: `/shared/nas2/xuehangg/syncbench_build/code/callee7/test_repo/`
 
-[2025-02-05 18:06:54] INFO - handler.py: 42
+[2025-02-05 18:10:02] INFO - caller_builder.py: 276
 
-Container xuehang_7_pytest_3.11__Wed__Feb____5__18_06_54__2025__test_repo__dockerhandler_attempt1 started successfully.
+Successfully saved data to '/shared/nas2/xuehangg/syncbench_build/dataset/caller_9_sympy.json
+
+Current progress successfully saved to '/shared/nas2/xuehangg/syncbench_build/dataset/caller_9_sympy.json'
+
+
+[2025-02-05 18:10:02] INFO - caller_builder.py: 699
+
+
+=========================  Function/method filtering 15/46: [test_polyoptions.py] -> [test_polyoptions.py] -> [test_Greedy_postprocess]  =========================
+
+[2025-02-05 18:10:02] WARNING - caller_builder.py: 392
+
+An error occurred when tracing commit history: /shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy
+Attemptaining again...
+
+[2025-02-05 18:10:02] INFO - builder.py: 176
+
+Checking if Docker image 'xuehang/9_sympy' exists...
+
+Docker image 'xuehang/9_sympy' already exists with ID: 75594250eeb0
+
+[2025-02-05 18:10:02] INFO - exetest.py: 199
+
+Repository already exists at `/shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/`.
+
+Removing existing repo and re-cloning...
+
+[2025-02-05 18:10:02] WARNING - exetest.py: 144
+
+Failed to remove file /shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/.git/objects/pack/.nfs000000000c5201e4000121e3: [Errno 16] Device or resource busy: '/shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/.git/objects/pack/.nfs000000000c5201e4000121e3'
+Attempting to remove file /shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/.git/objects/pack/.nfs000000000c5201e4000121e3 again...
+
+[2025-02-05 18:10:02] WARNING - exetest.py: 144
+
+Failed to remove file /shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/.git/objects/pack/.nfs000000000c52202d000121e2: [Errno 16] Device or resource busy: '/shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/.git/objects/pack/.nfs000000000c52202d000121e2'
+Attempting to remove file /shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/.git/objects/pack/.nfs000000000c52202d000121e2 again...
+
+[2025-02-05 18:10:02] WARNING - exetest.py: 151
+
+Failed to remove directory /shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/.git/objects/pack: [Errno 39] Directory not empty: '/shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/.git/objects/pack'
+Attempting to remove directory /shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/.git/objects/pack again...
+
+[2025-02-05 18:10:02] WARNING - exetest.py: 151
+
+Failed to remove directory /shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/.git/objects: [Errno 39] Directory not empty: '/shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/.git/objects'
+Attempting to remove directory /shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/.git/objects again...
+
+[2025-02-05 18:10:02] WARNING - exetest.py: 151
+
+Failed to remove directory /shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/.git: [Errno 39] Directory not empty: '/shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/.git'
+Attempting to remove directory /shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/.git again...
+
+[2025-02-05 18:10:02] INFO - exetest.py: 155
+
+Successfully removed target directory at '/shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/'
+
+[2025-02-05 18:10:02] INFO - handler.py: 22
+
+The local path '/shared/nas2/xuehangg/syncbench_build/code/caller9/9_sympy/' already exists.
+
+[2025-02-05 18:10:02] INFO - handler.py: 42
+
+Container xuehang_7_pytest_3.11__Wed__Feb____5__18_10_02__2025__test_repo__dockerhandler_attempt1 started successfully.
+
+[2025-02-05 18:10:02] INFO - handler.py: 42
+
+Container xuehang_9_sympy_3.11__Wed__Feb____5__18_10_02__2025__test_repo__dockerhandler_attempt1 started successfully.
+
+[2025-02-05 18:10:05] INFO - handler.py: 66
+
+Folder /workspace/test_repo successfully copied to /shared/nas2/xuehangg/syncbench_build/code/callee7/test_repo/
+
+[2025-02-05 18:10:05] INFO - handler.py: 77
+
+Container xuehang_7_pytest_3.11__Wed__Feb____5__18_10_02__2025__test_repo__dockerhandler_attempt1 stopped and removed successfully.
+
+[2025-02-05 18:10:05] INFO - exetest.py: 210
+
+Repository cloned from docker image to `/shared/nas2/xuehangg/syncbench_build/code/callee7/test_repo/`
+
+[2025-02-05 18:10:05] INFO - aligner.py: 85
+
+Successfully found and replaced the code of function/method `get_public_names` in the context_code.
+
+[2025-02-05 18:10:05] INFO - exetest.py: 291
+
+The path '/shared/nas2/xuehangg/syncbench_build/code/callee7/test_repo/src/_pytest/pytester.py' already exists.
+
+[2025-02-05 18:10:05] INFO - callee_builder.py: 305
+
+Using docker image with ID: 2ad0b81aebdc
+
+[2025-02-05 18:10:05] INFO - exetest.py: 199
+
+Repository already exists at `/shared/nas2/xuehangg/syncbench_build/code/callee7/test_repo/`.
+
+Skipping repo clone...
+
+[2025-02-05 18:10:05] INFO - aligner.py: 85
+
+Successfully found and replaced the code of function/method `get_public_names` in the context_code.
+
+[2025-02-05 18:10:05] INFO - tester.py: 51
+
+Path already exists: /shared/nas2/xuehangg/syncbench_build/code/callee7/test_repo/src/_pytest/pytester.py
+
+[2025-02-05 18:10:05] INFO - tester.py: 61
+
+Successfully saved aligned_code to '/shared/nas2/xuehangg/syncbench_build/code/callee7/test_repo/src/_pytest/pytester.py'
+
+[2025-02-05 18:10:05] INFO - tester.py: 368
+
+Running unit test using file `/workspace/test_repo/testing/test_python_path.py` in Docker container `xuehang_7_pytest_container_get_public_names_Wed_Feb__5_18_10_05_2025`...
+
+[2025-02-05 18:10:07] INFO - handler.py: 66
+
+Folder /workspace/test_repo successfully copied to /shared/nas2/xuehangg/syncbench_build/code/callee21/test_repo/
+
+[2025-02-05 18:10:07] INFO - handler.py: 77
+
+Container xuehang_21_mlflow_3.11__Wed__Feb____5__18_09_50__2025__test_repo__dockerhandler_attempt1 stopped and removed successfully.
+
+[2025-02-05 18:10:07] INFO - exetest.py: 210
+
+Repository cloned from docker image to `/shared/nas2/xuehangg/syncbench_build/code/callee21/test_repo/`
+
+[2025-02-05 18:10:07] INFO - aligner.py: 85
+
+Successfully found and replaced the code of function/method `invalid_parameter_value` in the context_code.
+
+[2025-02-05 18:10:07] INFO - exetest.py: 291
+
+The path '/shared/nas2/xuehangg/syncbench_build/code/callee21/test_repo/mlflow/exceptions.py' already exists.
+
+[2025-02-05 18:10:07] INFO - callee_builder.py: 305
+
+Using docker image with ID: 73f308f5c08c
+
+[2025-02-05 18:10:07] INFO - exetest.py: 199
+
+Repository already exists at `/shared/nas2/xuehangg/syncbench_build/code/callee21/test_repo/`.
+
+Skipping repo clone...
+
+[2025-02-05 18:10:07] INFO - aligner.py: 85
+
+Successfully found and replaced the code of function/method `invalid_parameter_value` in the context_code.
+
+[2025-02-05 18:10:07] INFO - tester.py: 51
+
+Path already exists: /shared/nas2/xuehangg/syncbench_build/code/callee21/test_repo/mlflow/exceptions.py
+
+[2025-02-05 18:10:07] INFO - tester.py: 61
+
+Successfully saved aligned_code to '/shared/nas2/xuehangg/syncbench_build/code/callee21/test_repo/mlflow/exceptions.py'
+
+[2025-02-05 18:10:07] INFO - tester.py: 368
+
+Running unit test using file `/workspace/test_repo/tests/pyfunc/test_model_export_with_loader_module_and_data_path.py` in Docker container `xuehang_21_mlflow_container__invalid_parameter_value__Wed_Feb__5_18_10_07_2025`...

@@ -183,7 +183,7 @@ Edit source repo at: `./source/my_repo_dict.json`
 Set source repo in *SyncBench* construction command to specify which source repositories to use.
 
 #### **3.1.2 Configuration**
-**(1) Set params**
+**Set params:** modify `construction.sh`
   ```
   cd SyncMind/scripts/construction.sh
   ```
