@@ -328,11 +328,11 @@ if __name__ == '__main__':
     else:
         from datasets import load_dataset
         syncbench_datasets = load_dataset("xuehang/SyncBench", data_files={
-            "eval": "syncbench/syncbench_300.csv",
-            "caller": "syncbench/syncbench_caller_150.csv",
-            "callee": "syncbench/syncbench_callee_150.csv"
+            "syncbench_300": "syncbench/syncbench_300.csv",
+            "syncbench_300_caller": "syncbench/syncbench_caller_150.csv",
+            "syncbench_300_callee": "syncbench/syncbench_callee_150.csv"
         })
-        instance_data = syncbench_datasets["eval"].to_pandas()
+        instance_data = syncbench_datasets["syncbench_300"].to_pandas()
         instance_dataset_path = "xuehang/SyncBench/syncbench/syncbench_300"
     
     if args.eval_n_limit > len(instance_data):

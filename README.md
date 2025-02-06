@@ -155,15 +155,15 @@ from datasets import load_dataset
 
 # Load datasets
 dataset = load_dataset("xuehang/SyncBench", data_files={
-    "eval": "syncbench/syncbench_300.csv",
-    "caller": "syncbench/syncbench_caller_150.csv",
-    "callee": "syncbench/syncbench_callee_150.csv"
+    "syncbench_300": "syncbench/syncbench_300.csv",
+    "syncbench_300_caller": "syncbench/syncbench_caller_150.csv",
+    "syncbench_300_callee": "syncbench/syncbench_callee_150.csv"
 })
 
 # Access the data
-eval_data = dataset['eval']
-caller_data = dataset['caller']
-callee_data = dataset['callee']
+eval_data = dataset["syncbench_300"]
+caller_data = dataset["syncbench_300_caller"]
+callee_data = dataset["syncbench_300_callee"]
 ```
 
 ### **2.3 Unit Test**
