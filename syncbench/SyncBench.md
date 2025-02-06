@@ -116,8 +116,8 @@ git clone https://github.com/xhguo7/SyncMind.git
     bash ./scripts/construction.sh
     ```
     This will save both the structured data in `.json` format and the instantiated data in `.csv` format
-      - `JSON` data: will be saved to `./syncbench_build/dataset` in `.json` format
-      - `CSV` data: will be saved to `./syncbench_build/syncbench` in `.csv` format
+    - `JSON` data: will be saved to `./syncbench_build/dataset` in `.json` format
+    - `CSV` data: will be saved to `./syncbench_build/syncbench` in `.csv` format
 
     Where `syncbench_build` shares the same parent directory as `SyncMind`.
 
@@ -129,7 +129,7 @@ git clone https://github.com/xhguo7/SyncMind.git
       bash ./scripts/syncbench.sh
       ```
       This will convert structured `.json` data into instantiated datasets in `.csv` format
-        - `CSV` data: will be saved to `./syncbench_build/syncbench` in `.csv` format
+      - `CSV` data: will be saved to `./syncbench_build/syncbench` in `.csv` format
 
       Where `syncbench_build` shares the same parent directory as `SyncMind`.
   - Noted that this step in totally optional, just in case if you would like to change instance attributes.
