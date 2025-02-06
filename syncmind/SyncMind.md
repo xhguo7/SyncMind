@@ -1,4 +1,4 @@
-# **SyncMind:** Measuring Agent Out-of-Sync Recovery in Collaborative Software Engineering
+# **SyncMind: Measuring Agent Out-of-Sync Recovery in Collaborative Software Engineering**
 
 
 ## **SyncMind**
@@ -37,13 +37,15 @@ More details can be found at [README.md](https://github.com/xhguo7/SyncMind/READ
 
 - Data preparation
     - Make sure you have *SyncBench* instances prepared before running *SyncMind*
+      - Download *SyncBench* from Hugging Face, and then set `--data-path` (i.e., [evaluation data path] in the example below) when running evaluation on *SyncMind*
+      - Directly load *SyncBench* when running evaluation on *SyncMind*, and define `--eval-n-limit` (i.e., [evaluation limit] in the example below) to set dataset size for evaluation
 
 
 ## 📊**3. SyncMind**
 - Run *SyncMind*
   ```
   cd SyncMind/syncmind/framework/OpenHands
-  bash ./evaluation/syncmind/scripts/run_infer.sh [llm configuration] [git version] [agent] [evaluation limit] [out-of-sync recovery method] [evaluation data path] [if using remote run] [max-turn limit] [num-workers]
+  bash ./evaluation/syncmind/scripts/run_infer.sh [llm configuration] [git version] [agent] [evaluation limit] [out-of-sync recovery method] [if using remote run] [max-turn limit] [num-workers] [evaluation data path]
   ```
 
   For example: run *SyncMind* for `GPT-4o` on `callee_11_whisper_instance.csv`

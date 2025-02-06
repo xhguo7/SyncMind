@@ -1,4 +1,4 @@
-<h1 align="center"><b> SyncMind: Agent Out-of-Sync Recovery in Collaborative Software Engineering </b></h1>
+<h1 align="center"><b> SyncMind: Measureing Agent Out-of-Sync Recovery in Collaborative Software Engineering </b></h1>
 
 <p align="center">
 <a href="https://https://xhguo7.github.io/SyncMind">🌐 Homepage</a>
