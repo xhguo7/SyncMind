@@ -146,9 +146,25 @@ dataset = load_dataset("xuehang/SyncBench", data_files=<dataset_name>)
 For example:
 ```
 from datasets import load_dataset
-dataset = load_dataset("xuehang/SyncBench", data_files="syncbench_300.csv")
+dataset = load_dataset("xuehang/SyncBench", data_files="syncbench/syncbench_300.csv")
 ```
 
+Alternatively:
+```
+from datasets import load_dataset
+
+# Load datasets
+dataset = load_dataset("xuehang/SyncBench", data_files={
+    "eval": "syncbench/syncbench_300.csv",
+    "caller": "syncbench/syncbench_caller_150.csv",
+    "callee": "syncbench/syncbench_callee_150.csv"
+})
+
+# Access the data
+eval_data = dataset['eval']
+caller_data = dataset['caller']
+callee_data = dataset['callee']
+```
 
 ### **2.3 Unit Test**
 Run unit test:

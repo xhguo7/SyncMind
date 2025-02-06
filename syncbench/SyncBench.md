@@ -30,7 +30,7 @@ git clone https://github.com/xhguo7/SyncMind.git
 
 
 
-## 🚀**2. Quick Start**
+## 📝 **2. Dataset Construction**
 
 **(1) Set params**
   ```
@@ -174,7 +174,7 @@ bash ./scripts/construction.sh
 ```
 This will save the constructed datasets in `.json` format
 
-**(3) Instantiate SyncBench for Agent Out-of-Sync Recovery**
+**(3) (Optional) Instantiate SyncBench for Agent Out-of-Sync Recovery**
 ```
 cd SyncMind
 bash ./scripts/syncbench.sh

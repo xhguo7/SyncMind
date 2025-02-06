@@ -327,9 +327,13 @@ if __name__ == '__main__':
         instance_data = pd.read_csv(instance_dataset_path)
     else:
         from datasets import load_dataset
-        dataset = load_dataset("xuehang/SyncBench")
-        instance_data = dataset['syncbench_300'].to_pandas()
-        instance_dataset_path = "xuehang/SyncBench/syncbench_300"
+        syncbench_datasets = load_dataset("xuehang/SyncBench", data_files={
+            "eval": "syncbench/syncbench_300.csv",
+            "caller": "syncbench/syncbench_caller_150.csv",
+            "callee": "syncbench/syncbench_callee_150.csv"
+        })
+        instance_data = syncbench_datasets["eval"].to_pandas()
+        instance_dataset_path = "xuehang/SyncBench/syncbench/syncbench_300"
     
     if args.eval_n_limit > len(instance_data):
         args.eval_n_limit = len(instance_data)
