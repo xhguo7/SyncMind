@@ -59,24 +59,24 @@ More details can be found at [README.md](https://github.com/xhguo7/SyncMind/READ
   python run_eval.py
   ```
   
-- Our experiments in our paper are conducted on [OpenHands `0.10.0`](https://github.com/xhguo7/OpenHands12) 
-  - Can directly use **SyncMind** on [OpenHands `0.10.0`](https://github.com/xhguo7/OpenHands12):
+- Our experiments in our paper are conducted on [OpenHands 0.10.0](https://github.com/xhguo7/OpenHands10) 
+  - Can directly use **SyncMind** on [OpenHands 0.10.0](https://github.com/xhguo7/OpenHands10):
     - *Quick Use*: May directly use the entire framework
       ```
       cd SyncMind/syncmind/framework/OpenHands
       ```
-    - *OR*: May clone [OpenHands `0.10.0`](https://github.com/xhguo7/OpenHands12) to your desired local path
+    - *OR*: May clone [OpenHands 0.10.0](https://github.com/xhguo7/OpenHands10) to your desired local path
       ```
-      git clone https://github.com/xhguo7/OpenHands12.git
-      cp -rp SyncMind/syncmind/framework/syncmind OpenHands12/evaluation/
+      git clone https://github.com/xhguo7/OpenHands10.git
+      cp -rp SyncMind/syncmind/framework/syncmind OpenHands10/evaluation/
       ```
   - Can also leverage our updated **SyncMind** on latest [OpenHands](https://github.com/All-Hands-AI/OpenHands)
     - We will do our best to maintain the synchronized version of **SyncMind** that can be compatible with the latest [OpenHands](https://github.com/All-Hands-AI/OpenHands)
     - Check our recent updates at [SyncMind.md](https://github.com/xhguo7/SyncMind/blob/main/syncmind/SyncMind.md)
     - We will save updated versions of **SyncMind** to the following directory:
-    ```
-    cd SyncMind/syncmind/updates/syncmind
-    ```
+      ```
+      cd SyncMind/syncmind/updates
+      ```
 
 
 ## 📋**4. Version Archives**
