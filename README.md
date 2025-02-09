@@ -1,9 +1,9 @@
 <h1 align="center"><b> SyncMind: Measuring Agent Out-of-Sync Recovery in Collaborative Software Engineering </b></h1>
 
 <p align="center">
-<a href="https://https://xhguo7.github.io/SyncMind">🌐 Homepage</a>
+<a href="https://https://xhguo7.github.io/SyncMind/">🌐 Homepage</a>
 •
-<a href="https://xhguo7.github.io/SyncMind">📃 Paper</a>
+<a href="https://xhguo7.github.io/SyncMind/">📃 Paper</a>
 •
 <a href="https://huggingface.co/datasets/xuehang/SyncBench" >🤗 Data</a>
 •

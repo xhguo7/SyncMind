@@ -1,0 +1,290 @@
+
+[2025-02-09 12:11:05] INFO - exetest.py: 155
+
+Successfully removed target directory at `/shared/nas2/xuehangg/syncbench_build/code/caller15/test_repo/`
+
+[2025-02-09 12:11:05] INFO - tester.py: 79
+
+Removing temporary directory used for repository at '/shared/nas2/xuehangg/syncbench_build/code/caller15/test_repo/'
+
+[2025-02-09 12:11:05] INFO - caller_builder.py: 472
+
+[Execution Test for 'gold_code + new_context'] Passed
+
+
+[2025-02-09 12:11:05] INFO - caller_builder.py: 302
+
+Preparing docker env for execution test...
+
+[2025-02-09 12:11:05] WARNING - caller_builder.py: 125
+
+Failed to remove file `/shared/nas2/xuehangg/syncbench_build/code/caller15/15_spacy/.git/objects/pack/.nfs000000000cf9d8800001c33c`: [Errno 16] Device or resource busy: '/shared/nas2/xuehangg/syncbench_build/code/caller15/15_spacy/.git/objects/pack/.nfs000000000cf9d8800001c33c'
+Attempting file removal again...
+
+[2025-02-09 12:11:05] WARNING - caller_builder.py: 125
+
+Failed to remove file `/shared/nas2/xuehangg/syncbench_build/code/caller15/15_spacy/.git/objects/pack/.nfs000000000cf9d4ee0001c33b`: [Errno 16] Device or resource busy: '/shared/nas2/xuehangg/syncbench_build/code/caller15/15_spacy/.git/objects/pack/.nfs000000000cf9d4ee0001c33b'
+Attempting file removal again...
+
+[2025-02-09 12:11:05] WARNING - caller_builder.py: 132
+
+Failed to remove directory `/shared/nas2/xuehangg/syncbench_build/code/caller15/15_spacy/.git/objects/pack`: [Errno 39] Directory not empty: '/shared/nas2/xuehangg/syncbench_build/code/caller15/15_spacy/.git/objects/pack'
+Attempting directory removal again...
+
+[2025-02-09 12:11:05] WARNING - caller_builder.py: 132
+
+Failed to remove directory `/shared/nas2/xuehangg/syncbench_build/code/caller15/15_spacy/.git/objects`: [Errno 39] Directory not empty: '/shared/nas2/xuehangg/syncbench_build/code/caller15/15_spacy/.git/objects'
+Attempting directory removal again...
+
+[2025-02-09 12:11:05] WARNING - caller_builder.py: 132
+
+Failed to remove directory `/shared/nas2/xuehangg/syncbench_build/code/caller15/15_spacy/.git`: [Errno 39] Directory not empty: '/shared/nas2/xuehangg/syncbench_build/code/caller15/15_spacy/.git'
+Attempting directory removal again...
+
+[2025-02-09 12:11:05] WARNING - caller_builder.py: 132
+
+Failed to remove directory `/shared/nas2/xuehangg/syncbench_build/code/caller15/15_spacy`: [Errno 39] Directory not empty: '/shared/nas2/xuehangg/syncbench_build/code/caller15/15_spacy'
+Attempting directory removal again...
+
+[2025-02-09 12:11:05] INFO - caller_builder.py: 136
+
+Successfully removed directory at '/shared/nas2/xuehangg/syncbench_build/code/caller15/'
+
+[2025-02-09 12:11:05] INFO - builder.py: 176
+
+Checking if Docker image 'xuehang/15_spacy' exists...
+
+Docker image 'xuehang/15_spacy' already exists with ID: 059492a93bd6
+
+[2025-02-09 12:11:05] INFO - handler.py: 30
+
+Successfiully created local path: `/shared/nas2/xuehangg/syncbench_build/code/caller15/test_repo/`
+
+[2025-02-09 12:11:06] INFO - handler.py: 42
+
+Container xuehang_15_spacy_3.11__Sun__Feb____9__12_11_05__2025__test_repo__dockerhandler_attempt1 started successfully.
+
+[2025-02-09 12:11:08] INFO - tester.py: 92
+
+Execution succeeded!
+Container output: 
+Obtaining file:///workspace/test_repo
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: filelock in /workspace/test_venv/lib/python3.11/site-packages (from transformers==4.45.0.dev0) (3.15.4)
+Requirement already satisfied: huggingface-hub<1.0,>=0.23.2 in /workspace/test_venv/lib/python3.11/site-packages (from transformers==4.45.0.dev0) (0.24.6)
+Requirement already satisfied: numpy>=1.17 in /workspace/test_venv/lib/python3.11/site-packages (from transformers==4.45.0.dev0) (1.26.4)
+Requirement already satisfied: packaging>=20.0 in /workspace/test_venv/lib/python3.11/site-packages (from transformers==4.45.0.dev0) (24.1)
+Requirement already satisfied: pyyaml>=5.1 in /workspace/test_venv/lib/python3.11/site-packages (from transformers==4.45.0.dev0) (6.0.2)
+Requirement already satisfied: regex!=2019.12.17 in /workspace/test_venv/lib/python3.11/site-packages (from transformers==4.45.0.dev0) (2024.7.24)
+Requirement already satisfied: requests in /workspace/test_venv/lib/python3.11/site-packages (from transformers==4.45.0.dev0) (2.32.3)
+Requirement already satisfied: tokenizers<0.20,>=0.19 in /workspace/test_venv/lib/python3.11/site-packages (from transformers==4.45.0.dev0) (0.19.1)
+Requirement already satisfied: safetensors>=0.4.1 in /workspace/test_venv/lib/python3.11/site-packages (from transformers==4.45.0.dev0) (0.4.4)
+Requirement already satisfied: tqdm>=4.27 in /workspace/test_venv/lib/python3.11/site-packages (from transformers==4.45.0.dev0) (4.66.5)
+Requirement already satisfied: fsspec>=2023.5.0 in /workspace/test_venv/lib/python3.11/site-packages (from huggingface-hub<1.0,>=0.23.2->transformers==4.45.0.dev0) (2024.6.1)
+Requirement already satisfied: typing-extensions>=3.7.4.3 in /workspace/test_venv/lib/python3.11/site-packages (from huggingface-hub<1.0,>=0.23.2->transformers==4.45.0.dev0) (4.12.2)
+Requirement already satisfied: charset-normalizer<4,>=2 in /workspace/test_venv/lib/python3.11/site-packages (from requests->transformers==4.45.0.dev0) (3.3.2)
+Requirement already satisfied: idna<4,>=2.5 in /workspace/test_venv/lib/python3.11/site-packages (from requests->transformers==4.45.0.dev0) (3.8)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /workspace/test_venv/lib/python3.11/site-packages (from requests->transformers==4.45.0.dev0) (2.2.2)
+Requirement already satisfied: certifi>=2017.4.17 in /workspace/test_venv/lib/python3.11/site-packages (from requests->transformers==4.45.0.dev0) (2024.8.30)
+Building wheels for collected packages: transformers
+  Building editable for transformers (pyproject.toml): started
+  Building editable for transformers (pyproject.toml): finished with status 'done'
+  Created wheel for transformers: filename=transformers-4.45.0.dev0-0.editable-py3-none-any.whl size=17379 sha256=de3b0a256732eaaab3edc84e73dc2efb5e548ccad557d46d64a6c1ff2782fa1e
+  Stored in directory: /tmp/pip-ephem-wheel-cache-xvv_sauh/wheels/77/6d/8d/6d288ec591919a528b58517c67f4d12e0e98d23d266200ee38
+Successfully built transformers
+Installing collected packages: transformers
+  Attempting uninstall: transformers
+    Found existing installation: transformers 4.45.0.dev0
+    Uninstalling transformers-4.45.0.dev0:
+      Successfully uninstalled transformers-4.45.0.dev0
+Successfully installed transformers-4.45.0.dev0
+============================= test session starts ==============================
+platform linux -- Python 3.11.9, pytest-8.3.2, pluggy-1.5.0 -- /workspace/test_venv/bin/python
+cachedir: .pytest_cache
+rootdir: /workspace/test_repo
+configfile: pyproject.toml
+plugins: asyncio-0.24.0
+asyncio: mode=Mode.STRICT, default_loop_scope=function
+collecting ... collected 146 items
+
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_attention_outputs SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_batching_equivalence PASSED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_can_use_safetensors <- tests/test_modeling_common.py [2025-02-09 18:10:50,465] [WARNING] [real_accelerator.py:162:get_accelerator] Setting accelerator to CPU. If you have GPU or other accelerator, we were unable to detect it.
+[2025-02-09 18:10:50,466] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cpu (auto detect)
+PASSED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_compile_cuda_graph_time <- tests/test_modeling_common.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_config PASSED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_correct_missing_keys <- tests/test_modeling_common.py PASSED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_cpu_offload <- tests/test_modeling_common.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_custom_4d_attention_mask <- tests/test_modeling_common.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_determinism <- tests/test_modeling_common.py PASSED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_disk_offload_bin <- tests/test_modeling_common.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_disk_offload_safetensors <- tests/test_modeling_common.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_eager_matches_sdpa_generate <- tests/test_modeling_common.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_eager_matches_sdpa_inference_0_float16 <- ../../usr/local/lib/python3.11/unittest/case.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_eager_matches_sdpa_inference_1_bfloat16 <- ../../usr/local/lib/python3.11/unittest/case.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_eager_matches_sdpa_inference_2_float32 <- ../../usr/local/lib/python3.11/unittest/case.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_equivalence_flax_to_pt <- tests/test_modeling_common.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_equivalence_pt_to_flax <- tests/test_modeling_common.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_feed_forward_chunking <- tests/test_modeling_common.py PASSED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_flash_attention_2_padding_matches_padding_free_with_position_ids <- tests/test_modeling_common.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_flash_attn_2_conversion <- tests/test_modeling_common.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_flash_attn_2_fp32_ln <- tests/test_modeling_common.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_flash_attn_2_from_config <- tests/test_modeling_common.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_flash_attn_2_generate_left_padding <- tests/test_modeling_common.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_flash_attn_2_generate_padding_right <- tests/test_modeling_common.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_flash_attn_2_generate_reuse_cache <- tests/test_modeling_common.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_flash_attn_2_generate_use_cache <- tests/test_modeling_common.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_flash_attn_2_inference_equivalence <- tests/test_modeling_common.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_flash_attn_2_inference_equivalence_right_padding <- tests/test_modeling_common.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_flax_from_pt_safetensors <- tests/test_modeling_common.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_for_image_classification PASSED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_forward_with_num_logits_to_keep <- tests/test_modeling_common.py PASSED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_from_pretrained_no_checkpoint <- tests/test_modeling_common.py PASSED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_gradient_checkpointing_backward_compatibility <- tests/test_modeling_common.py PASSED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_gradient_checkpointing_enable_disable <- tests/test_modeling_common.py PASSED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_head_pruning <- tests/test_modeling_common.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_head_pruning_integration <- tests/test_modeling_common.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_head_pruning_save_load_from_config_init <- tests/test_modeling_common.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_head_pruning_save_load_from_pretrained <- tests/test_modeling_common.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_headmasking <- tests/test_modeling_common.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_hidden_states_output PASSED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_initialization <- tests/test_modeling_common.py PASSED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_inputs_embeds SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_inputs_embeds_matches_input_ids <- tests/test_modeling_common.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_inputs_embeds_matches_input_ids_with_generate <- tests/test_modeling_common.py PASSED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_keep_in_fp32_modules <- tests/test_modeling_common.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_load_save_without_tied_weights <- tests/test_modeling_common.py PASSED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_load_with_mismatched_shapes <- tests/test_modeling_common.py PASSED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_matched_shapes_have_loaded_weights_when_some_mismatched_shapes_exist <- tests/test_modeling_common.py PASSED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_mismatched_shapes_have_properly_initialized_weights <- tests/test_modeling_common.py PASSED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_model PASSED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_model_from_pretrained SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_model_get_set_embeddings SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_model_is_small <- tests/test_modeling_common.py PASSED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_model_main_input_name <- tests/test_modeling_common.py PASSED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_model_outputs_equivalence <- tests/test_modeling_common.py PASSED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_model_parallel_equal_results <- tests/test_modeling_common.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_model_parallelism <- tests/test_modeling_common.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_model_parallelization <- tests/test_modeling_common.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_model_weights_reload_no_missing_tied_weights <- tests/test_modeling_common.py PASSED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_multi_gpu_data_parallel_forward <- tests/test_modeling_common.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_pipeline_audio_classification <- tests/test_pipeline_mixin.py SKIPPEDetV1ModelTest`.)
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_pipeline_audio_classification_fp16 <- tests/test_pipeline_mixin.py SKIPPEDodelTest`.)
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_pipeline_automatic_speech_recognition <- tests/test_pipeline_mixin.py SKIPPEDmodel_mapping` for `MobileNetV1ModelTest`.)
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_pipeline_automatic_speech_recognition_fp16 <- tests/test_pipeline_mixin.py SKIPPEDmodel_mapping` for `MobileNetV1ModelTest`.)
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_pipeline_depth_estimation <- tests/test_pipeline_mixin.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_pipeline_depth_estimation_fp16 <- tests/test_pipeline_mixin.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_pipeline_document_question_answering <- tests/test_pipeline_mixin.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_pipeline_document_question_answering_fp16 <- tests/test_pipeline_mixin.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_pipeline_feature_extraction <- tests/test_pipeline_mixin.py SKIPPEDobileNetV1ModelTest`.)
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_pipeline_feature_extraction_fp16 <- tests/test_pipeline_mixin.py SKIPPEDelTest`.)
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_pipeline_fill_mask <- tests/test_pipeline_mixin.py SKIPPEDst`.)
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_pipeline_fill_mask_fp16 <- tests/test_pipeline_mixin.py SKIPPEDt`.)
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_pipeline_image_classification <- tests/test_pipeline_mixin.py PASSED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_pipeline_image_classification_fp16 <- tests/test_pipeline_mixin.py PASSED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_pipeline_image_feature_extraction <- tests/test_pipeline_mixin.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_pipeline_image_feature_extraction_fp16 <- tests/test_pipeline_mixin.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_pipeline_image_segmentation <- tests/test_pipeline_mixin.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_pipeline_image_segmentation_fp16 <- tests/test_pipeline_mixin.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_pipeline_image_to_text <- tests/test_pipeline_mixin.py SKIPPEDModelTest`.)
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_pipeline_image_to_text_fp16 <- tests/test_pipeline_mixin.py SKIPPEDModelTest`.)
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_pipeline_mask_generation <- tests/test_pipeline_mixin.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_pipeline_mask_generation_fp16 <- tests/test_pipeline_mixin.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_pipeline_object_detection <- tests/test_pipeline_mixin.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_pipeline_object_detection_fp16 <- tests/test_pipeline_mixin.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_pipeline_question_answering <- tests/test_pipeline_mixin.py SKIPPEDobileNetV1ModelTest`.)
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_pipeline_question_answering_fp16 <- tests/test_pipeline_mixin.py SKIPPEDelTest`.)
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_pipeline_summarization <- tests/test_pipeline_mixin.py SKIPPEDModelTest`.)
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_pipeline_summarization_fp16 <- tests/test_pipeline_mixin.py SKIPPEDModelTest`.)
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_pipeline_table_question_answering <- tests/test_pipeline_mixin.py SKIPPEDileNetV1ModelTest`.)
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_pipeline_table_question_answering_fp16 <- tests/test_pipeline_mixin.py SKIPPEDtV1ModelTest`.)
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_pipeline_text2text_generation <- tests/test_pipeline_mixin.py SKIPPEDetV1ModelTest`.)
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_pipeline_text2text_generation_fp16 <- tests/test_pipeline_mixin.py SKIPPEDodelTest`.)
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_pipeline_text_classification <- tests/test_pipeline_mixin.py SKIPPEDtV1ModelTest`.)
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_pipeline_text_classification_fp16 <- tests/test_pipeline_mixin.py SKIPPEDdelTest`.)
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_pipeline_text_generation <- tests/test_pipeline_mixin.py SKIPPEDetV1ModelTest`.)
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_pipeline_text_generation_fp16 <- tests/test_pipeline_mixin.py SKIPPEDetV1ModelTest`.)
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_pipeline_text_to_audio <- tests/test_pipeline_mixin.py SKIPPEDModelTest`.)
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_pipeline_text_to_audio_fp16 <- tests/test_pipeline_mixin.py SKIPPEDModelTest`.)
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_pipeline_token_classification <- tests/test_pipeline_mixin.py SKIPPEDetV1ModelTest`.)
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_pipeline_token_classification_fp16 <- tests/test_pipeline_mixin.py SKIPPEDodelTest`.)
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_pipeline_translation <- tests/test_pipeline_mixin.py SKIPPEDlTest`.)
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_pipeline_translation_fp16 <- tests/test_pipeline_mixin.py SKIPPEDlTest`.)
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_pipeline_video_classification <- tests/test_pipeline_mixin.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_pipeline_video_classification_fp16 <- tests/test_pipeline_mixin.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_pipeline_visual_question_answering <- tests/test_pipeline_mixin.py SKIPPEDbileNetV1ModelTest`.)
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_pipeline_visual_question_answering_fp16 <- tests/test_pipeline_mixin.py SKIPPEDetV1ModelTest`.)
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_pipeline_zero_shot <- tests/test_pipeline_mixin.py SKIPPEDst`.)
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_pipeline_zero_shot_audio_classification <- tests/test_pipeline_mixin.py SKIPPEDine_model_mapping` for `MobileNetV1ModelTest`.)
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_pipeline_zero_shot_audio_classification_fp16 <- tests/test_pipeline_mixin.py SKIPPEDline_model_mapping` for
+`MobileNetV1ModelTest`.)
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_pipeline_zero_shot_fp16 <- tests/test_pipeline_mixin.py SKIPPEDt`.)
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_pipeline_zero_shot_image_classification <- tests/test_pipeline_mixin.py SKIPPEDine_model_mapping` for `MobileNetV1ModelTest`.)
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_pipeline_zero_shot_image_classification_fp16 <- tests/test_pipeline_mixin.py SKIPPEDline_model_mapping` for
+`MobileNetV1ModelTest`.)
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_pipeline_zero_shot_object_detection <- tests/test_pipeline_mixin.py SKIPPEDobileNetV1ModelTest`.)
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_pipeline_zero_shot_object_detection_fp16 <- tests/test_pipeline_mixin.py SKIPPEDNetV1ModelTest`.)
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_problem_types <- tests/test_modeling_common.py PASSED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_pt_tf_model_equivalence <- tests/test_modeling_common.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_resize_embeddings_untied <- tests/test_modeling_common.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_resize_position_vector_embeddings <- tests/test_modeling_common.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_resize_tokens_embeddings <- tests/test_modeling_common.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_retain_grad_hidden_states_attentions <- tests/test_modeling_common.py PASSED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_save_load <- tests/test_modeling_common.py PASSED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_save_load_fast_init_from_base <- tests/test_modeling_common.py PASSED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_save_load_fast_init_to_base <- tests/test_modeling_common.py PASSED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_save_load_keys_to_ignore_on_save <- tests/test_modeling_common.py PASSED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_save_load_low_cpu_mem_usage <- tests/test_modeling_common.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_save_load_low_cpu_mem_usage_checkpoints <- tests/test_modeling_common.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_save_load_low_cpu_mem_usage_no_safetensors <- tests/test_modeling_common.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_sdpa_can_compile_dynamic <- tests/test_modeling_common.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_sdpa_can_dispatch_on_flash <- tests/test_modeling_common.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_sdpa_matches_eager_sliding_window <- tests/test_modeling_common.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_static_cache_matches_dynamic <- tests/test_modeling_common.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_tf_from_pt_safetensors <- tests/test_modeling_common.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_tie_model_weights <- tests/test_modeling_common.py PASSED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_tied_weights_keys <- tests/test_modeling_common.py PASSED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_torch_compile <- tests/test_modeling_common.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_torch_fx <- tests/test_modeling_common.py SKIPPEDt
+compatible with torch.fx)
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_torch_fx_output_loss <- tests/test_modeling_common.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_torch_save_load <- tests/test_modeling_common.py PASSED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_torchscript_output_attentions <- tests/test_modeling_common.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_torchscript_output_hidden_state <- tests/test_modeling_common.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_torchscript_simple <- tests/test_modeling_common.py SKIPPED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_training <- tests/test_modeling_common.py PASSED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_training_gradient_checkpointing <- tests/test_modeling_common.py PASSED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_training_gradient_checkpointing_use_reentrant <- tests/test_modeling_common.py PASSED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelTest::test_training_gradient_checkpointing_use_reentrant_false <- tests/test_modeling_common.py PASSED
+tests/models/mobilenet_v1/test_modeling_mobilenet_v1.py::MobileNetV1ModelIntegrationTest::test_inference_image_classification_head SKIPPED
+
+=============================== warnings summary ===============================
+src/transformers/deepspeed.py:24
+  /workspace/test_repo/src/transformers/deepspeed.py:24: FutureWarning: transformers.deepspeed module is deprecated and will be removed in a future version. Please import deepspeed modules directly from transformers.integrations
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+================= 38 passed, 108 skipped, 1 warning in 19.67s ==================
+
+
+[2025-02-09 12:11:08] INFO - tester.py: 257
+
+{'total': 147, 'passed': 38, 'xpassed': 0, 'failed': 0, 'xfailed': 0, 'deselected': 0, 'skipped': 108, 'warning': 1, 'error': 0}
+
+[2025-02-09 12:11:08] INFO - tester.py: 436
+
+Number of test evals in current unit test: 147
+
+[2025-02-09 12:11:08] INFO - tester.py: 66
+
+Stopping and removing container 'xuehang_2_transformers_container_test_model_from_pretrained_Sun_Feb__9_12_10_32_2025'...
+
+Successfully removed container 'xuehang_2_transformers_container_test_model_from_pretrained_Sun_Feb__9_12_10_32_2025'
