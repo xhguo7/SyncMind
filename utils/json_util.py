@@ -1,7 +1,3 @@
-"""
-Util functions for json
-"""
-
 import json
 
 # Save to json
