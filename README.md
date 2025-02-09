@@ -56,12 +56,13 @@ Setup environment for **SyncMind**:
       git clone https://github.com/xhguo7/OpenHands10.git
       cp -rp SyncMind/syncmind/framework/syncmind OpenHands10/evaluation/
       ```
-  - Can also leverage our updated **SyncMind** on latest [OpenHands](https://github.com/All-Hands-AI/OpenHands)
+  - If run **SyncMind** on latest [OpenHands](https://github.com/All-Hands-AI/OpenHands)
+    - May need to modify several relative paths of imports
     - We will do our best to maintain the synchronized version of **SyncMind** that can be compatible with the latest [OpenHands](https://github.com/All-Hands-AI/OpenHands)
     - Check our recent updates at [SyncMind.md](https://github.com/xhguo7/SyncMind/blob/main/syncmind/SyncMind.md)
     - We will save updated versions of **SyncMind** to the following directory:
     ```
-    cd SyncMind/syncmind/updates/syncmind
+    cd SyncMind/syncmind/updates
     ```
 
 
@@ -91,6 +92,11 @@ Setup environment for **SyncMind**:
   - *SyncBench*
     - In our current version, [SyncBench](https://huggingface.co/datasets/xuehang/SyncBench) is built upon 21 popular GitHub repositories.
     - For computational efficiency, we also downsampled an evaluation subset comprising [300 instances](https://huggingface.co/datasets/xuehang/SyncBench) for agent *out-of-sync* evaluation.
+  - Load *SyncBench*
+    ```
+    from datasets import load_dataset
+    dataset = load_dataset("xuehang/SyncBench")
+    ```
 
 - Run *SyncMind*
   ```
@@ -106,12 +112,7 @@ Setup environment for **SyncMind**:
   ```
   bash ./evaluation/syncmind/scripts/run_infer.sh llm.gpt_4o HEAD CodeActAgent 100 independent false 30 1
   ```
-
-- Metrics
-  ```
-  cd ./SyncMind/syncmind/framework/OpenHands/evaluation/syncmind/metrics/
-  python run_eval.py
-  ```
+  
 
 ### **2.2 SyncBench: Agent Out-of-Sync Recovery Benchmark Construction**
 
