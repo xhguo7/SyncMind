@@ -1,0 +1,85 @@
+
+[2025-02-09 18:12:26] INFO - exetest.py: 155
+
+Successfully removed target directory at `/shared/nas2/xuehangg/syncbench_build/code/callee16/test_repo/`
+
+[2025-02-09 18:12:26] INFO - tester.py: 79
+
+Removing temporary directory used for repository at '/shared/nas2/xuehangg/syncbench_build/code/callee16/test_repo/'
+
+[2025-02-09 18:12:26] INFO - callee_builder.py: 491
+
+[Execution Test for 'original_code + new_context'] Failed
+
+
+[2025-02-09 18:12:26] INFO - callee_builder.py: 741
+
+[2025-02-09 18:12:26] INFO - callee_builder.py: 550
+
+[Valid test 201/201] Current commit(4dd47fc6978abe832380ee551a9bff213b754c5e) has been successfully recorded.
+
+[2025-02-09 18:12:27] INFO - callee_builder.py: 272
+
+Successfully saved data to '/shared/nas2/xuehangg/syncbench_build/dataset/callee_16_pillow.json
+
+Current progress successfully saved to '/shared/nas2/xuehangg/syncbench_build/dataset/callee_16_pillow.json'
+
+
+[2025-02-09 18:12:27] INFO - callee_builder.py: 741
+
+
+=========================  Function/method filtering 6/34: [test_image.py] -> [helper.py] -> [assert_image_equal_tofile]  =========================
+
+[2025-02-09 18:12:27] WARNING - callee_builder.py: 393
+
+An error occurred when tracing commit history: /shared/nas2/xuehangg/syncbench_build/code/callee16/16_pillow
+Attemptaining again...
+
+[2025-02-09 18:12:27] INFO - builder.py: 176
+
+Checking if Docker image 'xuehang/16_pillow' exists...
+
+Docker image 'xuehang/16_pillow' already exists with ID: fc29e8ee0f09
+
+[2025-02-09 18:12:27] INFO - exetest.py: 199
+
+Repository already exists at `/shared/nas2/xuehangg/syncbench_build/code/callee16/16_pillow/`.
+
+Removing existing repo and re-cloning...
+
+[2025-02-09 18:12:27] WARNING - exetest.py: 144
+
+Failed to remove file /shared/nas2/xuehangg/syncbench_build/code/callee16/16_pillow/.git/objects/pack/.nfs000000000cfa22250001c9f3: [Errno 16] Device or resource busy: '/shared/nas2/xuehangg/syncbench_build/code/callee16/16_pillow/.git/objects/pack/.nfs000000000cfa22250001c9f3'
+Attempting to remove file /shared/nas2/xuehangg/syncbench_build/code/callee16/16_pillow/.git/objects/pack/.nfs000000000cfa22250001c9f3 again...
+
+[2025-02-09 18:12:27] WARNING - exetest.py: 144
+
+Failed to remove file /shared/nas2/xuehangg/syncbench_build/code/callee16/16_pillow/.git/objects/pack/.nfs000000000cfa17a90001c9f4: [Errno 16] Device or resource busy: '/shared/nas2/xuehangg/syncbench_build/code/callee16/16_pillow/.git/objects/pack/.nfs000000000cfa17a90001c9f4'
+Attempting to remove file /shared/nas2/xuehangg/syncbench_build/code/callee16/16_pillow/.git/objects/pack/.nfs000000000cfa17a90001c9f4 again...
+
+[2025-02-09 18:12:27] WARNING - exetest.py: 151
+
+Failed to remove directory `/shared/nas2/xuehangg/syncbench_build/code/callee16/16_pillow/.git/objects/pack`: [Errno 39] Directory not empty: '/shared/nas2/xuehangg/syncbench_build/code/callee16/16_pillow/.git/objects/pack'
+Attempting to remove directory `/shared/nas2/xuehangg/syncbench_build/code/callee16/16_pillow/.git/objects/pack` again...
+
+[2025-02-09 18:12:27] WARNING - exetest.py: 151
+
+Failed to remove directory `/shared/nas2/xuehangg/syncbench_build/code/callee16/16_pillow/.git/objects`: [Errno 39] Directory not empty: '/shared/nas2/xuehangg/syncbench_build/code/callee16/16_pillow/.git/objects'
+Attempting to remove directory `/shared/nas2/xuehangg/syncbench_build/code/callee16/16_pillow/.git/objects` again...
+
+[2025-02-09 18:12:27] WARNING - exetest.py: 151
+
+Failed to remove directory `/shared/nas2/xuehangg/syncbench_build/code/callee16/16_pillow/.git`: [Errno 39] Directory not empty: '/shared/nas2/xuehangg/syncbench_build/code/callee16/16_pillow/.git'
+Attempting to remove directory `/shared/nas2/xuehangg/syncbench_build/code/callee16/16_pillow/.git` again...
+
+[2025-02-09 18:12:27] INFO - exetest.py: 155
+
+Successfully removed target directory at `/shared/nas2/xuehangg/syncbench_build/code/callee16/16_pillow/`
+
+[2025-02-09 18:12:27] INFO - handler.py: 22
+
+The local path '/shared/nas2/xuehangg/syncbench_build/code/callee16/16_pillow/' already exists.
+
+[2025-02-09 18:12:27] INFO - handler.py: 42
+
+Container xuehang_16_pillow_3.11__Sun__Feb____9__18_12_27__2025__test_repo__dockerhandler_attempt1 started successfully.
