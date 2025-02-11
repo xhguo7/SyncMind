@@ -124,8 +124,8 @@ dataset = load_dataset("xuehang/SyncBench")
 
 **You can now access all SyncBench datasets:**
 - Evaluation dataset consisting of 300 instances: `dataset['syncbench_300']`
-  - Callee: `dataset['syncbench_callee_150']`
-  - Caller: `dataset['syncbench_caller_150']`
+  - Callee: `dataset['syncbench_300_callee']`
+  - Caller: `dataset['syncbench_300_caller']`
 - SyncBench consisting of 24,332 instances: `dataset['syncbench_24k']`
   - Callee: `dataset['syncbench_24k_callee']`
   - Caller: `dataset['syncbench_24k_caller']`
@@ -138,8 +138,8 @@ dataset = load_dataset("xuehang/SyncBench", data_files=<dataset_name>)
 
 **Fill in `<dataset_name>` with a specific dataset name:**
 - syncbench_300
-  - syncbench_callee_150
-  - syncbench_caller_150
+  - syncbench_300_callee
+  - syncbench_300_caller
 - syncbench_24k
   - syncbench_24k_callee
   - syncbench_24k_caller
@@ -157,8 +157,8 @@ from datasets import load_dataset
 # Load datasets
 dataset = load_dataset("xuehang/SyncBench", data_files={
     "syncbench_300": "syncbench/syncbench_300.csv",
-    "syncbench_300_caller": "syncbench/syncbench_caller_150.csv",
-    "syncbench_300_callee": "syncbench/syncbench_callee_150.csv"
+    "syncbench_300_caller": "syncbench/syncbench_300_caller.csv",
+    "syncbench_300_callee": "syncbench/syncbench_300_callee.csv"
 })
 
 # Access the data

@@ -329,8 +329,8 @@ if __name__ == '__main__':
         from datasets import load_dataset
         syncbench_datasets = load_dataset("xuehang/SyncBench", data_files={
             "syncbench_300": "syncbench/syncbench_300.csv",
-            "syncbench_300_caller": "syncbench/syncbench_caller_150.csv",
-            "syncbench_300_callee": "syncbench/syncbench_callee_150.csv"
+            "syncbench_300_caller": "syncbench/syncbench_300_caller.csv",
+            "syncbench_300_callee": "syncbench/syncbench_300_callee.csv"
         })
         instance_data = syncbench_datasets["syncbench_300"].to_pandas()
         instance_dataset_path = "xuehang/SyncBench/syncbench/syncbench_300"

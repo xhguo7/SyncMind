@@ -227,7 +227,7 @@
         "github_link": "https://github.com/mlflow/mlflow",
         "test_method": "pytest", 
         "python_version": "3.11",
-        "requirements": ["boto3"], 
+        "requirements": ["boto3", "lightning"], 
         "install_command": [], 
         "additional_unittest_command": "",
         "image_id": ""

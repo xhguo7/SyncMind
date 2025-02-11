@@ -17,6 +17,7 @@ def dataset_to_benchset(args, dataset_dict_list: List) -> pd.DataFrame:
         new_instance_dict = {
             'instance_id': f"{inst_dict['repo']['repo_id']}_{inst_dict['repo']['repo_name']}_{task_type}__{inst_dict['context_data']['pyfile_name'].rstrip('.py')}__{inst_dict['fm_data']['fm_name']}__{inst_dict['changes']['commit_id']}", 
             'instance_type': task_type,
+            'task_type': inst_dict['changes']['test_type'],
             'repo_url': inst_dict['repo']['repo_url'],
             'commit': inst_dict['changes']['commit_id'],
             'fm_type': inst_dict['fm_data']['fm_type'], 
