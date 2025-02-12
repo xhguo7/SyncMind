@@ -23,14 +23,14 @@
 
 
 
-# 🍀**1. Environment Setup**
+## 🍀**1. Environment Setup**
 
 To use **SyncMind** and **SyncBench** for *agent out-of-sync recovery*:
 ```
 git clone https://github.com/xhguo7/SyncMind.git
 ```
 
-## **1.1 SyncMind**
+### **1.1 SyncMind**
 Setup environment for **SyncMind**:
 - We are using [OpenHands](https://github.com/All-Hands-AI/OpenHands) to implement interactive codebase environments for agent *out-of-sync* recovery.
   - Miniconda env setup: may refer to [Development.md](https://github.com/All-Hands-AI/OpenHands/blob/main/Development.md) for further details
@@ -67,7 +67,7 @@ Setup environment for **SyncMind**:
 
 
 
-## **1.2 SyncBench**
+### **1.2 SyncBench**
 
 - **Quick Install:**
   ```
@@ -85,9 +85,9 @@ Setup environment for **SyncMind**:
 
 
 
-# 🚀**2. Quick Start**
+## 🚀**2. Quick Start**
 
-## **2.1 SyncMind: Agent Out-of-Sync Recovery Evaluation**
+### **2.1 SyncMind: Agent Out-of-Sync Recovery Evaluation**
 - Prepare data
   - *SyncBench*
     - In our current version, [SyncBench](https://huggingface.co/datasets/xuehang/SyncBench) is built upon 21 popular GitHub repositories.
@@ -154,7 +154,7 @@ Setup environment for **SyncMind**:
 
   
 
-## **2.2 SyncBench: Agent Out-of-Sync Recovery Benchmark Construction**
+### **2.2 SyncBench: Agent Out-of-Sync Recovery Benchmark Construction**
 
 **(1) Load SyncBench**
 ```
@@ -207,7 +207,7 @@ caller_data = dataset["syncbench_300_caller"]
 callee_data = dataset["syncbench_300_callee"]
 ```
 
-## **2.3 Unit Test**
+### **2.3 Unit Test**
 Run unit test:
   ```
   cd SyncMind
@@ -221,7 +221,7 @@ In our current version, [SyncBench](https://huggingface.co/datasets/xuehang/Sync
 
 **SyncBench** can be readily scale up by applying to diverse qualified Python repositories, and can also be quickly downsampled to smaller evaluation subsets.
 
-## 📈 **3.1 Scale Up**
+### 📈 **3.1 Scale Up**
 **SyncBench** can be readily scale up by applying to diverse Python repositories that meet the following prerequisites:
   - Have *Python* as the primary language
   - Possess well-developed unit tests
@@ -229,7 +229,7 @@ In our current version, [SyncBench](https://huggingface.co/datasets/xuehang/Sync
     - Repositories with *env setup* files, such as `setup.py`, `.toml`, `.yml`, etc., can help quickly build up the docker environment
     - Meanwhile, please be rest assured that you can also manually specified certain packages to install when your selected repositories may not include these *env setup* files.
 
-### **3.1.1 Prepare Source Repo**
+#### **3.1.1 Prepare Source Repo**
 
 **Source Repository**
 
@@ -239,7 +239,7 @@ Edit source repo at: `./source/my_repo_dict.json`
 
 Set source repo in *SyncBench* construction command to specify which source repositories to use.
 
-### **3.1.2 Configuration**
+#### **3.1.2 Configuration**
 **Set params:** directly modify `construction.sh`
   ```
   cd SyncMind/scripts/construction.sh
@@ -300,7 +300,7 @@ Set source repo in *SyncBench* construction command to specify which source repo
     TRACE_MODE=0
     ```
 
-### **3.1.3 Let's Expand SyncBench!**
+#### **3.1.3 Let's Expand SyncBench!**
 **(1) (Optional) Check Gits**
   - If would like to check git commits before constructing *SyncBench*
     ```
@@ -334,7 +334,7 @@ Set source repo in *SyncBench* construction command to specify which source repo
     - Running `construction.sh` already includes this instantiation step with default attributes for agent out-of-sync recovery evaluation.
 
 
-## 📉 **3.2 Scale Down**
+### 📉 **3.2 Scale Down**
 For small-scale evaluation, **SyncBench** can be readily downsampled to fewer instances:
 
 **(1) 300 Instances:**
