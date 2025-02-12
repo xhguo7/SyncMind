@@ -149,6 +149,8 @@ In our current version, [SyncBench](https://huggingface.co/datasets/xuehang/Sync
   - (Optional) Support easy *env setup* is a plus, be not required
     - Repositories with *env setup* files, such as `setup.py`, `.toml`, `.yml`, etc., can help quickly build up the docker environment
     - Meanwhile, please be rest assured that you can also manually specified certain packages to install when your selected repositories may not include these *env setup* files.
+      - Need manual package installation? See examples at [my_repo_dict.json](https://github.com/xhguo7/SyncMind/blob/main/source/my_repo_dict.json)
+        - Add custom source repos to this file ([my_repo_dict.json](https://github.com/xhguo7/SyncMind/blob/main/source/my_repo_dict.json)) and then run `construction.sh`, *SyncBench* construction will install your specified packages automatically in corresponding isolated environments. 
 
 #### **3.1.1 Prepare Source Repo**
 

@@ -3,7 +3,7 @@
 <p align="center">
 <a href="https://xhguo7.github.io/SyncMind/">🌐 Homepage</a>
 •
-<a href="https://xhguo7.github.io/SyncMind/">📃 Paper</a>
+<a href="https://arxiv.org/abs/2502.06994">📃 Paper</a>
 •
 <a href="https://huggingface.co/datasets/xuehang/SyncBench" >🤗 Data</a>
 •
