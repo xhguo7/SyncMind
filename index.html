@@ -400,7 +400,7 @@
         }
 
         .key-findings {
-            margin-bottom: 4rem;
+            margin-bottom: 1rem;
         }
 
         .findings-grid {
@@ -423,6 +423,10 @@
             color: var(--secondary-color);
             margin-bottom: 1rem;
         }
+        
+        .finding-title:not(:first-of-type) {
+            margin-top: 3rem;
+        }
 
         .finding-content {
             display: flex;
@@ -436,7 +440,7 @@
 
         .finding-image {
             flex: 1;
-            max-width: 400px;
+            max-width: 500px;
         }
 
         .finding-image img {
@@ -542,6 +546,7 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <div class="header-container">
@@ -712,9 +717,9 @@
             </div>
 
             <div class="key-findings">
-                <h2>Key Findings</h2>
                 <div class="findings-grid">
                     <div class="finding-item">
+                        <h2>Key Findings</h2>
                         <div class="finding-title">(1) Significant Ability Gaps Among Different LLM Agents</div>
                         <div class="finding-content">
                             <div class="finding-text">
@@ -729,7 +734,7 @@
                             </div>
                         </div>
 
-                        <div class="finding-title">(2) Beneficial Collaborator Assistance In Agent Recovery Success.</div>
+                        <div class="finding-title">(2) Beneficial Collaborator Assistance In Agent Recovery Success</div>
                         <div class="finding-content">
                             <div class="finding-text">
                                 <p>Collaborator assistance demonstrates beneficial impact on agents' out-of-sync recovery success.</p>
@@ -749,7 +754,7 @@
                             </div>
                         </div>
 
-                        <div class="finding-title">(3) LLM Agents' Lack of Willingness to Collaborate.</div>
+                        <div class="finding-title">(3) LLM Agents' Lack of Willingness to Collaborate</div>
                         <div class="finding-content">
                             <div class="finding-text">
                                 <ul class="finding-list">
@@ -762,7 +767,7 @@
                             </div>
                         </div>
 
-                        <div class="finding-title">(4) LLM Agents' Lack of Resource Awareness.</div>
+                        <div class="finding-title">(4) LLM Agents' Lack of Resource Awareness</div>
                         <div class="finding-content">
                             <div class="finding-text">
                                 <p>Our resource-aware out-of-sync recovery experiments evaluates agents' resource awareness in both temporal and financial dimensions.</p>
@@ -790,12 +795,12 @@
 
         </div>
 
-        <section class="content-section">
+        <div class="component">
             <h2>Resources</h2>
             <div class="resources">
                 <div class="resource-card">
                     <h3>Paper</h3>
-                    <p>View our paper to learn more about SyncMind and SyncBench.</p>
+                    <p>Check out our paper to view more details about SyncMind and SyncBench.</p>
                     <a href="https://arxiv.org/abs/2502.06994" class="button" target="_blank">Paper</a>
                 </div>
                 <div class="resource-card">
@@ -809,7 +814,7 @@
                     <a href="https://github.com/xhguo7/SyncMind" class="button" target="_blank">GitHub</a>
                 </div>
             </div>
-        </section>
+        </div>
 
         <section class="content-section citation-section">
             <h2>BibTeX</h2>
