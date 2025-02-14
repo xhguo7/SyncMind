@@ -1,5 +1,0 @@
-
-[2025-02-11 19:52:50] INFO - caller_builder.py: 699
-
-
-=========================  Function/method filtering 21/23: [test_modeling_upernet.py] -> [test_modeling_upernet.py] -> [test_model_from_pretrained]  =========================

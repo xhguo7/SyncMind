@@ -394,6 +394,86 @@
             display: block;
         }
 
+        .framework-description {
+            margin: 2rem 0;
+            text-align: justify;
+        }
+
+        .key-findings {
+            margin-bottom: 2rem;
+        }
+
+        .findings-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .finding-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .finding-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .finding-content {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .finding-text {
+            flex: 1;
+        }
+
+        .finding-image {
+            flex: 1;
+            max-width: 400px;
+        }
+
+        .finding-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .finding-list {
+            margin-top: 1rem;
+            padding-left: 1.5rem;
+        }
+
+        .finding-list li {
+            margin-bottom: 0.5rem;
+        }
+
+        .sub-finding-list {
+            margin-top: 0.5rem;
+            margin-left: 1.5rem;
+        }
+
+        .sub-finding-list li {
+            margin-bottom: 0.5rem;
+            list-style-type: circle;  /* Changes bullet style for sub-items */
+        }
+
+        @media (max-width: 768px) {
+            .finding-content {
+                flex-direction: column;
+            }
+            
+            .finding-image {
+                max-width: 100%;
+            }
+        }
+
         /* Smooth scrolling behavior */
         html {
             scroll-behavior: smooth;
@@ -527,10 +607,19 @@
         <div id="syncmind" class="component">
             <h2>SyncMind: Agent Out-of-Sync Recovery Framework</h2>
             <p>
+                <strong>Agent Out-of-Sync Recovery:</strong><br>
                 Tackling the challenge of agent out-of-sync in collaborative software engineering, 
                 we propose <strong>SyncMind</strong>, a framework that systematically evaluates agent out-of-sync recovery in collaborative scenarios.
             </p>
             <img src="/SyncMind/assets/syncmind.png" alt="SyncMind Framework" class="framework-img">
+
+            <p class="framework-description">
+                <strong>Resource-Aware Out-of-Sync Recovery:</strong><br>
+                We integrate the resource-aware recovery module into <em>SyncMind</em>, evaluating agents' awareness of temporal and financial resources.
+            </p>
+            
+            <!-- Add the second framework image -->
+            <img src="/SyncMind/assets/resource_awareness.png" alt="SyncMind Framework Modules" class="framework-img">
         </div>
 
         <div id="syncbench" class="component">
@@ -578,6 +667,84 @@
                     </p>
                 </div>
             </div>
+
+            <div class="key-findings">
+                <h2>Key Findings</h2>
+                <div class="findings-grid">
+                    <div class="finding-item">
+                        <div class="finding-title">(1) Significant Ability Gaps Among Different LLM Agents</div>
+                        <div class="finding-content">
+                            <div class="finding-text">
+                                <p>We observe significant variations in different LLM agents' out-of-sync recovery performance.</p>
+                                    <ul class="finding-list">
+                                        <li>Viewing experiment results on <em>Caller</em> and <em>Callee</em> separately, agents' recovery performance ranges from <em>Llama-3.1</em> agents (<span class="math">SR</sub></span><=4.00%) to <em>Claude-3.5-Sonnet</em> (<span class="math">SR</sub></span>>=25.41%).</li>
+                                        <li>These gaps remain huge despite varying task complexity and recovery settings (find more details in the Appendix sections of our paper).</li>
+                                    </ul>
+                            </div>
+                            <div class="finding-image">
+                                <img src="/SyncMind/assets/finding1.png" alt="Ability Gaps Among LLM Agents">
+                            </div>
+                        </div>
+
+                        <div class="finding-title">(2) Beneficial Collaborator Assistance In Agent Recovery Success.</div>
+                        <div class="finding-content">
+                            <div class="finding-text">
+                                <p>Collaborator assistance demonstrates beneficial impact on agents' out-of-sync recovery success.</p>
+                                    <ul class="finding-list">
+                                        <li>Comparing LLM agents' out-of-sync recovery performance between their individual independent (deeper colors) and collaborative (lighter colors) recoveries, collaborator assistance by and large improves agents' recovery success.</li>
+                                        <li>The positive effects of collaborator assistance grow stronger as task complexity increases.</li>
+                                        <li>The effectiveness of collaborator assistance hinges not only on agents' collabroative willingness, but their communication quality and strategy as well. These aspects also significantly affect agents' localization efficiency and recovery success.</li>
+                                            <ul class="sub-finding-list">
+                                                <li><strong>Collaborative willingness:</strong> LLM agents show in general limited collaboration initiative (<span class="math">ASR</sub></span><=4.86%).</li>
+                                                <li><strong>Question quality:</strong> Higher question quality correlates positively with agents' localization accuracy and recovery success.</li>
+                                                <li><strong>Communication strategy:</strong> Early environment exploration exhibits beneficial influence on recovery success, underlining the significance of strategic out-of-sync recovery.</li>
+                                            </ul>
+                                    </ul>
+                            </div>
+                            <div class="finding-image">
+                                <img src="/SyncMind/assets/finding2.png" alt="Ability Gaps Among LLM Agents">
+                            </div>
+                        </div>
+
+                        <div class="finding-title">(3) LLM Agents' Lack of Willingness to Collaborate.</div>
+                        <div class="finding-content">
+                            <div class="finding-text">
+                                <ul class="finding-list">
+                                    <li>Our calculation of <span class="math">ASR</sub></span> reveals existing LLM agents' lack of willingness to collaborate (<span class="math">ASR</sub></span><=4.86%).</li>
+                                    <li>The increasee agents' collaboration willingness is positively associated with agents' recovery success.</li>
+                                </ul>
+                            </div>
+                            <div class="finding-image">
+                                <img src="/SyncMind/assets/finding3.png" alt="Ability Gaps Among LLM Agents">
+                            </div>
+                        </div>
+
+                        <div class="finding-title">(4) LLM Agents' Lack of Resource Awareness.</div>
+                        <div class="finding-content">
+                            <div class="finding-text">
+                                <p>Our resource-aware out-of-sync recovery experiments evaluates agents' resource awareness in both temporal and financial dimensions.</p>
+                                    <ul class="finding-list">
+                                        <li>Resource-aware out-of-sync recovery:</li>
+                                            <ul class="finding-list">
+                                                <li><strong>Temporal awareness:</strong> We extend the maximum time limit for out-of-sync recovery from 30 turns to 50 turns.</li>
+                                                <li><strong>Financial awareness:</strong> We adjust the hypothetical total budget and action cost to elvaute agents' financial resource awareness.</li>
+                                                    <ul class="finding-list">
+                                                        <li><strong>Budget awareness:</strong> We triple the hypothetical total budget from $1000 (insufficient for 30-turn recovery) to $3000 (sufficient for 30-turn recovery with all kinds of action taking patterns).</li>
+                                                        <li><strong>Cost awareness:</strong> We halve and double the cost of seeking collaborator assistance, respectively.</li>
+                                                    </ul>
+                                            </ul>
+                                        <li>The minimal differences in agents' <span class="math">SR</sub></span> scores uncover existing LLM agents' general lack of resource awareness, despite notable benefits obtained from collaborator assistance.</li>
+                                    </ul>
+                            </div>
+                            <div class="finding-image">
+                                <img src="/SyncMind/assets/finding4.png" alt="Ability Gaps Among LLM Agents">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
         </div>
 
         <section class="content-section">
