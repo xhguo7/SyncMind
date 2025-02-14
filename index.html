@@ -497,6 +497,49 @@
                 display: none;
             }
         }
+
+        .citation-section {
+            margin-top: 3rem;
+        }
+
+        .citation-box {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            position: relative;
+            margin-top: 1rem;
+        }
+
+        .citation-text {
+            font-family: monospace;
+            white-space: pre-wrap;
+            margin: 0;
+            padding-right: 100px;
+        }
+
+        .copy-button {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .copy-button:hover {
+            background: #f0f0f0;
+        }
+
+        .copy-icon {
+            width: 16px;
+            height: 16px;
+        }
     </style>
 </head>
 <body>
@@ -767,6 +810,25 @@
                 </div>
             </div>
         </section>
+
+        <section class="content-section citation-section">
+            <h2>BibTeX</h2>
+            <div class="citation-box">
+                <pre class="citation-text">@article{guo2025syncmind,
+            title={SyncMind: Measuring Agent Out-of-Sync Recovery in Collaborative Software Engineering},
+            author={Guo, Xuehang and Wang, Xingyao and Chen, Yangyi and Li, Sha and Han, Chi and Li, Manling and Ji, Heng},
+            journal={arXiv preprint arXiv:2502.06994},
+            year={2025}
+        }</pre>
+                <button class="copy-button" onclick="copyToClipboard()">
+                    <svg class="copy-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -774,5 +836,19 @@
             <p>© 2025 SyncMind</p>
         </div>
     </footer>
+
+    <script>
+        function copyToClipboard() {
+            const citationText = document.querySelector('.citation-text').innerText;
+            navigator.clipboard.writeText(citationText).then(() => {
+                const button = document.querySelector('.copy-button');
+                const originalText = button.innerHTML;
+                button.innerHTML = '<svg class="copy-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Copied!';
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                }, 2000);
+            });
+        }
+    </script>
 </body>
 </html>
