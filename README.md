@@ -59,6 +59,7 @@ Setup environment for **SyncMind**:
   - If run **SyncMind** on latest [OpenHands](https://github.com/All-Hands-AI/OpenHands)
     - May need to modify several relative paths of imports
     - We will do our best to maintain the synchronized version of **SyncMind** that can be compatible with the latest [OpenHands](https://github.com/All-Hands-AI/OpenHands)
+      - Our [latest version](https://github.com/xhguo7/SyncMind/syncmind/framework/syncmind) syncs with [OpenHands 0.27.0](https://github.com/xhguo7/OpenHands)
     - Check our recent updates at [SyncMind.md](https://github.com/xhguo7/SyncMind/blob/main/syncmind/SyncMind.md)
     - We will save updated versions of **SyncMind** to the following directory:
     ```
@@ -101,7 +102,7 @@ Setup environment for **SyncMind**:
 - Run *SyncMind*
   ```
   cd SyncMind/syncmind/framework/OpenHands
-  bash ./evaluation/syncmind/scripts/run_infer.sh [llm configuration] [git version] [agent] [evaluation limit] [out-of-sync recovery method] [if using remote run] [max-turn limit] [num-workers] [evaluation data path] [resource-budget] [resource-coding cost] [resource-asking cost]
+  bash ./evaluation/benchmarks/syncmind/scripts/run_infer.sh [llm configuration] [git version] [agent] [evaluation limit] [out-of-sync recovery method] [if using remote run] [max-turn limit] [num-workers] [evaluation data path] [resource-budget] [resource-coding cost] [resource-asking cost]
   ```
 
   For example: Run *SyncMind* with `GPT-4o` as the agent tackling out-of-sync
@@ -117,14 +118,14 @@ Setup environment for **SyncMind**:
 
   If loading *SyncBench* directly from Hugging Face, skip `[evaluation data path]`:
   ```
-  bash ./evaluation/syncmind/scripts/run_infer.sh llm.gpt_4o HEAD CodeActAgent 10 independent false 30 1
+  bash ./evaluation/benchmarks/syncmind/scripts/run_infer.sh llm.gpt_4o HEAD CodeActAgent 10 independent false 30 1
   ```
 
   Or have already downloaded SyncBench locally: 
 
   Run *SyncMind* on local dataset `./data/callee_11_whisper_instance.csv`:
   ```
-  bash ./evaluation/syncmind/scripts/run_infer.sh llm.gpt_4o HEAD CodeActAgent 10 independent false 30 1 ./data/callee_11_whisper_instance.csv 
+  bash ./evaluation/benchmarks/syncmind/scripts/run_infer.sh llm.gpt_4o HEAD CodeActAgent 10 independent false 30 1 ./data/callee_11_whisper_instance.csv 
   ```
 
   Resource-aware agent out-of-sync recovery:
@@ -142,16 +143,22 @@ Setup environment for **SyncMind**:
 
   If loading *SyncBench* directly from Hugging Face, skip `[evaluation data path]`:
   ```
-  bash ./evaluation/syncmind/scripts/run_infer.sh llm.gpt_4o HEAD CodeActAgent 10 independent false 20 1 3000 50 200
+  bash ./evaluation/benchmarks/syncmind/scripts/run_infer.sh llm.gpt_4o HEAD CodeActAgent 10 independent false 20 1 3000 50 200
   ```
 
   Or have already downloaded SyncBench locally: 
 
   Run *SyncMind* on local dataset `./data/callee_11_whisper_instance.csv`:
   ```
-  bash ./evaluation/syncmind/scripts/run_infer.sh llm.gpt_4o HEAD CodeActAgent 10 independent false 20 1 3000 50 200 ./data/callee_11_whisper_instance.csv
+  bash ./evaluation/benchmarks/syncmind/scripts/run_infer.sh llm.gpt_4o HEAD CodeActAgent 10 independent false 20 1 3000 50 200 ./data/callee_11_whisper_instance.csv
   ```
 
+- Evaluation
+  ```
+  cd ./SyncMind/syncmind/framework/OpenHands
+  bash ./evaluation/benchmarks/syncmind/scripts/run_eval.sh [path to eval data]
+  ```
+  The evaluation result will be saved to the same directory as your eval data, with the file name `eval_summary_{timestamp}.json`.
   
 
 ### **2.2 SyncBench: Agent Out-of-Sync Recovery Benchmark Construction**

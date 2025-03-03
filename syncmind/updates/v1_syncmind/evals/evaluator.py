@@ -258,11 +258,6 @@ class DockerManager:
         try:
             logger.info(f"Pulling image `{hub_image_name}` from Docker Hub to local device...")
             subprocess.run(["docker", "pull", hub_image_name], check=True)
-            '''
-            logger.info(f"Adding the new tag `{test_image_name}` to pulled image `{hub_image_name}`...")
-            subprocess.run(["docker", "tag", hub_image_name, test_image_name], check=True)
-            logger.info(f"Image `{hub_image_name}` successfully pulled and named to {test_image_name}.")
-            '''
         except subprocess.CalledProcessError as e:
             logger.error(f"An error occurred while pulling docker image `{hub_image_name}` from Docker Hub to local device: {e}")
 
