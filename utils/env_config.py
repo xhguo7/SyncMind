@@ -168,10 +168,8 @@ class EnvConfig:
         if not os.path.exists(args.root_path):
             print(f"[ERROR] Your defined root_path does not exists. Please check your root_path definition and try again.")
 
-        if args.root_path.endswith('/'):
-            args.root_path = os.path.join(args.root_path, 'syncbench_build')
-        else:
-            args.root_path = os.path.join(args.root_path, '/syncbench_build')
+        args.root_path.rstrip('/')
+        args.root_path = os.path.join(args.root_path, 'syncbench_build')
         
         # Check all paths
         self.create_directory(args.root_path, "root path")

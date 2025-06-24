@@ -113,8 +113,13 @@ class Logger:
             "green": "#27BF60",
             "blue": "#0598FF",
         }
-        self.write_path = os.path.dirname(os.path.abspath(__file__)).split('utils')[0] + '/logs/syncmind_logs.txt'
+        self.write_path = os.path.join(os.path.dirname(os.path.abspath(__file__)).split('utils')[0], 'logs', 'syncmind_logs.txt')
         self.auto_write = True
+        self._init_logs()
+
+    def _init_logs(self):
+        log_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)).split('utils')[0], 'logs')
+        os.makedirs(log_dir, exist_ok = True)
 
     def write(self, msg: str) -> None:
         # Get the current time

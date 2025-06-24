@@ -74,14 +74,18 @@ class CodeHistoryTracer:
         file_path = os.path.join(self.repo_dir, file_rel_path)
         if not os.path.exists(file_path):
             return None
-
-        with open(file_path, 'r', encoding='utf-8') as file:
-            file_content = file.read()
-
+        
         try:
-            tree = ast.parse(file_content)
-        except (SyntaxError, IndentationError) as e:
-            logger.warning(f"Skipping commit due to parsing error: {e}")
+            with open(file_path, 'r', encoding='utf-8', errors='replace') as file:
+                file_content = file.read()
+            try:
+                tree = ast.parse(file_content)
+                return file_content
+            except (SyntaxError, IndentationError) as e:
+                logger.warning(f"Skipping commit due to parsing error: {e}")
+                return None
+        except Exception as e:
+            logger.warning(f"Error reading file {file_path}: {e}")
             return None
 
         for node in ast.walk(tree):

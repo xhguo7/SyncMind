@@ -50,6 +50,10 @@ def read_csv_to_df(file_path: str):
     Returns:
         pandas.DataFrame: DataFrame containing CSV data
     """
+    directory = os.path.dirname(file_path)
+    if not os.path.exists(directory):
+        os.makedirs(directory, exist_ok=True)
+        
     if not os.path.exists(file_path):
        open(file_path, 'w').close()
        return None
@@ -69,6 +73,10 @@ def save_df_to_csv(dataset: pd.DataFrame, save_path: str) -> None:
     Returns:
     - None
     """
+    directory = os.path.dirname(save_path)
+    if not os.path.exists(directory):
+        os.makedirs(directory, exist_ok=True)
+        
     try:
         dataset.to_csv(save_path, index=False, encoding='utf-8')
         logger.info(f"DataFrame successfully saved to `{save_path}` in UTF-8 encoding")

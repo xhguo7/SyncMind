@@ -40,6 +40,7 @@ if __name__ == '__main__':
     parser.add_argument('--commit_trace_mode', type=int, default=0, help='Trace all commits for each function/method code or only the oldest commit. Noted that tracing only oldest commit will increase out-of-sync recovery task complexity. (0: all commits| 1: oldest commit only)', choices=[0, 1])
     parser.add_argument('--construct_start', type=int, default=0, help='Repo starting index for dataset construction. Max range = [0, len(repo_source_dict_list))')
     parser.add_argument('--construct_end', type=int, default=1000, help='Repo ending index for dataset construction. Max range = [0, len(repo_source_dict_list))')
+    parser.add_argument('--construct_source', type=str, default='instance', help='SyncBench construction source')
     
     # Downsampling
     parser.add_argument('--filter_current_repo_only', type=int, default=1, help='[Instance Set Construction Only] If filter dataset instances for only current repo instead of all repos listed in repo_source_dict_list (0: NO | 1: YES)', choices=[0, 1])  # for instance generation only
